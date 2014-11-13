@@ -1,0 +1,66 @@
+---
+title: "Testing IPUMS Data"
+author: "Amanda Regan"
+date: "October 1, 2014"
+output: html_document
+---
+```{r}
+library(tidyr)
+library(dplyr)
+library(stringr)
+library(mullenMisc)
+
+getwd()
+census <- read.csv('usa_00011.csv')
+refined_data <- census %>% filter(YEAR == 1910) %>% select(YEAR, WARD, SEX, NFAMS, AGE, BPLD, LABFORCE, OCCSTR, INDSTR)
+race_ids <- refined_data  %>% group_by(BPLD) %>% summarize(count = n())
+
+codes <- read.csv("test.csv", header = TRUE) %>% as.data.frame(row.names=NULL)
+
+data <- left_join(refined_data, codes, by = c("BPLD" = "CODE"))
+#fix genders
+data$SEX[data$SEX == "1"] <- "male"
+data$SEX[data$SEX == "2"] <- "female"
+
+refined_data <- refined_data %>%
+      mutate(gender = ifelse(stri_detect_fixed(meaning, "1"),
+                                    "male", "female")) 
+
+refined_data <- data %>% filter(WARD == 21) %>% group_by(BIRTHPLACE) %>% summarize(count = n())
+```
+dover st
+```{r}
+census <- read.csv('usa_00010.csv')
+PosseDist <- census %>% filter(YEAR == 1910) %>% group_by(ENUMDIST) %>% summarize(Count = n())
+head(PosseDist)
+```
+
+
+dataframe of all gyms gecoded
+```{r}
+library(ggmap)
+addresses <- data.frame(name = c("316 Huntington Ave, Boston MA",
+                              "48 Boylston, Boston MA",
+                              "309 Washington, Boston MA",
+                              "175 Mass Ave, Boston MA",
+                              "75 Tyler, Boston MA",
+                              "40 Berkeley, Boston MA",
+                              "73 Causeway, Boston MA",
+                              "42 St. Botolph, Boston MA",
+                              "779 Beacon St, Boston MA",
+                              "198 Clarendon, Boston MA"),
+           stringsAsFactors = FALSE)
+cities_geocoded <- geocode(addresses$name)
+addresses <- cbind(addresses, cities_geocoded)
+```
+
+Now a map
+```{r}
+library(ggplot2)
+ggplot(addresses, aes(x = lon, y = lat)) +
+  geom_point() +
+  geom_text(aes(label = name), vjust = -1) +
+  coord_map()
+```
+
+Useful but 
