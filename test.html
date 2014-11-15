@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+<body>
+<script>
+d3.csv("data.csv", function(error, csv_data) {
+ var data = d3.nest()
+  .key(function(d) { return d.year;})
+  .rollup(function(d) { 
+   return d3.sum(d, function(g) {return g.gender; });
+  }).entries(csv_data);
+  console.log()
+});
+</script>
+</body>

@@ -1,0 +1,7 @@
+NATIVITY,Nativity_Type
+0,Native-Born
+1,"Native born, and both parents native born"
+2,"Native born, and father foreign, mother native"
+3,"Native born, and mother foreign, father native"
+4,"Native born, and both parents foreign"
+5,Foreign born

@@ -11,24 +11,62 @@ library(stringr)
 library(mullenMisc)
 
 getwd()
-census <- read.csv('usa_00011.csv')
-refined_data <- census %>% filter(YEAR == 1910) %>% select(YEAR, WARD, SEX, NFAMS, AGE, BPLD, LABFORCE, OCCSTR, INDSTR)
+census <- read.csv('usa_00012.csv')
+refined_data <- census %>% filter(YEAR == 1910 | YEAR == 1920) %>% select(YEAR, WARD, SEX, NFAMS, AGE, BPLD, OCC, NATIVITY,NATIVITY_MOM, AGE)
 race_ids <- refined_data  %>% group_by(BPLD) %>% summarize(count = n())
 
+head(classwrkd)
 codes <- read.csv("test.csv", header = TRUE) %>% as.data.frame(row.names=NULL)
 
 data <- left_join(refined_data, codes, by = c("BPLD" = "CODE"))
 #fix genders
 data$SEX[data$SEX == "1"] <- "male"
 data$SEX[data$SEX == "2"] <- "female"
+write.csv(data, file = "data.csv")
 
-refined_data <- refined_data %>%
-      mutate(gender = ifelse(stri_detect_fixed(meaning, "1"),
-                                    "male", "female")) 
-
+natcodes <- read.csv("nativitycodes.csv", header = TRUE) %>% as.data.frame(row.names=NULL)
+data <- left_join(data, natcodes)
 refined_data <- data %>% filter(WARD == 21) %>% group_by(BIRTHPLACE) %>% summarize(count = n())
+library(classInt)
+intervals <- classIntervals(data$AGE, 10, "pretty")
+head(cut(data$AGE, breaks = intervals$brks))
+data <- data %>%
+  mutate(age_classified = cut(AGE, intervals$brks))
+
+write.csv(data, file = "../data.csv")
 ```
-dover st
+
+
+```{r}
+years <-data %>% filter(YEAR == 1910) %>% filter(WARD == 1) %>% group_by(SEX) %>% summarize(count=n())
+gender <- tally(group_by(data, YEAR, WARD, SEX), sort = TRUE) 
+gender <-  rename(gender, c(SEX = "dimension", n = "count"))
+nativity <- tally(group_by(data, YEAR, WARD, Nativity_Type), sort = TRUE) %>% rename(c(Nativity_Type = "dimension", n = "count"))
+agegrp <- tally(group_by(data, YEAR, WARD, age_classified), sort = TRUE) %>% rename(c(age_classified = "dimension", n = "count"))
+birthpl <- tally(group_by(data, YEAR, WARD, BIRTHPLACE), sort = TRUE) %>% rename(c(BIRTHPLACE = "dimension", n = "count"))
+occupation <- tally(group_by(data, YEAR, WARD, OCC), sort = TRUE) %>% rename(c(OCC = "dimension", n = "count"))
+totalS <- rbind(gender, nativity, agegrp, birthpl, occupation)
+write.csv(totalS, file="data_long.csv")
+write.csv(wide,file="../data_gender.csv")
+fix <- read.csv("../data_gender.csv", header= TRUE) 
+fix <- as.data.frame(fix)
+fix <- spread(gender, count, -year, -ward)
+gender <- gender %>% spread(gender, count, -YEAR, -WARD)
+
+wide <- reshape(fix, timevar="sex", idvar = c("year","ward"), direction = "wide")
+
+
+
+%>% tally(SEX, sort = TRUE)
+tally(tally(plays_by_year))
+
+
+```
+
+
+
+
+
 ```{r}
 census <- read.csv('usa_00010.csv')
 PosseDist <- census %>% filter(YEAR == 1910) %>% group_by(ENUMDIST) %>% summarize(Count = n())
