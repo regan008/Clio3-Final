@@ -62,7 +62,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.csv("data_gender.csv", function(error, data) {
+d3.csv("data.csv", function(error, data) {
   //filters the data to only show 1910
   data = data.filter(function(d){return d.year === '1910'})
   //selects values that are not equal to the year and the ward 

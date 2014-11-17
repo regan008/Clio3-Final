@@ -1,12 +1,5 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<head>
-<script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
-<body>
-<script>
 // loading sample.json
-var sample2 = d3.csv("data.csv"); 
-    console.log(sample2.year[0])
+var sample2 = tributary.sample.sample2; 
 
 // date manipulation to format UTC to js Date obj
 sample2.forEach(function(d) { d.time = new Date(d.time * 1000); });
@@ -17,7 +10,7 @@ var width = 930 - margin.right - margin.left;
 var height = 582 - margin.top - margin.bottom;
 var timeFormat = d3.time.format("%c");
 var X = width/sample2.length*0.25;
-  
+	
 // find data range
 var xDomain = d3.extent(sample2, function (d, i){ return d.time; });
 var yMin = d3.min(sample2, function(d){ return Math.min(d.low); });
@@ -25,27 +18,27 @@ var yMax = d3.max(sample2, function(d){ return Math.max(d.high); });
 
 // scales, add 10pc padding to x-domain
 var xScale = d3.time.scale()
-  .domain(xDomain);
+	.domain(xDomain);
 
 xScale.domain([-0.1,1.1].map(xScale.invert))
-  .range([margin.left, width - margin.right]);
+	.range([margin.left, width - margin.right]);
 
 var yScale = d3.scale.linear()
-  .domain([yMin, yMax])
-  .range([height - margin.top, margin.bottom]);
+	.domain([yMin, yMax])
+	.range([height - margin.top, margin.bottom]);
 
 // set up axes
 var xAxis = d3.svg.axis()
     .scale(xScale)
     .orient("bottom")
-  .ticks(10)
-  .tickPadding(10);
+	.ticks(10)
+	.tickPadding(10);
 // .tickFormat(timeFormat)
 
 var yAxis = d3.svg.axis()
-  .scale(yScale)
-  .orient("right")
-  .tickValues(yScale.domain());
+	.scale(yScale)
+	.orient("right")
+	.tickValues(yScale.domain());
 
 // set up chart types
 var area = d3.svg.area()
@@ -59,9 +52,9 @@ var line = d3.svg.line().interpolate("monotone")
 
 // create svg container and offset
 var canvas = d3.select("svg")
-  .attr({"width": width, "height": height})
-  .append("g")
-  .attr("transform", "translate(" + margin.top/2 + "," + margin.left/2 + ")");
+	.attr({"width": width, "height": height})
+	.append("g")
+	.attr("transform", "translate(" + margin.top/2 + "," + margin.left/2 + ")");
 
 // grids
 canvas.append("svg:rect")
@@ -126,7 +119,7 @@ var chartDraw = {
 
 // draw axes
 canvas.append('g').call(xAxis)
-  .attr('transform', 'translate(0, ' + (height - margin.bottom) + ')');
+	.attr('transform', 'translate(0, ' + (height - margin.bottom) + ')');
 
 canvas.append('g').call(yAxis)
     .attr('transform', 'translate(' + (width - margin.right) + ', 0)');
@@ -142,7 +135,7 @@ d3.select(".tributary_svg")
       "transform": "translate(" + margin.left*1.3 + "," + margin.top*0.7 + ")"
     })
     .append("xhtml:select")
-  .on("change", function () { 
+	.on("change", function () { 
           
         d3.selectAll(".alt-view").remove();
         
@@ -164,6 +157,3 @@ d3.select(".tributary_svg")
 // default chart
 chartDraw.candle();
 
-
-</script>
-</body>
