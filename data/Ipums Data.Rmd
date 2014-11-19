@@ -32,8 +32,10 @@ intervals <- classIntervals(data$AGE, 10, "pretty")
 head(cut(data$AGE, breaks = intervals$brks))
 data <- data %>%
   mutate(age_classified = cut(AGE, intervals$brks))
-
-write.csv(data, file = "../data.csv")
+data_long <- data %>% gather(category,type, BIRTHPLACE, Nativity_Type, age_classified, NFAMS, SEX) 
+data_long <- data_long %>% subset(select=c(YEAR, WARD, category, type))
+write.csv(data_long , file="../data_longtest.csv", row.names=FALSE)
+write.csv(data_long, file = "../data.csv")
 ```
 
 
@@ -42,12 +44,14 @@ years <-data %>% filter(YEAR == 1910) %>% filter(WARD == 1) %>% group_by(SEX) %>
 gender <- tally(group_by(data, YEAR, WARD, SEX), sort = TRUE) 
 gender <-  rename(gender, c(SEX = "dimension", n = "count"))
 nativity <- tally(group_by(data, YEAR, WARD, Nativity_Type), sort = TRUE) %>% rename(c(Nativity_Type = "dimension", n = "count"))
-agegrp <- tally(group_by(data, YEAR, WARD, age_classified), sort = TRUE) %>% rename(c(age_classified = "dimension", n = "count"))
-birthpl <- tally(group_by(data, YEAR, WARD, BIRTHPLACE), sort = TRUE) %>% rename(c(BIRTHPLACE = "dimension", n = "count"))
+agegrp <- tally(group_by(data, YEAR, WARD, age_classified), sort = TRUE) 
+birthpl <- tally(group_by(data, YEAR, WARD, BIRTHPLACE), sort = TRUE) 
+
 occupation <- tally(group_by(data, YEAR, WARD, OCC), sort = TRUE) %>% rename(c(OCC = "dimension", n = "count"))
 totalS <- rbind(gender, nativity, agegrp, birthpl, occupation)
-write.csv(totalS, file="data_long.csv")
-write.csv(wide,file="../data_gender.csv")
+write.csv(totalS, file="data_long.csv", row.names = FALSE)
+write.csv(wide,file="../data_gender.csv", row.names = FALSE)
+all <- 
 fix <- read.csv("../data_gender.csv", header= TRUE) 
 fix <- as.data.frame(fix)
 fix <- spread(gender, count, -year, -ward)
