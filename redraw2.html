@@ -12,6 +12,11 @@
 	</select></p>
 <div id="vis"></div>
 <script>
+
+function filterYear(d) {return +d.year === +currentYear}
+
+var formatted;
+var currentYear = 1910;
 //set the margins
 var margin = {top: 50, right: 160, bottom: 80, left: 50},
     width = 900 - margin.left - margin.right,
@@ -47,43 +52,39 @@ var svg = d3.select("#vis").append("svg")
 //suck in the data, store it in a value called formatted, run the redraw function
 d3.csv("data.csv", function(data) {
 				formatted = data;
-				redraw();
+        redraw();
     			});
 
+// function onload() {
+
+ 
+// console.log(nested);
+// console.log("FORMATTED DATA");
+
+// currentyear = formatted.filter(function(){return year === 1910})
+
+// console.log("CURRENT YEAR DATA");
+// console.log(currentyear);
+//return nested;
+// redraw();
+// }
+
 function change() {
+  currentYear = menu.property("value")
 	d3.transition()
 		.duration(750)
 		.each(redraw);
 }
 
 function redraw() {
-	svg.selectAll("g").remove();
-   // svg = d3.selectAll("#vis").append("svg")
-	var nested = d3.nest()
-		//.key(function(d) {return d.ward; })
-		.key(function(d) { return d.year; })
-		.map(formatted)
-    console.log(nested);
-    // get value from menu selection
-    // the option values are set in HTML and correspond
-    //to the [type] value we used to nest the data  
-    var series = menu.property("value");
-    
-    // only retrieve data from the selected series, using the nest we just created
-    var data = nested[series];
-	console.log(data);
-	color.domain(d3.keys(data[0]).filter(function(key) { return (key !== "year" && key !== "ward"); }));
-	var genderNames = d3.keys(data[0]).filter(function(key) { return key !== "ward" && key !== "year"; });
-	console.log(genderNames);
-	data.forEach(function(d) {
-    d.genders = genderNames.map(function(name) { return {name: name, value: +d[name]}; });
-    console.log(d.genders);
-  });
+
+  svg.selectAll("g").remove();
+  
 	
 
-	x0.domain(data.map(function(d) { return d.ward; }));
-  	x1.domain(genderNames).rangeRoundBands([0, x0.rangeBand()]);
-  	y.domain([0, d3.max(data, function(d) { return d3.max(d.genders, function(d) { return d.value; }); })]);
+	// x0.domain(data.map(function(d) { return d.ward; }));
+ //  	x1.domain(genderNames).rangeRoundBands([0, x0.rangeBand()]);
+ //  	y.domain([0, d3.max(data, function(d) { return d3.max(d.genders, function(d) { return d.value; }); })]);
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -98,25 +99,26 @@ function redraw() {
       .attr("dy", ".71em")
       .style("text-anchor", "end")
       .text("Population");
+
  
   var ward = svg.selectAll(".ward")
-      .data(data)
-    .enter().append("g")
-      .attr("class", "g")
-      .attr("transform", function(d) { return "translate(" + x0(d.ward) + ",0)"; });
+      .data(formatted.filter(filterYear))
+      .enter()
+      .append("g")
+      // .filter(function(d) {console.log(d);return +d.year === 1910})
+      .attr("id", function(d) {return d.ward});
 
-  ward.selectAll("rect")
-      .data(function(d) { 
-      console.log("THis is the thing to pay attention to");
-      console.log(d);
-        return d.genders; 
-      })
-    .enter().append("rect")
-      .attr("width", x1.rangeBand())
-      .attr("x", function(d) { return x1(d.name); })
-      .attr("y", function(d) { return y(d.value); })
-      .attr("height", function(d) { return height - y(d.value); })
-      .style("fill", function(d) { return color(d.name); });
+//       .attr("class", "g")
+//       .attr("transform", function(d) { console.log(d);return "translate(" + d.ward + ",0)"; });
+// // console.log(data);
+   ward.selectAll("rect")
+       .data(function(d) { return d.ward; })
+     .enter().append("rect")
+       .attr("width", x1.rangeBand())
+       .attr("x", function(d) { return x1(console.log(d.ward)); })
+       .attr("y", function(d) { return y(console.log(d.male)); })
+       .attr("height", function(d) { return height - y(+d.male); })
+       .style("fill", function(d) { return color(+d.male); });
 
 } //end redraw
 
