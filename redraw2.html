@@ -49,34 +49,24 @@ var svg = d3.select("#vis").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");	
 
-//suck in the data, store it in a value called formatted, run the redraw function
+//this sucks in the data, stores it in a variable called data that is then renamed to formatted (don't know why).  Keys are created for each series in the graph.  The data is then mapped into those key sand the scales are created (from Bostock's example).
 d3.csv("data.csv", function(data) {
 				formatted = data;
+    //Create keys for each gender
         genderNames = d3.keys(formatted[0]).filter(function(key) {return key !== "ward" && key !== "year"; });
-formatted.forEach(function(d) {
-  d.genders = genderNames.map(function(name) { return {name: name, value: +d[name]};});
-  console.log(d.genders);
-});
-x0.domain(data.map(function(d) { return d.ward; }));
-x1.domain(genderNames).rangeRoundBands([0, x0.rangeBand()]);
-y.domain([0, d3.max(data, function(d) { return d3.max(d.genders, function(d) { return d.value; }); })]);
+    //formats and maps each gender to a new variable called d.genders with the values name and value.   
+        formatted.forEach(function(d) {
+          d.genders = genderNames.map(function(name) { return {name: name, value: +d[name]};});
+          console.log(d.genders);
+        });
+    //creates some scales. No positive exactly what it does.  Pulled from mbostock's Grouped Bar Chart at bl.ocks.org/mbostock/3887051
+        x0.domain(data.map(function(d) { return d.ward; }));
+        x1.domain(genderNames).rangeRoundBands([0, x0.rangeBand()]);
+        y.domain([0, d3.max(data, function(d) { return d3.max(d.genders, function(d) { return d.value; }); })]);
+    //Call the redraw function    
         redraw();
     			});
-
-// function onload() {
-
- 
-// console.log(nested);
-// console.log("FORMATTED DATA");
-
-// currentyear = formatted.filter(function(){return year === 1910})
-
-// console.log("CURRENT YEAR DATA");
-// console.log(currentyear);
-//return nested;
-// redraw();
-// }
-
+//This function gets thte current property of the dropdown and on a change it redraws the chart. 
 function change() {
   currentYear = menu.property("value")
 	d3.transition()
@@ -87,12 +77,6 @@ function change() {
 function redraw() {
 
   svg.selectAll("g").remove();
-  
-	
-
-	// x0.domain(data.map(function(d) { return d.ward; }));
- //  	x1.domain(genderNames).rangeRoundBands([0, x0.rangeBand()]);
- //  	y.domain([0, d3.max(data, function(d) { return d3.max(d.genders, function(d) { return d.value; }); })]);
   svg.append("g")
       .attr("class", "x axis")
       .attr("transform", "translate(0," + height + ")")
@@ -108,9 +92,6 @@ function redraw() {
       .style("text-anchor", "end")
       .text("Population");
 
-
-
-// svg.attr("height", barHeight * formatted.length);
   var ward = svg.selectAll(".ward")
       .data(formatted.filter(filterYear))
       .enter()
@@ -127,33 +108,10 @@ function redraw() {
       .attr("height", function(d) { return height - y(d.value); })
       .style("fill", function(d) { return color(d.name); });
 
-  // ward.append("rect")
-  //   .attr("y", function(d) { return y(d.male); })
-  //   .attr("height", function(d) { return height - y(d.male); })
-  //   .attr("width", barWidth - 1);
-
-  // ward.append("text")
-  //   .attr("x", barWidth / 2)
-  //   .attr("y", function(d) { return y(d.male) + 3; })
-  //   .attr("dy", ".35em")
-  //   .text(function(d) {return d.male;});
 
 
 
 
-
-
-//       .attr("class", "g")
-//       .attr("transform", function(d) { console.log(d);return "translate(" + d.ward + ",0)"; });
-// // console.log(data);
-   // ward.selectAll("rect")
-   //     .data(function(d) { return d.ward; })
-   //   .enter().append("rect")
-   //     .attr("width", x1.rangeBand())
-   //     .attr("x", function(d) { return x1(console.log(d.ward)); })
-   //     .attr("y", function(d) { return y(console.log(d.male)); })
-   //     .attr("height", function(d) { return height - y(+d.male); })
-   //     // .style("fill", function(d) { return color(+d.male); });
 
 } //end redraw
 
