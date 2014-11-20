@@ -45,7 +45,7 @@ var svg = d3.select("#vis").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");	
 
 //suck in the data, store it in a value called formatted, run the redraw function
-d3.csv("data_gender.csv", function(data) {
+d3.csv("data.csv", function(data) {
 				formatted = data;
 				redraw();
     			});
@@ -106,7 +106,11 @@ function redraw() {
       .attr("transform", function(d) { return "translate(" + x0(d.ward) + ",0)"; });
 
   ward.selectAll("rect")
-      .data(function(d) { return d.genders; })
+      .data(function(d) { 
+      console.log("THis is the thing to pay attention to");
+      console.log(d);
+        return d.genders; 
+      })
     .enter().append("rect")
       .attr("width", x1.rangeBand())
       .attr("x", function(d) { return x1(d.name); })
