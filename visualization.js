@@ -47,3 +47,75 @@
 
     });
 
+
+
+
+function filterYear(d) {return +d.year === +currentYear && +d.ward === +currentWard}
+var menuyear = d3.select("#year select")
+    .on("change", change);  
+var menuward = d3.select("#ward select")
+    .on("change", change);    
+var currentYear = 1910;
+var currentWard = 1;
+
+var agewidth = 500,
+    ageheight = 300,
+    radius = Math.min(agewidth, ageheight) / 2;
+
+var color = d3.scale.ordinal()
+    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+
+var arc = d3.svg.arc()
+    .outerRadius(radius - 10)
+    .innerRadius(0);
+var data;
+var pie = d3.layout.pie()
+    .sort(null)
+    .value(function(d) { return d.count; });
+var svg = d3.select("#ages").append("svg")
+    .attr("width", agewidth)
+    .attr("height", ageheight)
+  .append("g")
+    .attr("transform", "translate(" + agewidth / 2 + "," + ageheight / 2 + ")");
+
+d3.csv("ages.csv", function(error, csv) {
+ data = csv;
+ svg.selectAll("g").remove();
+  data.forEach(function(d) {
+    d.count = +d.count;  });
+  redraw();
+});
+
+
+function change() {
+
+  currentYear = menuyear.property("value")
+  currentWard = menuward.property("value")
+  d3.transition()
+    .duration(750)
+    .each(redraw);
+}
+
+
+function redraw() {
+
+  svg.selectAll("g").remove();
+  svg.selectAll(".arc").remove()
+
+  var g = svg.selectAll(".arc")
+      .data(pie(data.filter(filterYear)))
+    .enter().append("g")
+      .attr("class", "arc");
+
+  g.append("path")
+      .attr("d", arc)
+      .style("fill", function(d) { return color(d.data.agegrp); });
+
+  g.append("text")
+      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.data.agegrp; });
+
+};
+
