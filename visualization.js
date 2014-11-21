@@ -2,7 +2,7 @@
   var mapwidth  = 750;
   var mapheight = 530;
 
-  var vis = d3.select("#vis").append("svg")
+  var mapvis = d3.select("#mapvis").append("svg")
       .attr("width", mapwidth).attr("height", mapheight)
 
   d3.json("wardsandparks.json", function(json) {
@@ -33,11 +33,11 @@
       // add a rectangle to see the bound of the svg
       //vis.append("rect").attr('width', width).attr('height', height)
         //.style('stroke', 'black').style('fill', 'none');
-      vis.selectAll(".ward").data(json.features)
+      mapvis.selectAll(".ward").data(json.features)
           .enter().append("path")
               .attr("class", function(d) { return "space" + d.properties.SpaceType; })
               .attr("d", path);
-      vis.selectAll(".ward-label")
+      mapvis.selectAll(".ward-label")
             .data(json.features)
         .enter().append("text")
             .attr("class", function(d) { return "ward-label " + d.properties.wid; })
