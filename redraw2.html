@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <meta charset="utf-8">
 <style>
+
 </style>
 <body>
 <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
@@ -10,6 +11,10 @@
 		<option value="1910">1910</option>
 		<option value="1920">1920</option>
 	</select></p>
+
+ <!--  <p id="dimension" class="menuchoice">Select Dimension
+  <select>
+    <option -->
 <div id="vis"></div>
 <script>
 
@@ -52,13 +57,25 @@ var svg = d3.select("#vis").append("svg")
 //this sucks in the data, stores it in a variable called data that is then renamed to formatted (don't know why).  Keys are created for each series in the graph.  The data is then mapped into those key sand the scales are created (from Bostock's example).
 d3.csv("data.csv", function(data) {
 				formatted = data;
+
     //Create keys for each gender
-        genderNames = d3.keys(formatted[0]).filter(function(key) {return key !== "ward" && key !== "year"; });
+        genderNames = d3.keys(formatted[0]).filter(function(key) {return key !== "ward" && key !== "year" && key !== "citizen" && key !== "non-citizen" ; });
+        //Create keys for each gender
+        ethnicityNames = d3.keys(formatted[0]).filter(function(key) {return key !== "ward" && key !== "year" && key !== "male" && key !== "female" ; });
     //formats and maps each gender to a new variable called d.genders with the values name and value.   
         formatted.forEach(function(d) {
-          d.genders = genderNames.map(function(name) { return {name: name, value: +d[name]};});
-          console.log(d.genders);
+          d.genders = genderNames.map(function(name) { 
+            return {name: name, value: +d[name]};});
+        // console.log(d.genders);
         });
+        console.log(ethnicityNames);
+    //formats and maps each gender to a new variable called d.genders with the values name and value.   
+        formatted.forEach(function(d) {
+          d.ethnicities = ethnicityNames.map(function(name) { 
+            return {name: name, value: +d[name]};});
+          console.log(d.ethnicities);
+        });
+    // console.log(formatted.ethnicities)
     //creates some scales. No positive exactly what it does.  Pulled from mbostock's Grouped Bar Chart at bl.ocks.org/mbostock/3887051
         x0.domain(data.map(function(d) { return d.ward; }));
         x1.domain(genderNames).rangeRoundBands([0, x0.rangeBand()]);
@@ -97,6 +114,7 @@ function redraw() {
       .enter()
       .append("g")
       .attr("transform", function(d) { return "translate(" + x0(d.ward) + ",0)"; })
+      .attr("class", "grouping")
       .attr("id", function(d) {return d.ward});
 
   ward.selectAll("rect")
