@@ -49,6 +49,7 @@
 
 
 
+function filterYearAges(d) {return +d.year === +currentYear && +d.ward === +currentWard && +d.count > 11}
 
 function filterYear(d) {return +d.year === +currentYear && +d.ward === +currentWard}
 var menuyear = d3.select("#year select")
@@ -63,8 +64,9 @@ var agewidth = 300,
     radius = Math.min(agewidth, ageheight) / 2;
 
 var color = d3.scale.ordinal()
-    .range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+    .range(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]);
 
+// "#3BB9C4", "#D4502F","#C2C14C","#9865CF","#D19E45", "#7F301C", "#1F6369"
 var arc = d3.svg.arc()
     .outerRadius(radius - 10)
     .innerRadius(0);
@@ -108,20 +110,25 @@ function redraw() {
   svg.selectAll(".arc").remove()
 
   var g = svg.selectAll(".arc")
-      .data(pie(data.filter(filterYear)))
+      .data(pie(data.filter(filterYearAges)))
     .enter().append("g")
       .attr("class", "arc");
 
   g.append("path")
       .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.agegrp); });
+      .style("fill", function(d) { return color(d.data.agegrp); })
+      .attr("data-legend", function(d){return d.data.agegrp});
 
-  g.append("text")
-      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .style("text-anchor", "middle")
-      .text(function(d) { return d.data.agegrp; });
-
+  // g.append("text")
+  //     .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+  //     .attr("dy", ".35em")
+  //     .style("text-anchor", "middle")
+  //     .text(function(d) { return d.data.agegrp; });
+  legend = svg.append("g")
+      .attr("class", "legend")
+      .attr("transform", "translate(50,30)")
+      .style("font-size", "12px")
+      .call(d3.legend)
 };
 var svg_nat = d3.select("#nativity").append("svg")
     .attr("width", agewidth)
@@ -144,19 +151,28 @@ function drawnativity() {
 
   svg_nat.selectAll("g").remove();
   svg_nat.selectAll(".arc_nat").remove()
-
+  
   var g = svg_nat.selectAll(".arc_nat")
       .data(pienativity(data_nat.filter(filterYear)))
     .enter().append("g")
       .attr("class", "arc");
   g.append("path")
       .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.nativity); });
-  g.append("text")
-      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-      .attr("dy", ".35em")
-      .style("text-anchor", "middle")
-      .text(function(d) { return d.data.nativity; });
-
+      .style("fill", function(d) { return color(d.data.nativity); })
+      .attr("data-legend", function(d){return d.data.nativity});
+      
+      // .attr("d", arc)
+      
+      //.style("fill", function (d) { return color(d.data.nativity); });
+  // g.append("text")
+      // .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      // .attr("dy", ".35em")
+      // .style("text-anchor", "middle")
+      // .text(function(d) { return d.data.nativity; });
+  legend = svg_nat.append("g")
+      .attr("class", "legend")
+      .attr("transform", "translate(-10,50)")
+      .style("font-size", "11px")
+      .call(d3.legend)
 };
 
