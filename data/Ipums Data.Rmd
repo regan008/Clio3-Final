@@ -42,8 +42,11 @@ write.csv(data_long, file = "../data.csv")
 ```{r}
 years <-data %>% filter(YEAR == 1910) %>% filter(WARD == 1) %>% group_by(SEX) %>% summarize(count=n())
 gender <- tally(group_by(data, YEAR, WARD, SEX), sort = TRUE) 
-gender <-  rename(gender, c(SEX = "dimension", n = "count"))
-nativity <- tally(group_by(data, YEAR, WARD, Nativity_Type), sort = TRUE) %>% rename(c(Nativity_Type = "dimension", n = "count"))
+gender <-  rename(gender, c(SEX = "genderdimension", n = "gendercount"))
+nativity <- tally(group_by(data, YEAR, WARD, Nativity_Type), sort = TRUE)
+nativity <- nativity %>% rename(c(n = "nativity_count"))
+
+
 agegrp <- tally(group_by(data, YEAR, WARD, age_classified), sort = TRUE) 
 birthpl <- tally(group_by(data, YEAR, WARD, BIRTHPLACE), sort = TRUE) 
 
