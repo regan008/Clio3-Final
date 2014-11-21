@@ -1,30 +1,6 @@
-<!DOCTYPE html>
-<meta charset="utf-8">
-<style>
 
-
-.spaceward {
-  fill: #a3a3a3;
-   stroke: #282828;
-  stroke-width: 0.25px;
-}
-.spacepark {
-  fill: #a3a3a3;
-}
-.ward-label {
-  font-family: 'Open Sans', Sans-serif;
-  font-size: 9px;
-}
-
-
-</style>
-<body>
-<div id="vis"></div>
-<script src="http://d3js.org/d3.v3.min.js"></script>
-
-<script>
-  var mapwidth  = 550;
-  var mapheight = 500;
+  var mapwidth  = 750;
+  var mapheight = 530;
 
   var vis = d3.select("#vis").append("svg")
       .attr("width", mapwidth).attr("height", mapheight)
@@ -71,6 +47,3 @@
 
     });
 
-</script>
-</body>
-</html>
