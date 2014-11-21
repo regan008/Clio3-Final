@@ -125,7 +125,7 @@ function redraw() {
   //     .attr("dy", ".35em")
   //     .style("text-anchor", "middle")
   //     .text(function(d) { return d.data.agegrp; });
-  legend = svg.append("g")
+  legend = svg_age.append("g")
       .attr("class", "legend")
       .attr("transform", "translate(50,30)")
       .style("font-size", "12px")
