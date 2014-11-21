@@ -18,26 +18,36 @@ race_ids <- refined_data  %>% group_by(BPLD) %>% summarize(count = n())
 head(classwrkd)
 codes <- read.csv("test.csv", header = TRUE) %>% as.data.frame(row.names=NULL)
 
-data <- left_join(refined_data, codes, by = c("BPLD" = "CODE"))
+refined_data <- left_join(refined_data, codes, by = c("BPLD" = "CODE"))
 #fix genders
-data$SEX[data$SEX == "1"] <- "male"
-data$SEX[data$SEX == "2"] <- "female"
+refined_data$SEX[refined_data$SEX == "1"] <- "male"
+refined_data$SEX[refined_data$SEX == "2"] <- "female"
 write.csv(data, file = "data.csv")
 
 natcodes <- read.csv("nativitycodes.csv", header = TRUE) %>% as.data.frame(row.names=NULL)
 data <- left_join(data, natcodes)
 refined_data <- data %>% filter(WARD == 21) %>% group_by(BIRTHPLACE) %>% summarize(count = n())
 library(classInt)
-intervals <- classIntervals(data$AGE, 10, "pretty")
-head(cut(data$AGE, breaks = intervals$brks))
-data <- data %>%
+intervals <- classIntervals(refined_data$AGE, 10, "pretty")
+head(cut(refined_data$AGE, breaks = intervals$brks))
+refined_data <- refined_data %>%
   mutate(age_classified = cut(AGE, intervals$brks))
-data_long <- data %>% gather(category,type, BIRTHPLACE, Nativity_Type, age_classified, NFAMS, SEX) 
+data_long <- data %>% gather(category,type, BIRTHPLACE, Nativity_Type, age_classified, NFAMS, SEX)
+
 data_long <- data_long %>% subset(select=c(YEAR, WARD, category, type))
+
 write.csv(data_long , file="../data_longtest.csv", row.names=FALSE)
 write.csv(data_long, file = "../data.csv")
 ```
 
+Create a csv for ages with jenks and counts per ward per year. 
+```{r}
+refined_data <- as.data.frame(refined_data)
+agegrps <- (subset(refined_data, select=c(YEAR, WARD, age_classified)))
+agecount <- tally(group_by(agegrps, YEAR, WARD, age_classified), sort = TRUE)
+agecount <- agecount %>% arrange(YEAR, WARD)
+write.csv(agecount, file="../ages.csv", row.names = FALSE)
+```
 
 ```{r}
 years <-data %>% filter(YEAR == 1910) %>% filter(WARD == 1) %>% group_by(SEX) %>% summarize(count=n())
