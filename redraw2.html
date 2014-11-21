@@ -12,9 +12,6 @@
 		<option value="1920">1920</option>
 	</select></p>
 
- <!--  <p id="dimension" class="menuchoice">Select Dimension
-  <select>
-    <option -->
 <div id="vis"></div>
 <script>
 
@@ -74,7 +71,7 @@ d3.csv("data.csv", function(data) {
     			});
 //This function gets thte current property of the dropdown and on a change it redraws the chart. 
 function change() {
-  currentYear = menu.property("value")
+  currentYear = menu.property("value", this.ward)
 	d3.transition()
 		.duration(750)
 		.each(redraw);

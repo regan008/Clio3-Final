@@ -58,8 +58,8 @@ var menuward = d3.select("#ward select")
 var currentYear = 1910;
 var currentWard = 1;
 
-var agewidth = 500,
-    ageheight = 300,
+var agewidth = 300,
+    ageheight = 400,
     radius = Math.min(agewidth, ageheight) / 2;
 
 var color = d3.scale.ordinal()
@@ -69,9 +69,13 @@ var arc = d3.svg.arc()
     .outerRadius(radius - 10)
     .innerRadius(0);
 var data;
+var datanativity;
 var pie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.count; });
+var pienativity = d3.layout.pie()
+    .sort(null)
+    .value(function(d) { return d.count; });   
 var svg = d3.select("#ages").append("svg")
     .attr("width", agewidth)
     .attr("height", ageheight)
@@ -93,7 +97,8 @@ function change() {
   currentWard = menuward.property("value")
   d3.transition()
     .duration(750)
-    .each(redraw);
+    .each(redraw)
+    .each(drawnativity);
 }
 
 
@@ -116,6 +121,42 @@ function redraw() {
       .attr("dy", ".35em")
       .style("text-anchor", "middle")
       .text(function(d) { return d.data.agegrp; });
+
+};
+var svg_nat = d3.select("#nativity").append("svg")
+    .attr("width", agewidth)
+    .attr("height", ageheight)
+  .append("g")
+    .attr("transform", "translate(" + agewidth / 2 + "," + ageheight / 2 + ")");
+
+d3.csv("nativity.csv", function(error, csvnat) {
+ data_nat = csvnat;
+ svg_nat.selectAll("g").remove();
+  data.forEach(function(d) {
+    d.count = +d.count;  });
+  console.log(data_nat);
+  redraw();
+  drawnativity();
+});
+
+
+function drawnativity() {
+
+  svg_nat.selectAll("g").remove();
+  svg_nat.selectAll(".arc_nat").remove()
+
+  var g = svg_nat.selectAll(".arc_nat")
+      .data(pienativity(data_nat.filter(filterYear)))
+    .enter().append("g")
+      .attr("class", "arc");
+  g.append("path")
+      .attr("d", arc)
+      .style("fill", function(d) { return color(d.data.nativity); });
+  g.append("text")
+      .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
+      .attr("dy", ".35em")
+      .style("text-anchor", "middle")
+      .text(function(d) { return d.data.nativity; });
 
 };
 
