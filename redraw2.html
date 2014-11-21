@@ -20,9 +20,9 @@ function filterYear(d) {return +d.year === +currentYear}
 var formatted;
 var currentYear = 1910;
 //set the margins
-var margin = {top: 50, right: 160, bottom: 80, left: 50},
-    width = 900 - margin.left - margin.right,
-    height = 400 - margin.top - margin.bottom;
+var margin_gender = {top: 50, right: 160, bottom: 80, left: 50},
+    width = 960 - margin_gender.left - margin_gender.right,
+    height = 275 - margin_gender.top - margin_gender.bottom;
 var x = d3.scale.ordinal()
     .rangeRoundBands([0,width], .1);
 var y = d3.scale.linear()
@@ -38,14 +38,14 @@ var yAxis = d3.svg.axis()
     .orient("left")
     // .tickFormat(d3.format(".2s"));
 var menu = d3.select("#menu select")
-    .on("change", change);    
+    .on("change", changegenders);    
 var color = d3.scale.ordinal()
   .range(["#e74c3c","#2980b9"])
 var svg = d3.select("#vis").append("svg")
-    .attr("width", width + margin.left + margin.right)
-    .attr("height", height + margin.top + margin.bottom)
+    .attr("width", width + margin_gender.left + margin_gender.right)
+    .attr("height", height + margin_gender.top + margin_gender.bottom)
   .append("g")
-    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");  
+    .attr("transform", "translate(" + margin_gender.left + "," + margin_gender.top + ")");  
 //this sucks in the data, stores it in a variable called data that is then renamed to formatted (don't know why).  Keys are created for each series in the graph.  The data is then mapped into those key sand the scales are created (from Bostock's example).
 d3.csv("data.csv", function(data) {
         formatted = data;
@@ -61,16 +61,16 @@ d3.csv("data.csv", function(data) {
         x1.domain(genderNames).rangeRoundBands([0, x0.rangeBand()]);
         y.domain([0, d3.max(data, function(d) { return d3.max(d.genders, function(d) { return d.value; }); })]);
     //Call the redraw function    
-        redraw();
+        drawgenders();
           });
 //This function gets thte current property of the dropdown and on a change it redraws the chart. 
-function change() {
+function changegenders() {
   currentYear = menu.property("value")
   d3.transition()
     .duration(750)
-    .each(redraw);
+    .each(drawgenders);
 }
-function redraw() {
+function drawgenders() {
   svg.selectAll("g").remove();
   svg.append("g")
       .attr("class", "x axis")
