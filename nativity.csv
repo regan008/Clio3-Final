@@ -1,0 +1,261 @@
+"year","ward","nativity","count"
+1910,0,"Native born, and both parents foreign",119
+1910,0,"Foreign born",115
+1910,0,"Native born, and both parents native born",107
+1910,0,"Native born, and father foreign, mother native",29
+1910,0,"Native born, and mother foreign, father native",17
+1910,1,"Foreign born",143
+1910,1,"Native born, and both parents foreign",123
+1910,1,"Native born, and both parents native born",81
+1910,1,"Native born, and father foreign, mother native",29
+1910,1,"Native born, and mother foreign, father native",24
+1910,2,"Foreign born",152
+1910,2,"Native born, and both parents foreign",139
+1910,2,"Native born, and both parents native born",57
+1910,2,"Native born, and father foreign, mother native",21
+1910,2,"Native born, and mother foreign, father native",2
+1910,3,"Native born, and both parents native born",82
+1910,3,"Native born, and both parents foreign",46
+1910,3,"Foreign born",40
+1910,3,"Native born, and father foreign, mother native",14
+1910,3,"Native born, and mother foreign, father native",2
+1910,4,"Native born, and both parents native born",55
+1910,4,"Foreign born",40
+1910,4,"Native born, and both parents foreign",40
+1910,4,"Native born, and father foreign, mother native",9
+1910,4,"Native born, and mother foreign, father native",3
+1910,5,"Foreign born",54
+1910,5,"Native born, and both parents foreign",53
+1910,5,"Native born, and both parents native born",51
+1910,5,"Native born, and mother foreign, father native",7
+1910,5,"Native born, and father foreign, mother native",5
+1910,6,"Foreign born",92
+1910,6,"Native born, and both parents foreign",53
+1910,6,"Native born, and both parents native born",5
+1910,7,"Foreign born",65
+1910,7,"Native born, and both parents foreign",32
+1910,7,"Native born, and both parents native born",22
+1910,7,"Native born, and mother foreign, father native",5
+1910,7,"Native born, and father foreign, mother native",4
+1910,8,"Foreign born",154
+1910,8,"Native born, and both parents foreign",64
+1910,8,"Native born, and both parents native born",26
+1910,8,"Native born, and father foreign, mother native",1
+1910,9,"Foreign born",118
+1910,9,"Native born, and both parents foreign",50
+1910,9,"Native born, and both parents native born",24
+1910,10,"Native born, and both parents native born",116
+1910,10,"Foreign born",87
+1910,10,"Native born, and both parents foreign",54
+1910,10,"Native born, and father foreign, mother native",6
+1910,10,"Native born, and mother foreign, father native",4
+1910,11,"Foreign born",158
+1910,11,"Native born, and both parents native born",102
+1910,11,"Native born, and both parents foreign",55
+1910,11,"Native born, and father foreign, mother native",21
+1910,11,"Native born, and mother foreign, father native",8
+1910,12,"Foreign born",101
+1910,12,"Native born, and both parents native born",83
+1910,12,"Native born, and both parents foreign",41
+1910,12,"Native born, and father foreign, mother native",6
+1910,12,"Native born, and mother foreign, father native",5
+1910,13,"Native born, and both parents foreign",85
+1910,13,"Foreign born",71
+1910,13,"Native born, and both parents native born",25
+1910,13,"Native born, and mother foreign, father native",8
+1910,13,"Native born, and father foreign, mother native",2
+1910,14,"Foreign born",79
+1910,14,"Native born, and both parents foreign",74
+1910,14,"Native born, and both parents native born",60
+1910,14,"Native born, and mother foreign, father native",23
+1910,14,"Native born, and father foreign, mother native",14
+1910,15,"Native born, and both parents native born",44
+1910,15,"Native born, and both parents foreign",40
+1910,15,"Foreign born",23
+1910,15,"Native born, and mother foreign, father native",11
+1910,15,"Native born, and father foreign, mother native",8
+1910,16,"Native born, and both parents foreign",108
+1910,16,"Foreign born",85
+1910,16,"Native born, and both parents native born",68
+1910,16,"Native born, and mother foreign, father native",21
+1910,16,"Native born, and father foreign, mother native",16
+1910,17,"Native born, and both parents foreign",103
+1910,17,"Foreign born",97
+1910,17,"Native born, and both parents native born",95
+1910,17,"Native born, and mother foreign, father native",21
+1910,17,"Native born, and father foreign, mother native",6
+1910,18,"Foreign born",122
+1910,18,"Native born, and both parents native born",71
+1910,18,"Native born, and both parents foreign",64
+1910,18,"Native born, and mother foreign, father native",21
+1910,18,"Native born, and father foreign, mother native",15
+1910,19,"Native born, and both parents foreign",136
+1910,19,"Foreign born",120
+1910,19,"Native born, and both parents native born",65
+1910,19,"Native born, and mother foreign, father native",23
+1910,19,"Native born, and father foreign, mother native",22
+1910,20,"Native born, and both parents native born",190
+1910,20,"Native born, and both parents foreign",158
+1910,20,"Foreign born",136
+1910,20,"Native born, and mother foreign, father native",41
+1910,20,"Native born, and father foreign, mother native",19
+1910,21,"Native born, and both parents native born",94
+1910,21,"Native born, and both parents foreign",48
+1910,21,"Foreign born",44
+1910,21,"Native born, and father foreign, mother native",14
+1910,21,"Native born, and mother foreign, father native",12
+1910,22,"Foreign born",94
+1910,22,"Native born, and both parents foreign",70
+1910,22,"Native born, and both parents native born",59
+1910,22,"Native born, and father foreign, mother native",22
+1910,22,"Native born, and mother foreign, father native",22
+1910,23,"Native born, and both parents native born",115
+1910,23,"Native born, and both parents foreign",95
+1910,23,"Foreign born",92
+1910,23,"Native born, and mother foreign, father native",34
+1910,23,"Native born, and father foreign, mother native",18
+1910,24,"Native born, and both parents native born",110
+1910,24,"Foreign born",95
+1910,24,"Native born, and both parents foreign",75
+1910,24,"Native born, and father foreign, mother native",34
+1910,24,"Native born, and mother foreign, father native",28
+1910,25,"Foreign born",90
+1910,25,"Native born, and both parents foreign",88
+1910,25,"Native born, and both parents native born",76
+1910,25,"Native born, and father foreign, mother native",17
+1910,25,"Native born, and mother foreign, father native",13
+1920,0,"Native born, and both parents foreign",36
+1920,0,"Foreign born",27
+1920,0,"Native born, and both parents native born",22
+1920,0,"Native born, and father foreign, mother native",7
+1920,0,"Native born, and mother foreign, father native",5
+1920,1,"Native born, and both parents foreign",116
+1920,1,"Foreign born",115
+1920,1,"Native born, and both parents native born",85
+1920,1,"Native born, and father foreign, mother native",35
+1920,1,"Native born, and mother foreign, father native",19
+1920,2,"Foreign born",223
+1920,2,"Native born, and both parents foreign",194
+1920,2,"Native born, and both parents native born",58
+1920,2,"Native born, and father foreign, mother native",18
+1920,2,"Native born, and mother foreign, father native",8
+1920,3,"Native born, and both parents foreign",93
+1920,3,"Foreign born",89
+1920,3,"Native born, and both parents native born",50
+1920,3,"Native born, and father foreign, mother native",21
+1920,3,"Native born, and mother foreign, father native",21
+1920,4,"Native born, and both parents foreign",107
+1920,4,"Native born, and both parents native born",105
+1920,4,"Foreign born",95
+1920,4,"Native born, and mother foreign, father native",10
+1920,4,"Native born, and father foreign, mother native",6
+1920,5,"Foreign born",310
+1920,5,"Native born, and both parents foreign",194
+1920,5,"Native born, and both parents native born",69
+1920,5,"Native born, and father foreign, mother native",9
+1920,5,"Native born, and mother foreign, father native",8
+1920,6,"Foreign born",148
+1920,6,"Native born, and both parents foreign",97
+1920,6,"Native born, and both parents native born",62
+1920,6,"Native born, and mother foreign, father native",18
+1920,6,"Native born, and father foreign, mother native",13
+1920,7,"Native born, and both parents native born",133
+1920,7,"Foreign born",101
+1920,7,"Native born, and both parents foreign",78
+1920,7,"Native born, and father foreign, mother native",17
+1920,7,"Native born, and mother foreign, father native",6
+1920,8,"Foreign born",132
+1920,8,"Native born, and both parents native born",128
+1920,8,"Native born, and both parents foreign",55
+1920,8,"Native born, and father foreign, mother native",13
+1920,8,"Native born, and mother foreign, father native",6
+1920,9,"Native born, and both parents foreign",109
+1920,9,"Foreign born",90
+1920,9,"Native born, and both parents native born",31
+1920,9,"Native born, and mother foreign, father native",18
+1920,9,"Native born, and father foreign, mother native",12
+1920,10,"Foreign born",78
+1920,10,"Native born, and both parents foreign",70
+1920,10,"Native born, and both parents native born",49
+1920,10,"Native born, and mother foreign, father native",19
+1920,10,"Native born, and father foreign, mother native",17
+1920,11,"Native born, and both parents foreign",111
+1920,11,"Foreign born",85
+1920,11,"Native born, and both parents native born",54
+1920,11,"Native born, and mother foreign, father native",27
+1920,11,"Native born, and father foreign, mother native",14
+1920,12,"Native born, and both parents foreign",111
+1920,12,"Foreign born",93
+1920,12,"Native born, and both parents native born",52
+1920,12,"Native born, and mother foreign, father native",16
+1920,12,"Native born, and father foreign, mother native",5
+1920,13,"Foreign born",64
+1920,13,"Native born, and both parents native born",61
+1920,13,"Native born, and both parents foreign",40
+1920,13,"Native born, and mother foreign, father native",9
+1920,13,"Native born, and father foreign, mother native",5
+1920,14,"Native born, and both parents foreign",62
+1920,14,"Foreign born",61
+1920,14,"Native born, and both parents native born",52
+1920,14,"Native born, and father foreign, mother native",11
+1920,14,"Native born, and mother foreign, father native",11
+1920,15,"Native born, and both parents foreign",80
+1920,15,"Foreign born",54
+1920,15,"Native born, and both parents native born",50
+1920,15,"Native born, and father foreign, mother native",27
+1920,15,"Native born, and mother foreign, father native",3
+1920,16,"Foreign born",110
+1920,16,"Native born, and both parents foreign",90
+1920,16,"Native born, and both parents native born",80
+1920,16,"Native born, and mother foreign, father native",25
+1920,16,"Native born, and father foreign, mother native",14
+1920,17,"Native born, and both parents foreign",81
+1920,17,"Foreign born",68
+1920,17,"Native born, and both parents native born",61
+1920,17,"Native born, and mother foreign, father native",30
+1920,17,"Native born, and father foreign, mother native",16
+1920,18,"Foreign born",136
+1920,18,"Native born, and both parents foreign",121
+1920,18,"Native born, and both parents native born",53
+1920,18,"Native born, and mother foreign, father native",13
+1920,18,"Native born, and father foreign, mother native",11
+1920,19,"Native born, and both parents foreign",76
+1920,19,"Foreign born",68
+1920,19,"Native born, and both parents native born",65
+1920,19,"Native born, and mother foreign, father native",20
+1920,19,"Native born, and father foreign, mother native",2
+1920,20,"Native born, and both parents foreign",92
+1920,20,"Foreign born",86
+1920,20,"Native born, and both parents native born",80
+1920,20,"Native born, and father foreign, mother native",36
+1920,20,"Native born, and mother foreign, father native",27
+1920,21,"Foreign born",88
+1920,21,"Native born, and both parents foreign",77
+1920,21,"Native born, and both parents native born",73
+1920,21,"Native born, and father foreign, mother native",4
+1920,21,"Native born, and mother foreign, father native",4
+1920,22,"Foreign born",91
+1920,22,"Native born, and both parents foreign",87
+1920,22,"Native born, and both parents native born",87
+1920,22,"Native born, and father foreign, mother native",16
+1920,22,"Native born, and mother foreign, father native",13
+1920,23,"Native born, and both parents native born",95
+1920,23,"Foreign born",74
+1920,23,"Native born, and both parents foreign",73
+1920,23,"Native born, and father foreign, mother native",9
+1920,23,"Native born, and mother foreign, father native",8
+1920,24,"Native born, and both parents native born",76
+1920,24,"Native born, and both parents foreign",58
+1920,24,"Foreign born",57
+1920,24,"Native born, and father foreign, mother native",9
+1920,24,"Native born, and mother foreign, father native",7
+1920,25,"Native born, and both parents native born",117
+1920,25,"Native born, and both parents foreign",89
+1920,25,"Foreign born",68
+1920,25,"Native born, and father foreign, mother native",11
+1920,25,"Native born, and mother foreign, father native",8
+1920,26,"Foreign born",58
+1920,26,"Native born, and both parents foreign",49
+1920,26,"Native born, and both parents native born",43
+1920,26,"Native born, and father foreign, mother native",8
+1920,26,"Native born, and mother foreign, father native",7
