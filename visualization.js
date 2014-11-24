@@ -1,12 +1,19 @@
 
   var mapwidth  = 750;
   var mapheight = 530;
-
+  var gymdata;
   var mapvis = d3.select("#mapvis").append("svg")
       .attr("width", mapwidth).attr("height", mapheight)
 
+  d3.json("gyms.json", function(gyms2){
+        gymdata = gyms2;
+        //console.log(gymdata);
+      })
+  
+
   d3.json("wardsandparks.json", function(json) {
       // create a first guess for the projection
+ 
       var center = d3.geo.centroid(json)
       var scale  = 150;
       var offset = [mapwidth/2, mapheight/2];
@@ -15,6 +22,7 @@
 
       // create the path
       var path = d3.geo.path().projection(projection);
+      var circle = d3.geo.path().projection(projection);
 
       // using the path determine the bounds of the current map and use 
       // these to determine better values for the scale and translation
@@ -29,7 +37,7 @@
       projection = d3.geo.mercator().center(center)
         .scale(scale).translate(offset);
       path = path.projection(projection);
-
+      circle = circle.projection(projection);
       // add a rectangle to see the bound of the svg
       //vis.append("rect").attr('width', width).attr('height', height)
         //.style('stroke', 'black').style('fill', 'none');
@@ -37,6 +45,11 @@
           .enter().append("path")
               .attr("class", function(d) { return "space" + d.properties.SpaceType; })
               .attr("d", path);
+      mapvis.selectAll(".ward").data(gymdata.features)
+          .enter().append("path")
+          .attr("d", path)
+          .attr("r", 125);
+      console.log(json.features)
       mapvis.selectAll(".ward-label")
             .data(json.features)
         .enter().append("text")
@@ -44,7 +57,16 @@
             .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
             .attr("dy", ".35em")
             .text(function(d) { return d.properties.wid; });
-
+      console.log(gymdata.features);
+      // mapvis.selectAll("circle").data(gymdata.features)
+        //.enter().append("bubble").attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; });
+      // mapvis.append("g")
+      //     .attr("class", "bubble")
+      //   .selectAll("circle")  
+      //     .data(gymdata.features)
+      //   .enter().append("cirlce")
+      //     .attr("transform", function(d) {return "translate(" + path.centroid(d) + ")"; })
+      //     .attr("r", 1.5);
     });
 
 
@@ -142,7 +164,7 @@ d3.csv("nativity.csv", function(error, csvnat) {
  svg_nat.selectAll("g").remove();
   data.forEach(function(d) {
     d.count = +d.count;  });
-  console.log(data_nat);
+  // console.log(data_nat);
   redraw();
   drawnativity();
 });
