@@ -1,5 +1,9 @@
+  $('#slider').on('change', function(){
+  sliderval = $('#slider').attr('data-slider')
+  console.log(sliderval);
+});
   var mapwidth  = 750;
-  var mapheight = 530;
+  var mapheight = 475;
   var gymdata;
   // var scalefactor= 3000;
   // console.print(gymdata.T1914);
@@ -44,7 +48,7 @@
       projection = d3.geo.mercator().center(center)
         .scale(scale).translate(offset);
       path = path.projection(projection);
-      circle = circle.projection(projection);
+      // circle = circle.projection(projection);
       // add a rectangle to see the bound of the svg
       //vis.append("rect").attr('width', width).attr('height', height)
         //.style('stroke', 'black').style('fill', 'none');
@@ -70,7 +74,7 @@
           .enter()
           .append("circle")
           // .attr("r", function(d) {return 2 * Math.sqrt(d.converts)})
-          .attr("r", function(d) { return radius(+d["1914"])})
+          .attr("r", function(d) { return radius(+d[sliderval])})
           // .attr("r",  function(d) { return (+d["1914"])/scalefactor; })
           .attr("class","gym")
           .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});

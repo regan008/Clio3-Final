@@ -9,12 +9,12 @@
 
 
 .spaceward {
-  fill: #a3a3a3;
-   stroke: #282828;
-  stroke-width: 0.25px;
+  fill: #eee;
+   stroke: black;
+  /*stroke-width: 0.25px;*/
 }
 .spacepark {
-  fill: #a3a3a3;
+  fill: #eee;
 }
 .ward-label {
   font-family: 'Open Sans', Sans-serif;
@@ -24,6 +24,11 @@
  fill:white;
  stroke:black;
  opacity:0.8; }
+.gym {
+  fill: brown;
+  fill-opacity: .5;
+  stroke: #fff;
+  stroke-width: .5px; }
 
 </style>
 <body>
@@ -94,8 +99,17 @@
       </select></p>
 </div>
 </div>
-<div class="row">
+<!-- <div class="row">
 <div class="large-12 columns" id="vis"></div>
+</div> -->
+<div class="row"> 
+  <div class="large-12 columns">
+    <div class="range-slider" id="slider" data-slider data-options="start: 1914; end: 1920;">
+      <span class="range-slider-handle" role="slider" tabindex="1"></span>
+      <span class="range-slider-active-segment"></span>
+      <input type="hidden">
+    </div>
+  </div>
 </div>
 <div class="row">
 <div class="large-4 columns" id="charts">
@@ -113,6 +127,9 @@
 <script src="visualization.js"></script>
 <script src="foundation/js/foundation/foundation.js"></script>
 <script src="foundation/js/foundation/foundation.slider.js"></script>
+ <script>
+    $(document).foundation();
+  </script>
 
 </body>
 </html>
