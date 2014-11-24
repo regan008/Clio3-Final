@@ -1,29 +1,35 @@
-
   var mapwidth  = 750;
   var mapheight = 530;
   var gymdata;
+  // var scalefactor= 3000;
+  // console.print(gymdata.T1914);
   var mapvis = d3.select("#mapvis").append("svg")
       .attr("width", mapwidth).attr("height", mapheight)
 
-  d3.json("gyms.json", function(gyms2){
-        gymdata = gyms2;
-        //console.log(gymdata);
-      })
-  
+  // d3.json("gyms.json", function(gyms2){
+  //       gymdata = gyms2;
+  //       //console.log(gymdata);
+  //     })
+  d3.csv("BostonGyms.csv", function(gyms3){
+    gymdata = gyms3;
+  })
 
   d3.json("wardsandparks.json", function(json) {
       // create a first guess for the projection
- 
+      // var scalefactor= function (d){return gymdata.T1914};
+      
       var center = d3.geo.centroid(json)
       var scale  = 150;
       var offset = [mapwidth/2, mapheight/2];
       var projection = d3.geo.mercator().scale(scale).center(center)
           .translate(offset);
-
+      
       // create the path
       var path = d3.geo.path().projection(projection);
       var circle = d3.geo.path().projection(projection);
-
+      var radius = d3.scale.sqrt()
+              .domain([0, 1e4])
+              .range([0, 15]);
       // using the path determine the bounds of the current map and use 
       // these to determine better values for the scale and translation
       var bounds  = path.bounds(json);
@@ -32,6 +38,7 @@
       var scale   = (hscale < vscale) ? hscale : vscale;
       var offset  = [mapwidth - (bounds[0][0] + bounds[1][0])/2,
                         mapheight - (bounds[0][1] + bounds[1][1])/2];
+      
 
       // new projection
       projection = d3.geo.mercator().center(center)
@@ -45,11 +52,11 @@
           .enter().append("path")
               .attr("class", function(d) { return "space" + d.properties.SpaceType; })
               .attr("d", path);
-      mapvis.selectAll(".ward").data(gymdata.features)
-          .enter().append("path")
-          .attr("d", path)
-          .attr("r", 125);
-      console.log(json.features)
+      // mapvis.selectAll(".ward").data(gymdata.features)
+      //     .enter().append("path")
+      //     .attr("d", path)
+      //     .attr("r", 125);
+      // console.log(json.features)
       mapvis.selectAll(".ward-label")
             .data(json.features)
         .enter().append("text")
@@ -57,16 +64,17 @@
             .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
             .attr("dy", ".35em")
             .text(function(d) { return d.properties.wid; });
-      console.log(gymdata.features);
-      // mapvis.selectAll("circle").data(gymdata.features)
-        //.enter().append("bubble").attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; });
-      // mapvis.append("g")
-      //     .attr("class", "bubble")
-      //   .selectAll("circle")  
-      //     .data(gymdata.features)
-      //   .enter().append("cirlce")
-      //     .attr("transform", function(d) {return "translate(" + path.centroid(d) + ")"; })
-      //     .attr("r", 1.5);
+      // console.log(gymdata.features);
+      mapvis.selectAll("circles.points")
+          .data(gymdata)
+          .enter()
+          .append("circle")
+          // .attr("r", function(d) {return 2 * Math.sqrt(d.converts)})
+          .attr("r", function(d) { return radius(+d["1914"])})
+          // .attr("r",  function(d) { return (+d["1914"])/scalefactor; })
+          .attr("class","gym")
+          .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});
+            
     });
 
 
