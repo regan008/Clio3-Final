@@ -1,7 +1,23 @@
-  $('#slider').on('change', function(){
-  sliderval = $('#slider').attr('data-slider')
-  console.log(sliderval);
-});
+//TO DO: 
+    // *style dots
+    // *add pie chart of breakdown of classes
+    // *add labels to all pie charts
+    // *add pop-up with info
+    // *write an if statement to automatically draw the 1920s data if the slider is at or over 1920
+    // *add labels to slider
+    // *start slider at 1914 rather than in middle
+    // *fix font family
+    // *style background
+    // *add behavior where clicking on ward changes the ward in dropdown
+
+
+
+   $('#slider').on('change', function(){
+   sliderval = $('#slider').attr('data-slider')
+   console.log(sliderval);
+   drawmap();
+ });
+  var sliderval = 1914;
   var mapwidth  = 750;
   var mapheight = 475;
   var gymdata;
@@ -16,12 +32,15 @@
   //     })
   d3.csv("BostonGyms.csv", function(gyms3){
     gymdata = gyms3;
+    drawmap()
   })
-
+function drawmap(){
   d3.json("wardsandparks.json", function(json) {
       // create a first guess for the projection
       // var scalefactor= function (d){return gymdata.T1914};
-      
+      mapvis.selectAll("path").remove();
+      mapvis.selectAll("text").remove();
+      mapvis.selectAll("circle").remove();
       var center = d3.geo.centroid(json)
       var scale  = 150;
       var offset = [mapwidth/2, mapheight/2];
@@ -32,7 +51,7 @@
       var path = d3.geo.path().projection(projection);
       var circle = d3.geo.path().projection(projection);
       var radius = d3.scale.sqrt()
-              .domain([0, 1e4])
+              .domain([0, 1e3])
               .range([0, 15]);
       // using the path determine the bounds of the current map and use 
       // these to determine better values for the scale and translation
@@ -42,8 +61,6 @@
       var scale   = (hscale < vscale) ? hscale : vscale;
       var offset  = [mapwidth - (bounds[0][0] + bounds[1][0])/2,
                         mapheight - (bounds[0][1] + bounds[1][1])/2];
-      
-
       // new projection
       projection = d3.geo.mercator().center(center)
         .scale(scale).translate(offset);
@@ -69,6 +86,8 @@
             .attr("dy", ".35em")
             .text(function(d) { return d.properties.wid; });
       // console.log(gymdata.features);
+     
+
       mapvis.selectAll("circles.points")
           .data(gymdata)
           .enter()
@@ -79,7 +98,8 @@
           .attr("class","gym")
           .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});
             
-    });
+    })
+};
 
 
 
