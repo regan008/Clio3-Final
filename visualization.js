@@ -25,12 +25,30 @@
 var data;
 var datanativity;
 
-////***MAP***////
+
 d3.csv("BostonGyms.csv", function(gyms3){
     gymdata = gyms3;
     drawmap()
   })
+d3.csv("ages.csv", function(error, csv) {
+ data = csv;
+ svg.selectAll("g").remove();
+  data.forEach(function(d) {
+    d.count = +d.count;  });
+  drawAges();
+});
 
+d3.csv("nativity.csv", function(error, csvnat) {
+ data_nat = csvnat;
+ svg_nat.selectAll("g").remove();
+  data.forEach(function(d) {
+    d.count = +d.count;  });
+  // console.log(data_nat);
+  drawAges();
+  drawnativity();
+});
+
+////***MAP***////
   var mapwidth  = 750;
   var mapheight = 475;
   var gymdata;  //puts the gym location data in global scope. 
@@ -150,14 +168,13 @@ var svg_age = d3.select("#ages").append("svg")
   .append("g")
     .attr("transform", "translate(" + widthPie / 2 + "," + heightPie / 2 + ")");
 
+var svg_nat = d3.select("#nativity").append("svg")
+    .attr("width", widthPie)
+    .attr("height", heightPie)
+  .append("g")
+    .attr("transform", "translate(" + widthPie / 2 + "," + heightPie / 2 + ")");
 
-d3.csv("ages.csv", function(error, csv) {
- data = csv;
- svg.selectAll("g").remove();
-  data.forEach(function(d) {
-    d.count = +d.count;  });
-  redraw();
-});
+
 
 
 function change() {
@@ -166,65 +183,49 @@ function change() {
   currentWard = menuward.property("value")
   d3.transition()
     .duration(750)
-    .each(redraw)
+    .each(drawAges)
     .each(drawnativity)
     .each(drawgenders);
 }
 
+//drawAges() draw a pie chart for each ward per year based on IPUMS data.
+function drawAges() {
 
-function redraw() {
+    svg_age.selectAll("g").remove();
+    svg_age.selectAll(".arc").remove()
 
-  svg_age.selectAll("g").remove();
-  svg_age.selectAll(".arc").remove()
+    //filter in order to calculate percentages for tooltips.
+    var data_age_filt = data.filter(filterYear);
+    var total = d3.sum(data_age_filt, function(d) { return d.count;});
+    var toPercent = d3.format("0.1%");
+    
+    //format the tip when hovering over section of the pie chart. 
+    var tip_age = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        return "<strong>Residents between the ages of: " + d.data.agegrp + "</strong></br><strong>Percentage:</strong> <span style='color:red'>" + toPercent(d.data.count / total) + "</span>"; })
 
-  var data_age_filt = data.filter(filterYear);
-  var total = d3.sum(data_age_filt, function(d) { return d.count;});
-  var toPercent = d3.format("0.1%");
-  //format the tip when hovering over section of the pie chart. 
-  var tip_age = d3.tip()
-    .attr('class', 'd3-tip')
-    .offset([-10, 0])
-    .html(function(d) {
-      return "<strong>Residents between the ages of: " + d.data.agegrp + "</strong></br><strong>Percentage:</strong> <span style='color:red'>" + toPercent(d.data.count / total) + "</span>"; })
+    //append an filter data to each arc
+    var g = svg_age.selectAll(".arc")
+        .data(pie(data.filter(filterYearAges)))
+      .enter().append("g")
+        .attr("class", "arc");
+    //call tooltips
+    svg_age.call(tip_age);   
 
-  var g = svg_age.selectAll(".arc")
-      .data(pie(data.filter(filterYearAges)))
-    .enter().append("g")
-      .attr("class", "arc");
-  svg_nat.call(tip_age);   
-  g.append("path")
-      .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.agegrp); })
-      .attr("data-legend", function(d){return d.data.agegrp})
-      .on('mouseover', tip_age.show)
-      .on('mouseout', tip_age.hide);
+    //apend data to path. call tooltops on mouseover/mouseout
+    g.append("path")
+        .attr("d", arc)
+        .style("fill", function(d) { return color(d.data.agegrp); })
+        .attr("data-legend", function(d){return d.data.agegrp})
+        .on('mouseover', tip_age.show)
+        .on('mouseout', tip_age.hide);
+}; //end drawAges
 
-  // g.append("text")
-  //     .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-  //     .attr("dy", ".35em")
-  //     .style("text-anchor", "middle")
-  //     .text(function(d) { return d.data.agegrp; });
-  //   legend = svg_age.append("g")
-  //       .attr("class", "legend")
-  //       .attr("transform", "translate(50,30)")
-  //       .style("font-size", "12px")
-  //       .call(d3.legend)
-};
-var svg_nat = d3.select("#nativity").append("svg")
-    .attr("width", widthPie)
-    .attr("height", heightPie)
-  .append("g")
-    .attr("transform", "translate(" + widthPie / 2 + "," + heightPie / 2 + ")");
 
-d3.csv("nativity.csv", function(error, csvnat) {
- data_nat = csvnat;
- svg_nat.selectAll("g").remove();
-  data.forEach(function(d) {
-    d.count = +d.count;  });
-  // console.log(data_nat);
-  redraw();
-  drawnativity();
-});
+
+
 
 
 function drawnativity() {
