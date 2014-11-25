@@ -22,7 +22,8 @@
   var sliderval = 1914;
 
 ////LOAD ALL THE DATA////
-
+var data;
+var datanativity;
 
 ////***MAP***////
 d3.csv("BostonGyms.csv", function(gyms3){
@@ -106,42 +107,48 @@ function drawmap(){
 }; //closes drawmap
 
 
-
+//The functions filterYearAges and filterYear filter data based on the current year selected in each dropdown menu.
+//filterYearAges() returns data where the year and ward is equal to the current selections and has a count of greater than 11.  This is done to simplify the chart and only show the significant age groups. 
 function filterYearAges(d) {return +d.year === +currentYear && +d.ward === +currentWard && +d.count > 11}
-
+//filterYear() returns data where the year and ward are equal to the current selections. 
 function filterYear(d) {return +d.year === +currentYear && +d.ward === +currentWard}
+
+//menuyear and menuward both call the change function when the dropdown is updated. 
 var menuyear = d3.select("#year select")
     .on("change", change);  
 var menuward = d3.select("#ward select")
     .on("change", change);    
+
+//sets the default current values on page load and creates a variable to store the current value.
 var currentYear = 1910;
 var currentWard = 1;
 
-var agewidth = 300,
-    ageheight = 400,
-    radius = Math.min(agewidth, ageheight) / 2;
 
 var color = d3.scale.ordinal()
     .range(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]);
+///PIE CHARTS SET UP///
 
-// "#3BB9C4", "#D4502F","#C2C14C","#9865CF","#D19E45", "#7F301C", "#1F6369"
+var widthPie = 300,
+    heightPie = 400,
+    radius = Math.min(widthPie, heightPie) / 2;
+
 var arc = d3.svg.arc()
     .outerRadius(radius - 10)
     .innerRadius(0);
-var data;
-var datanativity;
+
 var pie = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.count; });
+
 var pienativity = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.count; });   
 
 var svg_age = d3.select("#ages").append("svg")
-    .attr("width", agewidth)
-    .attr("height", ageheight)
+    .attr("width", widthPie)
+    .attr("height", heightPie)
   .append("g")
-    .attr("transform", "translate(" + agewidth / 2 + "," + ageheight / 2 + ")");
+    .attr("transform", "translate(" + widthPie / 2 + "," + heightPie / 2 + ")");
 
 
 d3.csv("ages.csv", function(error, csv) {
@@ -204,10 +211,10 @@ function redraw() {
   //       .call(d3.legend)
 };
 var svg_nat = d3.select("#nativity").append("svg")
-    .attr("width", agewidth)
-    .attr("height", ageheight)
+    .attr("width", widthPie)
+    .attr("height", heightPie)
   .append("g")
-    .attr("transform", "translate(" + agewidth / 2 + "," + ageheight / 2 + ")");
+    .attr("transform", "translate(" + widthPie / 2 + "," + heightPie / 2 + ")");
 
 d3.csv("nativity.csv", function(error, csvnat) {
  data_nat = csvnat;
