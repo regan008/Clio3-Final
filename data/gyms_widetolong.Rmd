@@ -1,0 +1,17 @@
+---
+title: "gyms_manipulation"
+author: "Amanda Regan"
+date: "November 25, 2014"
+output: html_document
+---
+Need to manipulate the gym data from a wide to a long format for d3. 
+First, load the csv.
+```{r}
+library(dplyr)
+library(tidyr)
+library(magrittr)
+gyms <- read.csv("Desktop/Clio3-Final/BostonGyms_long.csv", header = TRUE)
+gyms_wide <- gyms %>% gather(classtype, attendence, -type, -date, -totals)
+write.csv(gyms_wide, file = "Desktop/Clio3-Final/gyms_long.csv", row.names = FALSE)
+```
+

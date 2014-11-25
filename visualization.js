@@ -24,15 +24,15 @@
 ////LOAD ALL THE DATA////
 var data;
 var datanativity;
-
+var gymclass;
 
 d3.csv("BostonGyms.csv", function(gyms3){
     gymdata = gyms3;
-    drawmap()
+    drawmap();
   })
 d3.csv("ages.csv", function(error, csv) {
  data = csv;
- svg.selectAll("g").remove();
+ // svg.selectAll("g").remove();
   data.forEach(function(d) {
     d.count = +d.count;  });
   drawAges();
@@ -47,6 +47,13 @@ d3.csv("nativity.csv", function(error, csvnat) {
   drawAges();
   drawNativity();
 });
+d3.csv("gyms_long.csv", function(error, csvgyms) {
+  gymclass = csvgyms;
+  gymclass.forEach(function(d) {
+    d.count = +d.count;  });
+  drawGymClassatt();
+
+})
 
 ////***MAP***////
   var mapwidth  = 750;
@@ -92,6 +99,14 @@ function drawmap(){
         var scale   = (hscale < vscale) ? hscale : vscale;
         var offset  = [mapwidth - (bounds[0][0] + bounds[1][0])/2,
                           mapheight - (bounds[0][1] + bounds[1][1])/2];
+        
+        var tip_map = d3.tip()
+          .attr('class', 'd3-tip')
+          .offset([-10, 0])
+          .html(function(d) {
+            return "<strong>" + d.Gymname + "</strong></br><strong>Total attendence in " + sliderval + " was " + d[sliderval] + "</strong>"; })
+
+
         // new projection
         projection = d3.geo.mercator().center(center)
           .scale(scale).translate(offset);
@@ -111,6 +126,8 @@ function drawmap(){
               .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
               .attr("dy", ".35em")
               .text(function(d) { return d.properties.wid; });
+        
+        mapvis.call(tip_map);  
         //add the circles to the map
         mapvis.selectAll("circles.points")
             .data(gymdata)
@@ -120,7 +137,9 @@ function drawmap(){
             .attr("r", function(d) { return radius(+d[sliderval])})
             // .attr("r",  function(d) { return (+d["1914"])/scalefactor; })
             .attr("class","gym")
-            .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});         
+            .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";})
+            .on('mouseover', tip_map.show)
+            .on('mouseout', tip_map.hide);        
     }) //closes d3.json within drawmap()
 }; //closes drawmap
 
@@ -130,7 +149,7 @@ function drawmap(){
 function filterYearAges(d) {return +d.year === +currentYear && +d.ward === +currentWard && +d.count > 11}
 //filterYear() returns data where the year and ward are equal to the current selections. 
 function filterYear(d) {return +d.year === +currentYear && +d.ward === +currentWard}
-
+function filterDates(d) {return +d.year === 1914 && d.gym === "Cabot Street Gymnasium"}
 //menuyear and menuward both call the change function when the dropdown is updated. 
 var menuyear = d3.select("#year select")
     .on("change", change);  
@@ -141,11 +160,10 @@ var menuward = d3.select("#ward select")
 var currentYear = 1910;
 var currentWard = 1;
 
-
+///PIE CHARTS SET UP///
 var color = d3.scale.ordinal()
     .range(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]);
-///PIE CHARTS SET UP///
-
+    
 var widthPie = 300,
     heightPie = 400,
     radius = Math.min(widthPie, heightPie) / 2;
@@ -174,7 +192,11 @@ var svg_nat = d3.select("#nativity").append("svg")
   .append("g")
     .attr("transform", "translate(" + widthPie / 2 + "," + heightPie / 2 + ")");
 
-
+var svg_gymclassattendence = d3.select("#gymclasses").append("svg")
+    .attr("width", widthPie)
+    .attr("height", heightPie)
+  .append("g")
+    .attr("transform", "translate(" + widthPie / 2 + "," + heightPie / 2 + ")");
 
 //change() is called when any of the dropdowns is updated.  It gets the current values for ward and year and then calls each redraw function. 
 function change() {
@@ -186,8 +208,45 @@ function change() {
     d3.transition()
       .duration(750)
       .each(drawAges)
-      .each(drawNativity);
+      .each(drawNativity)
+      .each(drawGymClassatt);
 } //end change()
+
+function drawGymClassatt() {
+
+    svg_gymclassattendence.selectAll("g").remove();
+    svg_gymclassattendence.selectAll(".arc").remove();
+
+    //filter in order to calculate percentages for tooltips.
+    var data_class_filt = gymclass.filter(filterDates);
+    var total = d3.sum(data_class_filt, function(d) { return +d.count;});
+    var toPercent = d3.format("0.1%");
+    
+    // //format the tip when hovering over section of the pie chart. 
+    var tip_gymclass = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        return d.data.classtype + ": " + toPercent(d.data.count / d.data.totals) ; })
+
+    //append an filter data to each arc
+    var g = svg_gymclassattendence.selectAll(".arc")
+        .data(pie(gymclass.filter(filterDates)))
+      .enter().append("g")
+        .attr("class", "arc");
+    //call tooltips
+    svg_gymclassattendence.call(tip_gymclass);   
+
+    //apend data to path. call tooltops on mouseover/mouseout
+    g.append("path")
+        .attr("d", arc)
+        .style("fill", function(d) { return color(d.data.classtype); })
+        // .attr("data-legend", function(d){return d.gymclass.classtype});
+         .on('mouseover', tip_gymclass.show)
+         .on('mouseout', tip_gymclass.hide);
+}; //end drawAges
+
+
 
 //drawAges() draw a pie chart for each ward per year based on IPUMS data.
 function drawAges() {
@@ -224,10 +283,6 @@ function drawAges() {
         .on('mouseout', tip_age.hide);
 }; //end drawAges
 
-
-
-
-
 //drawNativity() draw the pie chart of nativity by ward/year. 
 function drawNativity() {
     //selects and removes any existing chart piece before redrawing. 
@@ -261,7 +316,3 @@ function drawNativity() {
         .on('mouseout', tip_nat.hide);
   
 }; //end drawNativity()
-
-
-
-// 
