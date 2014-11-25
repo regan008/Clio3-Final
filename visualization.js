@@ -12,95 +12,98 @@
     // *comment code
 
 
-
+//When the slider changes log the slider val and call drawmap().
    $('#slider').on('change', function(){
    sliderval = $('#slider').attr('data-slider')
    console.log(sliderval);
    drawmap();
  });
+  //set base value for slider
   var sliderval = 1914;
-  var mapwidth  = 750;
-  var mapheight = 475;
-  var gymdata;
-  // var scalefactor= 3000;
-  // console.print(gymdata.T1914);
-  var mapvis = d3.select("#mapvis").append("svg")
-      .attr("width", mapwidth).attr("height", mapheight)
 
-  // d3.json("gyms.json", function(gyms2){
-  //       gymdata = gyms2;
-  //       //console.log(gymdata);
-  //     })
-  d3.csv("BostonGyms.csv", function(gyms3){
+////LOAD ALL THE DATA////
+
+
+////***MAP***////
+d3.csv("BostonGyms.csv", function(gyms3){
     gymdata = gyms3;
     drawmap()
   })
-function drawmap(){
-  d3.json("wardsandparks.json", function(json) {
-      // create a first guess for the projection
-      // var scalefactor= function (d){return gymdata.T1914};
-      mapvis.selectAll("path").remove();
-      mapvis.selectAll("text").remove();
-      mapvis.selectAll("circle").remove();
-      var center = d3.geo.centroid(json)
-      var scale  = 150;
-      var offset = [mapwidth/2, mapheight/2];
-      var projection = d3.geo.mercator().scale(scale).center(center)
-          .translate(offset);
-      
-      // create the path
-      var path = d3.geo.path().projection(projection);
-      var circle = d3.geo.path().projection(projection);
-      var radius = d3.scale.sqrt()
-              .domain([0, 1e3])
-              .range([0, 15]);
-      // using the path determine the bounds of the current map and use 
-      // these to determine better values for the scale and translation
-      var bounds  = path.bounds(json);
-      var hscale  = scale*mapwidth  / (bounds[1][0] - bounds[0][0]);
-      var vscale  = scale*mapheight / (bounds[1][1] - bounds[0][1]);
-      var scale   = (hscale < vscale) ? hscale : vscale;
-      var offset  = [mapwidth - (bounds[0][0] + bounds[1][0])/2,
-                        mapheight - (bounds[0][1] + bounds[1][1])/2];
-      // new projection
-      projection = d3.geo.mercator().center(center)
-        .scale(scale).translate(offset);
-      path = path.projection(projection);
-      // circle = circle.projection(projection);
-      // add a rectangle to see the bound of the svg
-      //vis.append("rect").attr('width', width).attr('height', height)
-        //.style('stroke', 'black').style('fill', 'none');
-      mapvis.selectAll(".ward").data(json.features)
-          .enter().append("path")
-              .attr("class", function(d) { return "space" + d.properties.SpaceType; })
-              .attr("d", path);
-      // mapvis.selectAll(".ward").data(gymdata.features)
-      //     .enter().append("path")
-      //     .attr("d", path)
-      //     .attr("r", 125);
-      // console.log(json.features)
-      mapvis.selectAll(".ward-label")
-            .data(json.features)
-        .enter().append("text")
-            .attr("class", function(d) { return "ward-label " + d.properties.wid; })
-            .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
-            .attr("dy", ".35em")
-            .text(function(d) { return d.properties.wid; });
-      // console.log(gymdata.features);
-     
 
-      mapvis.selectAll("circles.points")
-          .data(gymdata)
-          .enter()
-          .append("circle")
-          // .attr("r", function(d) {return 2 * Math.sqrt(d.converts)})
-          .attr("r", function(d) { return radius(+d[sliderval])})
-          // .attr("r",  function(d) { return (+d["1914"])/scalefactor; })
-          .attr("class","gym")
-          .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});
-            
-    })
-};
+  var mapwidth  = 750;
+  var mapheight = 475;
+  var gymdata;  //puts the gym location data in global scope. 
+
+  //select the #mapvis div and append a svg object to it.  Get the width and heigh from variables.
+  var mapvis = d3.select("#mapvis").append("svg")
+      .attr("width", mapwidth).attr("height", mapheight)
+
+//The function drawmap() takes a json object and creates the basemap.  It automatically calcualates the scope based on coordinates in the file. 
+//The function then appends ward labels to the map based on properties within the geojson file.
+//Lastly it appends circles on top of the map.  The radius of the circles is calculated based on the attendence figures in the BostonGyms.csv file. 
+function drawmap(){
+    d3.json("wardsandparks.json", function(json) {
+      
+        // create a first guess for the projection
+        // var scalefactor= function (d){return gymdata.T1914};
+        mapvis.selectAll("path").remove();
+        mapvis.selectAll("text").remove();
+        mapvis.selectAll("circle").remove();
+        var center = d3.geo.centroid(json)
+        var scale  = 150;
+        var offset = [mapwidth/2, mapheight/2];
+        var projection = d3.geo.mercator().scale(scale).center(center)
+            .translate(offset);
+        
+        // create the path
+        var path = d3.geo.path().projection(projection);
+        
+        //projection for the circle
+        var circle = d3.geo.path().projection(projection);
+        //calculate the radius for the circles 
+        var radius = d3.scale.sqrt()
+                .domain([0, 1e3])
+                .range([0, 15]);
+        
+        // using the path determine the bounds of the current map and use 
+        // these to determine better values for the scale and translation
+        var bounds  = path.bounds(json);
+        var hscale  = scale*mapwidth  / (bounds[1][0] - bounds[0][0]);
+        var vscale  = scale*mapheight / (bounds[1][1] - bounds[0][1]);
+        var scale   = (hscale < vscale) ? hscale : vscale;
+        var offset  = [mapwidth - (bounds[0][0] + bounds[1][0])/2,
+                          mapheight - (bounds[0][1] + bounds[1][1])/2];
+        // new projection
+        projection = d3.geo.mercator().center(center)
+          .scale(scale).translate(offset);
+        path = path.projection(projection);
+        
+        //append the map paths to the svg.
+        mapvis.selectAll(".ward").data(json.features)
+            .enter().append("path")
+                .attr("class", function(d) { return "space" + d.properties.SpaceType; })
+                .attr("d", path);
+
+        //add ward labels
+        mapvis.selectAll(".ward-label")
+              .data(json.features)
+          .enter().append("text")
+              .attr("class", function(d) { return "ward-label " + d.properties.wid; })
+              .attr("transform", function(d) { return "translate(" + path.centroid(d) + ")"; })
+              .attr("dy", ".35em")
+              .text(function(d) { return d.properties.wid; });
+        //add the circles to the map
+        mapvis.selectAll("circles.points")
+            .data(gymdata)
+            .enter()
+            .append("circle")
+            // .attr("r", function(d) {return 2 * Math.sqrt(d.converts)})
+            .attr("r", function(d) { return radius(+d[sliderval])})
+            // .attr("r",  function(d) { return (+d["1914"])/scalefactor; })
+            .attr("class","gym")
+            .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";});         
+    }) //closes d3.json within drawmap()
+}; //closes drawmap
 
 
 
