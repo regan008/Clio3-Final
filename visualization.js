@@ -9,6 +9,7 @@
     // *fix font family
     // *style background
     // *add behavior where clicking on ward changes the ward in dropdown
+    // *comment code
 
 
 
@@ -132,11 +133,13 @@ var pie = d3.layout.pie()
 var pienativity = d3.layout.pie()
     .sort(null)
     .value(function(d) { return d.count; });   
+
 var svg_age = d3.select("#ages").append("svg")
     .attr("width", agewidth)
     .attr("height", ageheight)
   .append("g")
     .attr("transform", "translate(" + agewidth / 2 + "," + ageheight / 2 + ")");
+
 
 d3.csv("ages.csv", function(error, csv) {
  data = csv;
@@ -164,26 +167,38 @@ function redraw() {
   svg_age.selectAll("g").remove();
   svg_age.selectAll(".arc").remove()
 
+  var data_age_filt = data.filter(filterYear);
+  var total = d3.sum(data_age_filt, function(d) { return d.count;});
+  var toPercent = d3.format("0.1%");
+  //format the tip when hovering over section of the pie chart. 
+  var tip_age = d3.tip()
+    .attr('class', 'd3-tip')
+    .offset([-10, 0])
+    .html(function(d) {
+      return "<strong>Residents between the ages of: " + d.data.agegrp + "</strong></br><strong>Percentage:</strong> <span style='color:red'>" + toPercent(d.data.count / total) + "</span>"; })
+
   var g = svg_age.selectAll(".arc")
       .data(pie(data.filter(filterYearAges)))
     .enter().append("g")
       .attr("class", "arc");
-
+  svg_nat.call(tip_age);   
   g.append("path")
       .attr("d", arc)
       .style("fill", function(d) { return color(d.data.agegrp); })
-      .attr("data-legend", function(d){return d.data.agegrp});
+      .attr("data-legend", function(d){return d.data.agegrp})
+      .on('mouseover', tip_age.show)
+      .on('mouseout', tip_age.hide);
 
   // g.append("text")
   //     .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
   //     .attr("dy", ".35em")
   //     .style("text-anchor", "middle")
   //     .text(function(d) { return d.data.agegrp; });
-  legend = svg_age.append("g")
-      .attr("class", "legend")
-      .attr("transform", "translate(50,30)")
-      .style("font-size", "12px")
-      .call(d3.legend)
+  //   legend = svg_age.append("g")
+  //       .attr("class", "legend")
+  //       .attr("transform", "translate(50,30)")
+  //       .style("font-size", "12px")
+  //       .call(d3.legend)
 };
 var svg_nat = d3.select("#nativity").append("svg")
     .attr("width", agewidth)
@@ -204,18 +219,35 @@ d3.csv("nativity.csv", function(error, csvnat) {
 
 function drawnativity() {
 
+  //selects and removes any existing chart piece before redrawing. 
   svg_nat.selectAll("g").remove();
   svg_nat.selectAll(".arc_nat").remove()
   
+  //filter data and calculate a total for generating percentages 
+  var data_nat_filt = data_nat.filter(filterYear);
+  var total = d3.sum(data_nat_filt, function(d) { return d.count;});
+  var toPercent = d3.format("0.1%");
+  //format the tip when hovering over section of the pie chart. 
+   var tip_nat = d3.tip()
+      .attr('class', 'd3-tip')
+      .offset([-10, 0])
+      .html(function(d) {
+        return "<strong>" + d.data.nativity + "</strong></br><strong>Percentage:</strong> <span style='color:red'>" + toPercent(d.data.count / total) + "</span>"; })
+  
+ 
   var g = svg_nat.selectAll(".arc_nat")
       .data(pienativity(data_nat.filter(filterYear)))
     .enter().append("g")
       .attr("class", "arc");
+
+  svg_nat.call(tip_nat);    
   g.append("path")
       .attr("d", arc)
       .style("fill", function(d) { return color(d.data.nativity); })
-      .attr("data-legend", function(d){return d.data.nativity});
-      
+      .attr("data-legend", function(d){return d.data.nativity})
+      .on('mouseover', tip_nat.show)
+      .on('mouseout', tip_nat.hide);
+  
       // .attr("d", arc)
       
       //.style("fill", function (d) { return color(d.data.nativity); });
@@ -224,11 +256,11 @@ function drawnativity() {
       // .attr("dy", ".35em")
       // .style("text-anchor", "middle")
       // .text(function(d) { return d.data.nativity; });
-  legend = svg_nat.append("g")
-      .attr("class", "legend")
-      .attr("transform", "translate(-10,50)")
-      .style("font-size", "11px")
-      .call(d3.legend)
+  // legend = svg_nat.append("g")
+  //     .attr("class", "legend")
+  //     .attr("transform", "translate(-10,50)")
+  //     .style("font-size", "11px")
+  //     .call(d3.legend)
 };
 function filterYearGenders(d) {return +d.year === +currentYear}
 var formatted;
