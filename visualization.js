@@ -45,7 +45,7 @@ d3.csv("nativity.csv", function(error, csvnat) {
     d.count = +d.count;  });
   // console.log(data_nat);
   drawAges();
-  drawnativity();
+  drawNativity();
 });
 
 ////***MAP***////
@@ -176,17 +176,18 @@ var svg_nat = d3.select("#nativity").append("svg")
 
 
 
-
+//change() is called when any of the dropdowns is updated.  It gets the current values for ward and year and then calls each redraw function. 
 function change() {
-
-  currentYear = menuyear.property("value")
-  currentWard = menuward.property("value")
-  d3.transition()
-    .duration(750)
-    .each(drawAges)
-    .each(drawnativity)
-    .each(drawgenders);
-}
+    
+    //get the current values of currentyear and currentward. Call the redraw functions drawAges(), drawNativity
+    currentYear = menuyear.property("value")
+    currentWard = menuward.property("value")
+    
+    d3.transition()
+      .duration(750)
+      .each(drawAges)
+      .each(drawNativity);
+} //end change()
 
 //drawAges() draw a pie chart for each ward per year based on IPUMS data.
 function drawAges() {
@@ -227,52 +228,39 @@ function drawAges() {
 
 
 
+//drawNativity() draw the pie chart of nativity by ward/year. 
+function drawNativity() {
+    //selects and removes any existing chart piece before redrawing. 
+    svg_nat.selectAll("g").remove();
+    svg_nat.selectAll(".arc_nat").remove()
+    
+    //filter data and calculate a total for generating percentages 
+    var data_nat_filt = data_nat.filter(filterYear);
+    var total = d3.sum(data_nat_filt, function(d) { return d.count;});
+    var toPercent = d3.format("0.1%");
 
-function drawnativity() {
+    //format the tip when hovering over section of the pie chart. 
+     var tip_nat = d3.tip()
+        .attr('class', 'd3-tip')
+        .offset([-10, 0])
+        .html(function(d) {
+          return "<strong>" + d.data.nativity + "</strong></br><strong>Percentage:</strong> <span style='color:red'>" + toPercent(d.data.count / total) + "</span>"; })
+    
+    var g = svg_nat.selectAll(".arc_nat")
+        .data(pienativity(data_nat.filter(filterYear)))
+      .enter().append("g")
+        .attr("class", "arc");
 
-  //selects and removes any existing chart piece before redrawing. 
-  svg_nat.selectAll("g").remove();
-  svg_nat.selectAll(".arc_nat").remove()
+    svg_nat.call(tip_nat);    
+    
+    g.append("path")
+        .attr("d", arc)
+        .style("fill", function(d) { return color(d.data.nativity); })
+        .attr("data-legend", function(d){return d.data.nativity})
+        .on('mouseover', tip_nat.show)
+        .on('mouseout', tip_nat.hide);
   
-  //filter data and calculate a total for generating percentages 
-  var data_nat_filt = data_nat.filter(filterYear);
-  var total = d3.sum(data_nat_filt, function(d) { return d.count;});
-  var toPercent = d3.format("0.1%");
-  //format the tip when hovering over section of the pie chart. 
-   var tip_nat = d3.tip()
-      .attr('class', 'd3-tip')
-      .offset([-10, 0])
-      .html(function(d) {
-        return "<strong>" + d.data.nativity + "</strong></br><strong>Percentage:</strong> <span style='color:red'>" + toPercent(d.data.count / total) + "</span>"; })
-  
- 
-  var g = svg_nat.selectAll(".arc_nat")
-      .data(pienativity(data_nat.filter(filterYear)))
-    .enter().append("g")
-      .attr("class", "arc");
-
-  svg_nat.call(tip_nat);    
-  g.append("path")
-      .attr("d", arc)
-      .style("fill", function(d) { return color(d.data.nativity); })
-      .attr("data-legend", function(d){return d.data.nativity})
-      .on('mouseover', tip_nat.show)
-      .on('mouseout', tip_nat.hide);
-  
-      // .attr("d", arc)
-      
-      //.style("fill", function (d) { return color(d.data.nativity); });
-  // g.append("text")
-      // .attr("transform", function(d) { return "translate(" + arc.centroid(d) + ")"; })
-      // .attr("dy", ".35em")
-      // .style("text-anchor", "middle")
-      // .text(function(d) { return d.data.nativity; });
-  // legend = svg_nat.append("g")
-  //     .attr("class", "legend")
-  //     .attr("transform", "translate(-10,50)")
-  //     .style("font-size", "11px")
-  //     .call(d3.legend)
-};
+}; //end drawNativity()
 function filterYearGenders(d) {return +d.year === +currentYear}
 var formatted;
 // var currentYear = 1910;
