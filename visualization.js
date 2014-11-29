@@ -59,7 +59,7 @@ d3.csv("gyms_long.csv", function(error, csvgyms) {
   var mapwidth  = 750;
   var mapheight = 475;
   var gymdata;  //puts the gym location data in global scope. 
-
+  var currentGym = "Cabot Street Gymnasium"
   //select the #mapvis div and append a svg object to it.  Get the width and heigh from variables.
   var mapvis = d3.select("#mapvis").append("svg")
       .attr("width", mapwidth).attr("height", mapheight)
@@ -133,23 +133,39 @@ function drawmap(){
             .data(gymdata)
             .enter()
             .append("circle")
+            // .attr("class", function(d) {return d.WardNo; })
             // .attr("r", function(d) {return 2 * Math.sqrt(d.converts)})
             .attr("r", function(d) { return radius(+d[sliderval])})
             // .attr("r",  function(d) { return (+d["1914"])/scalefactor; })
             .attr("class","gym")
             .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";})
             .on('mouseover', tip_map.show)
-            .on('mouseout', tip_map.hide);        
+            .on('mouseout', tip_map.hide)  
+            .on("click", function(d) { 
+                // console.log(gymclass); 
+                // console.log(gymclass.ward); 
+                currentWard = d.WardNo; 
+                drawAges(); 
+                drawNativity(); 
+                drawGymClassatt();
+                console.log("the circle has been clicked");  });
+
+            // .on("click", function () {
+            //     d3.select(".selected").classed("selected", false)
+            //     d3.select(this).classed("selected", true);
+            //     updateWard()
+                // console.log(val);
+
+         // });      
     }) //closes d3.json within drawmap()
 }; //closes drawmap
-
 
 //The functions filterYearAges and filterYear filter data based on the current year selected in each dropdown menu.
 //filterYearAges() returns data where the year and ward is equal to the current selections and has a count of greater than 11.  This is done to simplify the chart and only show the significant age groups. 
 function filterYearAges(d) {return +d.year === +currentYear && +d.ward === +currentWard && +d.count > 11}
 //filterYear() returns data where the year and ward are equal to the current selections. 
 function filterYear(d) {return +d.year === +currentYear && +d.ward === +currentWard}
-function filterDates(d) {return +d.year === 1914 && d.gym === "Cabot Street Gymnasium"}
+function filterDates(d) {return +d.year === +1914 && +d.ward === +currentWard}
 //menuyear and menuward both call the change function when the dropdown is updated. 
 var menuyear = d3.select("#year select")
     .on("change", change);  

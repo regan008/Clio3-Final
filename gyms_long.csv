@@ -1,792 +1,1 @@
-"gym","year","totals","classtype","count"
-"Cabot Street Gymnasium",1914,38005,"individuals",9173
-"Cabot Street Gymnasium",1915,29567,"individuals",5715
-"Cabot Street Gymnasium",1916,24618,"individuals",5424
-"Cabot Street Gymnasium",1917,37082,"individuals",11689
-"Cabot Street Gymnasium",1918,33193,"individuals",7784
-"Cabot Street Gymnasium",1919,10500,"individuals",1415
-"Cabot Street Gymnasium",1920,12053,"individuals",655
-"Cabot Street Gymnasium",1921,10615,"individuals",2192
-"Cabot Street Gymnasium",1922,25442,"individuals",6075
-"Cabot Street Gymnasium",1923,21073,"individuals",4980
-"Cabot Street Gymnasium",1924,22754,"individuals",5736
-"Cabot Street Gymnasium",1925,10465,"individuals",1780
-"Curtis Hall Gymnasium",1914,43240,"individuals",5335
-"Curtis Hall Gymnasium",1915,33415,"individuals",3030
-"Curtis Hall Gymnasium",1916,29265,"individuals",3535
-"Curtis Hall Gymnasium",1917,31240,"individuals",4245
-"Curtis Hall Gymnasium",1918,19833,"individuals",3362
-"Curtis Hall Gymnasium",1919,7228,"individuals",1021
-"Curtis Hall Gymnasium",1920,9312,"individuals",1331
-"Curtis Hall Gymnasium",1921,17848,"individuals",3729
-"Curtis Hall Gymnasium",1922,7770,"individuals",0
-"Curtis Hall Gymnasium",1923,15623,"individuals",855
-"Curtis Hall Gymnasium",1924,16102,"individuals",0
-"Curtis Hall Gymnasium",1925,16830,"individuals",258
-"D Street Gymnasium",1914,18359,"individuals",1406
-"D Street Gymnasium",1915,21740,"individuals",3884
-"D Street Gymnasium",1916,24228,"individuals",4268
-"D Street Gymnasium",1917,25159,"individuals",4412
-"D Street Gymnasium",1918,22956,"individuals",4465
-"D Street Gymnasium",1919,5821,"individuals",1566
-"D Street Gymnasium",1920,0,"individuals",0
-"D Street Gymnasium",1921,25818,"individuals",539
-"D Street Gymnasium",1922,17697,"individuals",2481
-"East Boston Gymnasium",1914,33227,"individuals",3538
-"East Boston Gymnasium",1915,32184,"individuals",3341
-"East Boston Gymnasium",1916,27781,"individuals",2774
-"East Boston Gymnasium",1917,21709,"individuals",1929
-"East Boston Gymnasium",1918,19837,"individuals",2022
-"East Boston Gymnasium",1920,8348,"individuals",2014
-"East Boston Gymnasium",1921,20185,"individuals",4423
-"East Boston Gymnasium",1922,23296,"individuals",8153
-"East Boston Gymnasium",1923,24539,"individuals",9732
-"East Boston Gymnasium",1924,10361,"individuals",3611
-"North Bennet Street",1914,26513,"individuals",3010
-"North Bennet Street",1915,19566,"individuals",3241
-"North Bennet Street",1916,18888,"individuals",4039
-"North Bennet Street",1917,19855,"individuals",4094
-"North Bennet Street",1918,13337,"individuals",1962
-"North Bennet Street",1920,5410,"individuals",2195
-"North Bennet Street",1921,23150,"individuals",6115
-"North Bennet Street",1922,31040,"individuals",7845
-"North Bennet Street",1923,29383,"individuals",6920
-"North Bennet Street",1924,25438,"individuals",8760
-"North Bennet Street",1925,5370,"individuals",0
-"Roslindale Gymnasium",1919,4340,"individuals",193
-"Roslindale Gymnasium",1920,13536,"individuals",630
-"Roslindale Gymnasium",1921,24313,"individuals",673
-"Roslindale Gymnasium",1922,25055,"individuals",683
-"Roslindale Gymnasium",1923,24835,"individuals",973
-"Roslindale Gymnasium",1924,22364,"individuals",488
-"Roslindale Gymnasium",1925,12783,"individuals",115
-"Ward 6",1917,12576,"individuals",1509
-"Ward 6",1918,7222,"individuals",768
-"Ward 6",1919,3065,"individuals",425
-"Ward 6",1921,1134,"individuals",83
-"Ward 6",1922,5107,"individuals",342
-"Ward 12",1917,31817,"individuals",4218
-"Ward 12",1918,28404,"individuals",4477
-"Ward 12",1919,13718,"individuals",2141
-"Ward 12",1920,15388,"individuals",7030
-"Ward 12",1921,18318,"individuals",690
-"Ward 12",1922,22449,"individuals",1775
-"Ward 12",1923,22692,"individuals",646
-"Ward 12",1924,18122,"individuals",0
-"Ward 16",1914,50063,"individuals",4778
-"Ward 16",1915,49721,"individuals",6510
-"Ward 16",1916,48606,"individuals",4223
-"Ward 17",1916,14216,"individuals",1546
-"Ward 17",1917,56818,"individuals",3225
-"Ward 17",1918,48114,"individuals",3086
-"Ward 17",1919,19190,"individuals",659
-"Ward 17",1920,29861,"individuals",1815
-"Ward 17",1921,35771,"individuals",2270
-"Ward 17",1922,42634,"individuals",2845
-"Ward 17",1923,39102,"individuals",5400
-"Ward 17",1924,33717,"individuals",3362
-"Ward 3",1914,17712,"individuals",3279
-"Ward 3",1915,17712,"individuals",3279
-"Ward 3",1916,16976,"individuals",2428
-"Ward 4",1917,18643,"individuals",1417
-"Ward 4",1918,14879,"individuals",1086
-"Ward 4",1919,5593,"individuals",177
-"Ward 4",1920,9047,"individuals",237
-"Ward 4",1921,8036,"individuals",162
-"Ward 4",1922,12860,"individuals",518
-"Ward 4",1923,11687,"individuals",227
-"Ward 4",1924,11702,"individuals",276
-"Ward 5",1917,19026,"individuals",2398
-"Ward 5",1918,13257,"individuals",1701
-"Ward 5",1919,9865,"individuals",1507
-"Ward 5",1920,10413,"individuals",1252
-"Ward 5",1921,2247,"individuals",288
-"Ward 5",1922,14232,"individuals",1850
-"Ward 5",1923,13740,"individuals",1977
-"Ward 5",1924,14140,"individuals",2254
-"Ward 6",1923,8282,"individuals",529
-"Ward 6",1924,3167,"individuals",329
-"Ward 7",1914,15425,"individuals",2091
-"Ward 7",1915,13042,"individuals",1423
-"Ward 7",1916,4015,"individuals",288
-"Ward 9",1914,10812,"individuals",1467
-"Ward 9",1915,14725,"individuals",1683
-"Ward 9",1916,18992,"individuals",3141
-"Cabot Street Gymnasium",1914,38005,"men",5571
-"Cabot Street Gymnasium",1915,29567,"men",5307
-"Cabot Street Gymnasium",1916,24618,"men",3916
-"Cabot Street Gymnasium",1917,37082,"men",4673
-"Cabot Street Gymnasium",1918,33193,"men",3089
-"Cabot Street Gymnasium",1919,10500,"men",1508
-"Cabot Street Gymnasium",1920,12053,"men",1665
-"Cabot Street Gymnasium",1921,10615,"men",1694
-"Cabot Street Gymnasium",1922,25442,"men",2872
-"Cabot Street Gymnasium",1923,21073,"men",2416
-"Cabot Street Gymnasium",1924,22754,"men",2834
-"Cabot Street Gymnasium",1925,10465,"men",1235
-"Curtis Hall Gymnasium",1914,43240,"men",6835
-"Curtis Hall Gymnasium",1915,33415,"men",4135
-"Curtis Hall Gymnasium",1916,29265,"men",3510
-"Curtis Hall Gymnasium",1917,31240,"men",3300
-"Curtis Hall Gymnasium",1918,19833,"men",1699
-"Curtis Hall Gymnasium",1919,7228,"men",314
-"Curtis Hall Gymnasium",1920,9312,"men",1005
-"Curtis Hall Gymnasium",1921,17848,"men",2595
-"Curtis Hall Gymnasium",1922,7770,"men",1185
-"Curtis Hall Gymnasium",1923,15623,"men",3027
-"Curtis Hall Gymnasium",1924,16102,"men",1904
-"Curtis Hall Gymnasium",1925,16830,"men",2420
-"D Street Gymnasium",1914,18359,"men",5393
-"D Street Gymnasium",1915,21740,"men",5834
-"D Street Gymnasium",1916,24228,"men",3723
-"D Street Gymnasium",1917,25159,"men",2430
-"D Street Gymnasium",1918,22956,"men",2021
-"D Street Gymnasium",1919,5821,"men",463
-"D Street Gymnasium",1920,0,"men",0
-"D Street Gymnasium",1921,25818,"men",3878
-"D Street Gymnasium",1922,17697,"men",3366
-"East Boston Gymnasium",1914,33227,"men",6157
-"East Boston Gymnasium",1915,32184,"men",6003
-"East Boston Gymnasium",1916,27781,"men",5124
-"East Boston Gymnasium",1917,21709,"men",3714
-"East Boston Gymnasium",1918,19837,"men",2830
-"East Boston Gymnasium",1920,8348,"men",1467
-"East Boston Gymnasium",1921,20185,"men",4512
-"East Boston Gymnasium",1922,23296,"men",5044
-"East Boston Gymnasium",1923,24539,"men",3308
-"East Boston Gymnasium",1924,10361,"men",1633
-"North Bennet Street",1914,26513,"men",5563
-"North Bennet Street",1915,19566,"men",3302
-"North Bennet Street",1916,18888,"men",2545
-"North Bennet Street",1917,19855,"men",2373
-"North Bennet Street",1918,13337,"men",1148
-"North Bennet Street",1920,5410,"men",910
-"North Bennet Street",1921,23150,"men",3345
-"North Bennet Street",1922,31040,"men",4900
-"North Bennet Street",1923,29383,"men",4155
-"North Bennet Street",1924,25438,"men",3165
-"North Bennet Street",1925,5370,"men",915
-"Roslindale Gymnasium",1919,4340,"men",431
-"Roslindale Gymnasium",1920,13536,"men",1669
-"Roslindale Gymnasium",1921,24313,"men",1957
-"Roslindale Gymnasium",1922,25055,"men",2665
-"Roslindale Gymnasium",1923,24835,"men",3159
-"Roslindale Gymnasium",1924,22364,"men",1998
-"Roslindale Gymnasium",1925,12783,"men",2059
-"Ward 6",1917,12576,"men",1891
-"Ward 6",1918,7222,"men",782
-"Ward 6",1919,3065,"men",270
-"Ward 6",1921,1134,"men",203
-"Ward 6",1922,5107,"men",1127
-"Ward 12",1917,31817,"men",3581
-"Ward 12",1918,28404,"men",3199
-"Ward 12",1919,13718,"men",1266
-"Ward 12",1920,15388,"men",1315
-"Ward 12",1921,18318,"men",1622
-"Ward 12",1922,22449,"men",2953
-"Ward 12",1923,22692,"men",3199
-"Ward 12",1924,18122,"men",2483
-"Ward 16",1914,50063,"men",9055
-"Ward 16",1915,49721,"men",10045
-"Ward 16",1916,48606,"men",7751
-"Ward 17",1916,14216,"men",1262
-"Ward 17",1917,56818,"men",7726
-"Ward 17",1918,48114,"men",7865
-"Ward 17",1919,19190,"men",2151
-"Ward 17",1920,29861,"men",5183
-"Ward 17",1921,35771,"men",5810
-"Ward 17",1922,42634,"men",6685
-"Ward 17",1923,39102,"men",6215
-"Ward 17",1924,33717,"men",5280
-"Ward 3",1914,17712,"men",2160
-"Ward 3",1915,17712,"men",2160
-"Ward 3",1916,16976,"men",1689
-"Ward 4",1917,18643,"men",2037
-"Ward 4",1918,14879,"men",1517
-"Ward 4",1919,5593,"men",441
-"Ward 4",1920,9047,"men",925
-"Ward 4",1921,8036,"men",654
-"Ward 4",1922,12860,"men",1016
-"Ward 4",1923,11687,"men",1339
-"Ward 4",1924,11702,"men",2463
-"Ward 5",1917,19026,"men",2395
-"Ward 5",1918,13257,"men",2213
-"Ward 5",1919,9865,"men",1086
-"Ward 5",1920,10413,"men",1101
-"Ward 5",1921,2247,"men",351
-"Ward 5",1922,14232,"men",2400
-"Ward 5",1923,13740,"men",2104
-"Ward 5",1924,14140,"men",2292
-"Ward 6",1923,8282,"men",1267
-"Ward 6",1924,3167,"men",426
-"Ward 7",1914,15425,"men",2758
-"Ward 7",1915,13042,"men",2175
-"Ward 7",1916,4015,"men",515
-"Ward 9",1914,10812,"men",2065
-"Ward 9",1915,14725,"men",2210
-"Ward 9",1916,18992,"men",2571
-"Cabot Street Gymnasium",1914,38005,"schoolboys",9562
-"Cabot Street Gymnasium",1915,29567,"schoolboys",7416
-"Cabot Street Gymnasium",1916,24618,"schoolboys",5965
-"Cabot Street Gymnasium",1917,37082,"schoolboys",9749
-"Cabot Street Gymnasium",1918,33193,"schoolboys",12646
-"Cabot Street Gymnasium",1919,10500,"schoolboys",3875
-"Cabot Street Gymnasium",1920,12053,"schoolboys",4040
-"Cabot Street Gymnasium",1921,10615,"schoolboys",2834
-"Cabot Street Gymnasium",1922,25442,"schoolboys",6972
-"Cabot Street Gymnasium",1923,21073,"schoolboys",4717
-"Cabot Street Gymnasium",1924,22754,"schoolboys",5345
-"Cabot Street Gymnasium",1925,10465,"schoolboys",2670
-"Curtis Hall Gymnasium",1914,43240,"schoolboys",8255
-"Curtis Hall Gymnasium",1915,33415,"schoolboys",7355
-"Curtis Hall Gymnasium",1916,29265,"schoolboys",5605
-"Curtis Hall Gymnasium",1917,31240,"schoolboys",7055
-"Curtis Hall Gymnasium",1918,19833,"schoolboys",4133
-"Curtis Hall Gymnasium",1919,7228,"schoolboys",1981
-"Curtis Hall Gymnasium",1920,9312,"schoolboys",2958
-"Curtis Hall Gymnasium",1921,17848,"schoolboys",3727
-"Curtis Hall Gymnasium",1922,7770,"schoolboys",3180
-"Curtis Hall Gymnasium",1923,15623,"schoolboys",4072
-"Curtis Hall Gymnasium",1924,16102,"schoolboys",4507
-"Curtis Hall Gymnasium",1925,16830,"schoolboys",3352
-"D Street Gymnasium",1914,18359,"schoolboys",5125
-"D Street Gymnasium",1915,21740,"schoolboys",4813
-"D Street Gymnasium",1916,24228,"schoolboys",8839
-"D Street Gymnasium",1917,25159,"schoolboys",9702
-"D Street Gymnasium",1918,22956,"schoolboys",6626
-"D Street Gymnasium",1919,5821,"schoolboys",975
-"D Street Gymnasium",1920,0,"schoolboys",0
-"D Street Gymnasium",1921,25818,"schoolboys",9836
-"D Street Gymnasium",1922,17697,"schoolboys",3588
-"East Boston Gymnasium",1914,33227,"schoolboys",7500
-"East Boston Gymnasium",1915,32184,"schoolboys",7077
-"East Boston Gymnasium",1916,27781,"schoolboys",7688
-"East Boston Gymnasium",1917,21709,"schoolboys",7027
-"East Boston Gymnasium",1918,19837,"schoolboys",7955
-"East Boston Gymnasium",1920,8348,"schoolboys",447
-"East Boston Gymnasium",1921,20185,"schoolboys",4867
-"East Boston Gymnasium",1922,23296,"schoolboys",4379
-"East Boston Gymnasium",1923,24539,"schoolboys",5848
-"East Boston Gymnasium",1924,10361,"schoolboys",2769
-"North Bennet Street",1914,26513,"schoolboys",9639
-"North Bennet Street",1915,19566,"schoolboys",7310
-"North Bennet Street",1916,18888,"schoolboys",7645
-"North Bennet Street",1917,19855,"schoolboys",7735
-"North Bennet Street",1918,13337,"schoolboys",6298
-"North Bennet Street",1920,5410,"schoolboys",265
-"North Bennet Street",1921,23150,"schoolboys",6995
-"North Bennet Street",1922,31040,"schoolboys",8890
-"North Bennet Street",1923,29383,"schoolboys",8135
-"North Bennet Street",1924,25438,"schoolboys",7350
-"North Bennet Street",1925,5370,"schoolboys",1515
-"Roslindale Gymnasium",1919,4340,"schoolboys",1443
-"Roslindale Gymnasium",1920,13536,"schoolboys",1667
-"Roslindale Gymnasium",1921,24313,"schoolboys",9494
-"Roslindale Gymnasium",1922,25055,"schoolboys",9886
-"Roslindale Gymnasium",1923,24835,"schoolboys",9219
-"Roslindale Gymnasium",1924,22364,"schoolboys",8172
-"Roslindale Gymnasium",1925,12783,"schoolboys",3408
-"Ward 6",1917,12576,"schoolboys",5844
-"Ward 6",1918,7222,"schoolboys",3188
-"Ward 6",1919,3065,"schoolboys",1105
-"Ward 6",1921,1134,"schoolboys",231
-"Ward 6",1922,5107,"schoolboys",1466
-"Ward 12",1917,31817,"schoolboys",8887
-"Ward 12",1918,28404,"schoolboys",8524
-"Ward 12",1919,13718,"schoolboys",4863
-"Ward 12",1920,15388,"schoolboys",560
-"Ward 12",1921,18318,"schoolboys",8728
-"Ward 12",1922,22449,"schoolboys",8631
-"Ward 12",1923,22692,"schoolboys",9001
-"Ward 12",1924,18122,"schoolboys",5937
-"Ward 16",1914,50063,"schoolboys",9534
-"Ward 16",1915,49721,"schoolboys",6435
-"Ward 16",1916,48606,"schoolboys",8203
-"Ward 17",1916,14216,"schoolboys",4647
-"Ward 17",1917,56818,"schoolboys",15082
-"Ward 17",1918,48114,"schoolboys",11927
-"Ward 17",1919,19190,"schoolboys",5797
-"Ward 17",1920,29861,"schoolboys",4600
-"Ward 17",1921,35771,"schoolboys",8045
-"Ward 17",1922,42634,"schoolboys",8920
-"Ward 17",1923,39102,"schoolboys",6680
-"Ward 17",1924,33717,"schoolboys",5404
-"Ward 3",1914,17712,"schoolboys",3450
-"Ward 3",1915,17712,"schoolboys",3450
-"Ward 3",1916,16976,"schoolboys",3219
-"Ward 4",1917,18643,"schoolboys",5085
-"Ward 4",1918,14879,"schoolboys",4128
-"Ward 4",1919,5593,"schoolboys",1512
-"Ward 4",1920,9047,"schoolboys",1054
-"Ward 4",1921,8036,"schoolboys",1860
-"Ward 4",1922,12860,"schoolboys",2200
-"Ward 4",1923,11687,"schoolboys",2140
-"Ward 4",1924,11702,"schoolboys",1689
-"Ward 5",1917,19026,"schoolboys",8349
-"Ward 5",1918,13257,"schoolboys",6174
-"Ward 5",1919,9865,"schoolboys",3323
-"Ward 5",1920,10413,"schoolboys",2374
-"Ward 5",1921,2247,"schoolboys",571
-"Ward 5",1922,14232,"schoolboys",4585
-"Ward 5",1923,13740,"schoolboys",4900
-"Ward 5",1924,14140,"schoolboys",4878
-"Ward 6",1923,8282,"schoolboys",2796
-"Ward 6",1924,3167,"schoolboys",907
-"Ward 7",1914,15425,"schoolboys",4173
-"Ward 7",1915,13042,"schoolboys",3852
-"Ward 7",1916,4015,"schoolboys",1709
-"Ward 9",1914,10812,"schoolboys",3718
-"Ward 9",1915,14725,"schoolboys",5036
-"Ward 9",1916,18992,"schoolboys",5877
-"Cabot Street Gymnasium",1914,38005,"workingboys",3175
-"Cabot Street Gymnasium",1915,29567,"workingboys",3636
-"Cabot Street Gymnasium",1916,24618,"workingboys",3897
-"Cabot Street Gymnasium",1917,37082,"workingboys",3804
-"Cabot Street Gymnasium",1918,33193,"workingboys",2755
-"Cabot Street Gymnasium",1919,10500,"workingboys",1487
-"Cabot Street Gymnasium",1920,12053,"workingboys",1847
-"Cabot Street Gymnasium",1921,10615,"workingboys",1185
-"Cabot Street Gymnasium",1922,25442,"workingboys",2176
-"Cabot Street Gymnasium",1923,21073,"workingboys",2445
-"Cabot Street Gymnasium",1924,22754,"workingboys",3047
-"Cabot Street Gymnasium",1925,10465,"workingboys",705
-"Curtis Hall Gymnasium",1914,43240,"workingboys",6185
-"Curtis Hall Gymnasium",1915,33415,"workingboys",5205
-"Curtis Hall Gymnasium",1916,29265,"workingboys",4180
-"Curtis Hall Gymnasium",1917,31240,"workingboys",4380
-"Curtis Hall Gymnasium",1918,19833,"workingboys",2328
-"Curtis Hall Gymnasium",1919,7228,"workingboys",916
-"Curtis Hall Gymnasium",1920,9312,"workingboys",1820
-"Curtis Hall Gymnasium",1921,17848,"workingboys",2017
-"Curtis Hall Gymnasium",1922,7770,"workingboys",1350
-"Curtis Hall Gymnasium",1923,15623,"workingboys",3009
-"Curtis Hall Gymnasium",1924,16102,"workingboys",1516
-"Curtis Hall Gymnasium",1925,16830,"workingboys",1926
-"D Street Gymnasium",1914,18359,"workingboys",2193
-"D Street Gymnasium",1915,21740,"workingboys",3578
-"D Street Gymnasium",1916,24228,"workingboys",2847
-"D Street Gymnasium",1917,25159,"workingboys",3652
-"D Street Gymnasium",1918,22956,"workingboys",3955
-"D Street Gymnasium",1919,5821,"workingboys",1660
-"D Street Gymnasium",1920,0,"workingboys",0
-"D Street Gymnasium",1921,25818,"workingboys",3031
-"D Street Gymnasium",1922,17697,"workingboys",3515
-"East Boston Gymnasium",1914,33227,"workingboys",3566
-"East Boston Gymnasium",1915,32184,"workingboys",5589
-"East Boston Gymnasium",1916,27781,"workingboys",3394
-"East Boston Gymnasium",1917,21709,"workingboys",2911
-"East Boston Gymnasium",1918,19837,"workingboys",1770
-"East Boston Gymnasium",1920,8348,"workingboys",447
-"East Boston Gymnasium",1921,20185,"workingboys",517
-"East Boston Gymnasium",1922,23296,"workingboys",1318
-"East Boston Gymnasium",1923,24539,"workingboys",1204
-"East Boston Gymnasium",1924,10361,"workingboys",731
-"North Bennet Street",1914,26513,"workingboys",1502
-"North Bennet Street",1915,19566,"workingboys",1019
-"North Bennet Street",1916,18888,"workingboys",1520
-"North Bennet Street",1917,19855,"workingboys",1863
-"North Bennet Street",1918,13337,"workingboys",789
-"North Bennet Street",1920,5410,"workingboys",265
-"North Bennet Street",1921,23150,"workingboys",1445
-"North Bennet Street",1922,31040,"workingboys",2600
-"North Bennet Street",1923,29383,"workingboys",1895
-"North Bennet Street",1924,25438,"workingboys",1533
-"North Bennet Street",1925,5370,"workingboys",415
-"Roslindale Gymnasium",1919,4340,"workingboys",291
-"Roslindale Gymnasium",1920,13536,"workingboys",1667
-"Roslindale Gymnasium",1921,24313,"workingboys",2679
-"Roslindale Gymnasium",1922,25055,"workingboys",3771
-"Roslindale Gymnasium",1923,24835,"workingboys",3363
-"Roslindale Gymnasium",1924,22364,"workingboys",3660
-"Roslindale Gymnasium",1925,12783,"workingboys",2585
-"Ward 6",1917,12576,"workingboys",1140
-"Ward 6",1918,7222,"workingboys",600
-"Ward 6",1919,3065,"workingboys",237
-"Ward 6",1921,1134,"workingboys",304
-"Ward 6",1922,5107,"workingboys",834
-"Ward 12",1917,31817,"workingboys",2149
-"Ward 12",1918,28404,"workingboys",1190
-"Ward 12",1919,13718,"workingboys",355
-"Ward 12",1920,15388,"workingboys",560
-"Ward 12",1921,18318,"workingboys",1260
-"Ward 12",1922,22449,"workingboys",1782
-"Ward 12",1923,22692,"workingboys",3136
-"Ward 12",1924,18122,"workingboys",3448
-"Ward 16",1914,50063,"workingboys",6661
-"Ward 16",1915,49721,"workingboys",9029
-"Ward 16",1916,48606,"workingboys",6509
-"Ward 17",1916,14216,"workingboys",609
-"Ward 17",1917,56818,"workingboys",6051
-"Ward 17",1918,48114,"workingboys",2724
-"Ward 17",1919,19190,"workingboys",1360
-"Ward 17",1920,29861,"workingboys",4600
-"Ward 17",1921,35771,"workingboys",5094
-"Ward 17",1922,42634,"workingboys",8330
-"Ward 17",1923,39102,"workingboys",6255
-"Ward 17",1924,33717,"workingboys",6555
-"Ward 3",1914,17712,"workingboys",1775
-"Ward 3",1915,17712,"workingboys",1775
-"Ward 3",1916,16976,"workingboys",2070
-"Ward 4",1917,18643,"workingboys",1552
-"Ward 4",1918,14879,"workingboys",1017
-"Ward 4",1919,5593,"workingboys",571
-"Ward 4",1920,9047,"workingboys",1054
-"Ward 4",1921,8036,"workingboys",900
-"Ward 4",1922,12860,"workingboys",1341
-"Ward 4",1923,11687,"workingboys",1356
-"Ward 4",1924,11702,"workingboys",1578
-"Ward 5",1917,19026,"workingboys",1285
-"Ward 5",1918,13257,"workingboys",297
-"Ward 5",1919,9865,"workingboys",470
-"Ward 5",1920,10413,"workingboys",2374
-"Ward 5",1921,2247,"workingboys",213
-"Ward 5",1922,14232,"workingboys",849
-"Ward 5",1923,13740,"workingboys",892
-"Ward 5",1924,14140,"workingboys",1139
-"Ward 6",1923,8282,"workingboys",858
-"Ward 6",1924,3167,"workingboys",392
-"Ward 7",1914,15425,"workingboys",1621
-"Ward 7",1915,13042,"workingboys",1413
-"Ward 7",1916,4015,"workingboys",309
-"Ward 9",1914,10812,"workingboys",326
-"Ward 9",1915,14725,"workingboys",973
-"Ward 9",1916,18992,"workingboys",719
-"Cabot Street Gymnasium",1914,38005,"women",4701
-"Cabot Street Gymnasium",1915,29567,"women",2631
-"Cabot Street Gymnasium",1916,24618,"women",1732
-"Cabot Street Gymnasium",1917,37082,"women",1828
-"Cabot Street Gymnasium",1918,33193,"women",395
-"Cabot Street Gymnasium",1919,10500,"women",145
-"Cabot Street Gymnasium",1920,12053,"women",883
-"Cabot Street Gymnasium",1921,10615,"women",25
-"Cabot Street Gymnasium",1922,25442,"women",2312
-"Cabot Street Gymnasium",1923,21073,"women",2789
-"Cabot Street Gymnasium",1924,22754,"women",1843
-"Cabot Street Gymnasium",1925,10465,"women",2400
-"Curtis Hall Gymnasium",1914,43240,"women",7890
-"Curtis Hall Gymnasium",1915,33415,"women",5475
-"Curtis Hall Gymnasium",1916,29265,"women",4870
-"Curtis Hall Gymnasium",1917,31240,"women",4750
-"Curtis Hall Gymnasium",1918,19833,"women",3037
-"Curtis Hall Gymnasium",1919,7228,"women",1554
-"Curtis Hall Gymnasium",1920,9312,"women",987
-"Curtis Hall Gymnasium",1921,17848,"women",1196
-"Curtis Hall Gymnasium",1922,7770,"women",0
-"Curtis Hall Gymnasium",1923,15623,"women",1618
-"Curtis Hall Gymnasium",1924,16102,"women",2562
-"Curtis Hall Gymnasium",1925,16830,"women",3407
-"D Street Gymnasium",1914,18359,"women",905
-"D Street Gymnasium",1915,21740,"women",293
-"D Street Gymnasium",1916,24228,"women",888
-"D Street Gymnasium",1917,25159,"women",861
-"D Street Gymnasium",1918,22956,"women",749
-"D Street Gymnasium",1919,5821,"women",85
-"D Street Gymnasium",1920,0,"women",0
-"D Street Gymnasium",1921,25818,"women",0
-"D Street Gymnasium",1922,17697,"women",2153
-"East Boston Gymnasium",1914,33227,"women",4266
-"East Boston Gymnasium",1915,32184,"women",2457
-"East Boston Gymnasium",1916,27781,"women",2165
-"East Boston Gymnasium",1917,21709,"women",1402
-"East Boston Gymnasium",1918,19837,"women",1161
-"East Boston Gymnasium",1920,8348,"women",802
-"East Boston Gymnasium",1921,20185,"women",1028
-"East Boston Gymnasium",1922,23296,"women",929
-"East Boston Gymnasium",1923,24539,"women",1924
-"East Boston Gymnasium",1924,10361,"women",638
-"North Bennet Street",1914,26513,"women",2240
-"North Bennet Street",1915,19566,"women",1298
-"North Bennet Street",1916,18888,"women",674
-"North Bennet Street",1917,19855,"women",1163
-"North Bennet Street",1918,13337,"women",502
-"North Bennet Street",1920,5410,"women",665
-"North Bennet Street",1921,23150,"women",1625
-"North Bennet Street",1922,31040,"women",2375
-"North Bennet Street",1923,29383,"women",1918
-"North Bennet Street",1924,25438,"women",635
-"North Bennet Street",1925,5370,"women",1135
-"Roslindale Gymnasium",1919,4340,"women",888
-"Roslindale Gymnasium",1920,13536,"women",3784
-"Roslindale Gymnasium",1921,24313,"women",4066
-"Roslindale Gymnasium",1922,25055,"women",2015
-"Roslindale Gymnasium",1923,24835,"women",1481
-"Roslindale Gymnasium",1924,22364,"women",938
-"Roslindale Gymnasium",1925,12783,"women",1651
-"Ward 6",1917,12576,"women",190
-"Ward 6",1918,7222,"women",186
-"Ward 6",1919,3065,"women",262
-"Ward 6",1921,1134,"women",118
-"Ward 6",1922,5107,"women",234
-"Ward 12",1917,31817,"women",3366
-"Ward 12",1918,28404,"women",3098
-"Ward 12",1919,13718,"women",1072
-"Ward 12",1920,15388,"women",853
-"Ward 12",1921,18318,"women",610
-"Ward 12",1922,22449,"women",660
-"Ward 12",1923,22692,"women",1195
-"Ward 12",1924,18122,"women",1729
-"Ward 16",1914,50063,"women",9383
-"Ward 16",1915,49721,"women",6618
-"Ward 16",1916,48606,"women",6288
-"Ward 17",1916,14216,"women",1765
-"Ward 17",1917,56818,"women",6625
-"Ward 17",1918,48114,"women",6714
-"Ward 17",1919,19190,"women",2089
-"Ward 17",1920,29861,"women",3560
-"Ward 17",1921,35771,"women",4262
-"Ward 17",1922,42634,"women",5127
-"Ward 17",1923,39102,"women",5407
-"Ward 17",1924,33717,"women",5225
-"Ward 3",1914,17712,"women",1846
-"Ward 3",1915,17712,"women",1846
-"Ward 3",1916,16976,"women",1797
-"Ward 4",1917,18643,"women",1581
-"Ward 4",1918,14879,"women",1080
-"Ward 4",1919,5593,"women",401
-"Ward 4",1920,9047,"women",798
-"Ward 4",1921,8036,"women",487
-"Ward 4",1922,12860,"women",988
-"Ward 4",1923,11687,"women",947
-"Ward 4",1924,11702,"women",619
-"Ward 5",1917,19026,"women",1229
-"Ward 5",1918,13257,"women",1176
-"Ward 5",1919,9865,"women",546
-"Ward 5",1920,10413,"women",654
-"Ward 5",1921,2247,"women",341
-"Ward 5",1922,14232,"women",989
-"Ward 5",1923,13740,"women",759
-"Ward 5",1924,14140,"women",813
-"Ward 6",1923,8282,"women",575
-"Ward 6",1924,3167,"women",248
-"Ward 7",1914,15425,"women",2065
-"Ward 7",1915,13042,"women",1870
-"Ward 7",1916,4015,"women",314
-"Ward 9",1914,10812,"women",673
-"Ward 9",1915,14725,"women",921
-"Ward 9",1916,18992,"women",1598
-"Cabot Street Gymnasium",1914,38005,"girls",4830
-"Cabot Street Gymnasium",1915,29567,"girls",4203
-"Cabot Street Gymnasium",1916,24618,"girls",3275
-"Cabot Street Gymnasium",1917,37082,"girls",5339
-"Cabot Street Gymnasium",1918,33193,"girls",6524
-"Cabot Street Gymnasium",1919,10500,"girls",2070
-"Cabot Street Gymnasium",1920,12053,"girls",2963
-"Cabot Street Gymnasium",1921,10615,"girls",2685
-"Cabot Street Gymnasium",1922,25442,"girls",5035
-"Cabot Street Gymnasium",1923,21073,"girls",3726
-"Cabot Street Gymnasium",1924,22754,"girls",3949
-"Cabot Street Gymnasium",1925,10465,"girls",1675
-"Curtis Hall Gymnasium",1914,43240,"girls",6035
-"Curtis Hall Gymnasium",1915,33415,"girls",5650
-"Curtis Hall Gymnasium",1916,29265,"girls",4880
-"Curtis Hall Gymnasium",1917,31240,"girls",4895
-"Curtis Hall Gymnasium",1918,19833,"girls",3164
-"Curtis Hall Gymnasium",1919,7228,"girls",1168
-"Curtis Hall Gymnasium",1920,9312,"girls",1145
-"Curtis Hall Gymnasium",1921,17848,"girls",4032
-"Curtis Hall Gymnasium",1922,7770,"girls",2055
-"Curtis Hall Gymnasium",1923,15623,"girls",2641
-"Curtis Hall Gymnasium",1924,16102,"girls",3377
-"Curtis Hall Gymnasium",1925,16830,"girls",2352
-"D Street Gymnasium",1914,18359,"girls",3337
-"D Street Gymnasium",1915,21740,"girls",3193
-"D Street Gymnasium",1916,24228,"girls",3286
-"D Street Gymnasium",1917,25159,"girls",4102
-"D Street Gymnasium",1918,22956,"girls",5140
-"D Street Gymnasium",1919,5821,"girls",1072
-"D Street Gymnasium",1920,0,"girls",0
-"D Street Gymnasium",1921,25818,"girls",8534
-"D Street Gymnasium",1922,17697,"girls",2256
-"East Boston Gymnasium",1914,33227,"girls",7642
-"East Boston Gymnasium",1915,32184,"girls",7431
-"East Boston Gymnasium",1916,27781,"girls",6636
-"East Boston Gymnasium",1917,21709,"girls",4726
-"East Boston Gymnasium",1918,19837,"girls",4099
-"East Boston Gymnasium",1920,8348,"girls",3171
-"East Boston Gymnasium",1921,20185,"girls",4838
-"East Boston Gymnasium",1922,23296,"girls",3473
-"East Boston Gymnasium",1923,24539,"girls",2523
-"East Boston Gymnasium",1924,10361,"girls",979
-"North Bennet Street",1914,26513,"girls",2785
-"North Bennet Street",1915,19566,"girls",2442
-"North Bennet Street",1916,18888,"girls",2465
-"North Bennet Street",1917,19855,"girls",2627
-"North Bennet Street",1918,13337,"girls",2638
-"North Bennet Street",1920,5410,"girls",1110
-"North Bennet Street",1921,23150,"girls",3625
-"North Bennet Street",1922,31040,"girls",4430
-"North Bennet Street",1923,29383,"girls",6360
-"North Bennet Street",1924,25438,"girls",3995
-"North Bennet Street",1925,5370,"girls",1390
-"Roslindale Gymnasium",1919,4340,"girls",1060
-"Roslindale Gymnasium",1920,13536,"girls",4085
-"Roslindale Gymnasium",1921,24313,"girls",5444
-"Roslindale Gymnasium",1922,25055,"girls",6035
-"Roslindale Gymnasium",1923,24835,"girls",6640
-"Roslindale Gymnasium",1924,22364,"girls",7108
-"Roslindale Gymnasium",1925,12783,"girls",2965
-"Ward 6",1917,12576,"girls",1973
-"Ward 6",1918,7222,"girls",1276
-"Ward 6",1919,3065,"girls",766
-"Ward 6",1921,1134,"girls",195
-"Ward 6",1922,5107,"girls",1030
-"Ward 12",1917,31817,"girls",8016
-"Ward 12",1918,28404,"girls",6314
-"Ward 12",1919,13718,"girls",3977
-"Ward 12",1920,15388,"girls",4385
-"Ward 12",1921,18318,"girls",5320
-"Ward 12",1922,22449,"girls",6134
-"Ward 12",1923,22692,"girls",5305
-"Ward 12",1924,18122,"girls",4525
-"Ward 16",1914,50063,"girls",9109
-"Ward 16",1915,49721,"girls",7138
-"Ward 16",1916,48606,"girls",9536
-"Ward 17",1916,14216,"girls",3666
-"Ward 17",1917,56818,"girls",11593
-"Ward 17",1918,48114,"girls",11351
-"Ward 17",1919,19190,"girls",6625
-"Ward 17",1920,29861,"girls",9400
-"Ward 17",1921,35771,"girls",9223
-"Ward 17",1922,42634,"girls",9070
-"Ward 17",1923,39102,"girls",7235
-"Ward 17",1924,33717,"girls",6614
-"Ward 3",1914,17712,"girls",4437
-"Ward 3",1915,17712,"girls",4437
-"Ward 3",1916,16976,"girls",3862
-"Ward 4",1917,18643,"girls",4852
-"Ward 4",1918,14879,"girls",3966
-"Ward 4",1919,5593,"girls",1487
-"Ward 4",1920,9047,"girls",3513
-"Ward 4",1921,8036,"girls",2399
-"Ward 4",1922,12860,"girls",5142
-"Ward 4",1923,11687,"girls",4505
-"Ward 4",1924,11702,"girls",4649
-"Ward 5",1917,19026,"girls",3370
-"Ward 5",1918,13257,"girls",1696
-"Ward 5",1919,9865,"girls",2933
-"Ward 5",1920,10413,"girls",2658
-"Ward 5",1921,2247,"girls",483
-"Ward 5",1922,14232,"girls",3213
-"Ward 5",1923,13740,"girls",2711
-"Ward 5",1924,14140,"girls",2645
-"Ward 6",1923,8282,"girls",2257
-"Ward 6",1924,3167,"girls",865
-"Ward 7",1914,15425,"girls",2717
-"Ward 7",1915,13042,"girls",2309
-"Ward 7",1916,4015,"girls",880
-"Ward 9",1914,10812,"girls",2043
-"Ward 9",1915,14725,"girls",3257
-"Ward 9",1916,18992,"girls",4319
-"Cabot Street Gymnasium",1914,38005,"mothers",993
-"Cabot Street Gymnasium",1915,29567,"mothers",659
-"Cabot Street Gymnasium",1916,24618,"mothers",409
-"Cabot Street Gymnasium",1917,37082,"mothers",0
-"Cabot Street Gymnasium",1918,33193,"mothers",0
-"Cabot Street Gymnasium",1919,10500,"mothers",0
-"Cabot Street Gymnasium",1920,12053,"mothers",0
-"Cabot Street Gymnasium",1921,10615,"mothers",0
-"Cabot Street Gymnasium",1922,25442,"mothers",0
-"Cabot Street Gymnasium",1923,21073,"mothers",0
-"Cabot Street Gymnasium",1924,22754,"mothers",0
-"Cabot Street Gymnasium",1925,10465,"mothers",0
-"Curtis Hall Gymnasium",1914,43240,"mothers",2705
-"Curtis Hall Gymnasium",1915,33415,"mothers",2565
-"Curtis Hall Gymnasium",1916,29265,"mothers",2685
-"Curtis Hall Gymnasium",1917,31240,"mothers",2615
-"Curtis Hall Gymnasium",1918,19833,"mothers",2110
-"Curtis Hall Gymnasium",1919,7228,"mothers",274
-"Curtis Hall Gymnasium",1920,9312,"mothers",66
-"Curtis Hall Gymnasium",1921,17848,"mothers",552
-"Curtis Hall Gymnasium",1922,7770,"mothers",0
-"Curtis Hall Gymnasium",1923,15623,"mothers",401
-"Curtis Hall Gymnasium",1924,16102,"mothers",2236
-"Curtis Hall Gymnasium",1925,16830,"mothers",3115
-"D Street Gymnasium",1914,18359,"mothers",0
-"D Street Gymnasium",1915,21740,"mothers",145
-"D Street Gymnasium",1916,24228,"mothers",377
-"D Street Gymnasium",1917,25159,"mothers",0
-"D Street Gymnasium",1918,22956,"mothers",0
-"D Street Gymnasium",1919,5821,"mothers",0
-"D Street Gymnasium",1920,0,"mothers",0
-"D Street Gymnasium",1921,25818,"mothers",0
-"D Street Gymnasium",1922,17697,"mothers",338
-"East Boston Gymnasium",1914,33227,"mothers",558
-"East Boston Gymnasium",1915,32184,"mothers",286
-"East Boston Gymnasium",1916,27781,"mothers",0
-"East Boston Gymnasium",1917,21709,"mothers",0
-"East Boston Gymnasium",1918,19837,"mothers",0
-"East Boston Gymnasium",1920,8348,"mothers",0
-"East Boston Gymnasium",1921,20185,"mothers",0
-"East Boston Gymnasium",1922,23296,"mothers",0
-"East Boston Gymnasium",1923,24539,"mothers",0
-"East Boston Gymnasium",1924,10361,"mothers",0
-"North Bennet Street",1914,26513,"mothers",1774
-"North Bennet Street",1915,19566,"mothers",954
-"North Bennet Street",1916,18888,"mothers",0
-"North Bennet Street",1917,19855,"mothers",0
-"North Bennet Street",1918,13337,"mothers",0
-"North Bennet Street",1920,5410,"mothers",0
-"North Bennet Street",1921,23150,"mothers",0
-"North Bennet Street",1922,31040,"mothers",0
-"North Bennet Street",1923,29383,"mothers",0
-"North Bennet Street",1924,25438,"mothers",0
-"North Bennet Street",1925,5370,"mothers",0
-"Roslindale Gymnasium",1919,4340,"mothers",34
-"Roslindale Gymnasium",1920,13536,"mothers",34
-"Roslindale Gymnasium",1921,24313,"mothers",0
-"Roslindale Gymnasium",1922,25055,"mothers",0
-"Roslindale Gymnasium",1923,24835,"mothers",0
-"Roslindale Gymnasium",1924,22364,"mothers",0
-"Roslindale Gymnasium",1925,12783,"mothers",0
-"Ward 6",1917,12576,"mothers",29
-"Ward 6",1918,7222,"mothers",422
-"Ward 6",1919,3065,"mothers",0
-"Ward 6",1921,1134,"mothers",0
-"Ward 6",1922,5107,"mothers",74
-"Ward 12",1917,31817,"mothers",1600
-"Ward 12",1918,28404,"mothers",1602
-"Ward 12",1919,13718,"mothers",44
-"Ward 12",1920,15388,"mothers",685
-"Ward 12",1921,18318,"mothers",88
-"Ward 12",1922,22449,"mothers",514
-"Ward 12",1923,22692,"mothers",210
-"Ward 12",1924,18122,"mothers",0
-"Ward 16",1914,50063,"mothers",1543
-"Ward 16",1915,49721,"mothers",3946
-"Ward 16",1916,48606,"mothers",6096
-"Ward 17",1916,14216,"mothers",721
-"Ward 17",1917,56818,"mothers",6516
-"Ward 17",1918,48114,"mothers",4447
-"Ward 17",1919,19190,"mothers",509
-"Ward 17",1920,29861,"mothers",703
-"Ward 17",1921,35771,"mothers",1067
-"Ward 17",1922,42634,"mothers",1657
-"Ward 17",1923,39102,"mothers",1910
-"Ward 17",1924,33717,"mothers",1277
-"Ward 3",1914,17712,"mothers",765
-"Ward 3",1915,17712,"mothers",765
-"Ward 3",1916,16976,"mothers",1911
-"Ward 4",1917,18643,"mothers",2119
-"Ward 4",1918,14879,"mothers",2085
-"Ward 4",1919,5593,"mothers",1004
-"Ward 4",1920,9047,"mothers",1466
-"Ward 4",1921,8036,"mothers",1574
-"Ward 4",1922,12860,"mothers",1655
-"Ward 4",1923,11687,"mothers",1173
-"Ward 4",1924,11702,"mothers",428
-"Ward 5",1917,19026,"mothers",0
-"Ward 5",1918,13257,"mothers",0
-"Ward 5",1919,9865,"mothers",0
-"Ward 5",1920,10413,"mothers",0
-"Ward 5",1921,2247,"mothers",0
-"Ward 5",1922,14232,"mothers",346
-"Ward 5",1923,13740,"mothers",397
-"Ward 5",1924,14140,"mothers",119
-"Ward 6",1923,8282,"mothers",0
-"Ward 6",1924,3167,"mothers",0
-"Ward 7",1914,15425,"mothers",0
-"Ward 7",1915,13042,"mothers",0
-"Ward 7",1916,4015,"mothers",0
-"Ward 9",1914,10812,"mothers",520
-"Ward 9",1915,14725,"mothers",645
-"Ward 9",1916,18992,"mothers",767
+gym,year,totals,classtype,count,wardCabot Street Gymnasium,1914,38005,individuals,9173,18Cabot Street Gymnasium,1915,29567,individuals,5715,18Cabot Street Gymnasium,1916,24618,individuals,5424,18Cabot Street Gymnasium,1917,37082,individuals,11689,18Cabot Street Gymnasium,1918,33193,individuals,7784,18Cabot Street Gymnasium,1919,10500,individuals,1415,18Cabot Street Gymnasium,1920,12053,individuals,655,18Cabot Street Gymnasium,1921,10615,individuals,2192,18Cabot Street Gymnasium,1922,25442,individuals,6075,18Cabot Street Gymnasium,1923,21073,individuals,4980,18Cabot Street Gymnasium,1924,22754,individuals,5736,18Cabot Street Gymnasium,1925,10465,individuals,1780,18Curtis Hall Gymnasium,1914,43240,individuals,5335,22Curtis Hall Gymnasium,1915,33415,individuals,3030,22Curtis Hall Gymnasium,1916,29265,individuals,3535,22Curtis Hall Gymnasium,1917,31240,individuals,4245,22Curtis Hall Gymnasium,1918,19833,individuals,3362,22Curtis Hall Gymnasium,1919,7228,individuals,1021,22Curtis Hall Gymnasium,1920,9312,individuals,1331,22Curtis Hall Gymnasium,1921,17848,individuals,3729,22Curtis Hall Gymnasium,1922,7770,individuals,0,22Curtis Hall Gymnasium,1923,15623,individuals,855,22Curtis Hall Gymnasium,1924,16102,individuals,0,22Curtis Hall Gymnasium,1925,16830,individuals,258,22D Street Gymnasium,1914,18359,individuals,1406,13D Street Gymnasium,1915,21740,individuals,3884,13D Street Gymnasium,1916,24228,individuals,4268,13D Street Gymnasium,1917,25159,individuals,4412,13D Street Gymnasium,1918,22956,individuals,4465,13D Street Gymnasium,1919,5821,individuals,1566,13D Street Gymnasium,1920,0,individuals,0,13D Street Gymnasium,1921,25818,individuals,539,13D Street Gymnasium,1922,17697,individuals,2481,13East Boston Gymnasium,1914,33227,individuals,3538,2East Boston Gymnasium,1915,32184,individuals,3341,2East Boston Gymnasium,1916,27781,individuals,2774,2East Boston Gymnasium,1917,21709,individuals,1929,2East Boston Gymnasium,1918,19837,individuals,2022,2East Boston Gymnasium,1920,8348,individuals,2014,2East Boston Gymnasium,1921,20185,individuals,4423,2East Boston Gymnasium,1922,23296,individuals,8153,2East Boston Gymnasium,1923,24539,individuals,9732,2East Boston Gymnasium,1924,10361,individuals,3611,2North Bennet Street,1914,26513,individuals,3010,6North Bennet Street,1915,19566,individuals,3241,6North Bennet Street,1916,18888,individuals,4039,6North Bennet Street,1917,19855,individuals,4094,6North Bennet Street,1918,13337,individuals,1962,6North Bennet Street,1920,5410,individuals,2195,6North Bennet Street,1921,23150,individuals,6115,6North Bennet Street,1922,31040,individuals,7845,6North Bennet Street,1923,29383,individuals,6920,6North Bennet Street,1924,25438,individuals,8760,6North Bennet Street,1925,5370,individuals,0,6Roslindale Gymnasium,1919,4340,individuals,193,24Roslindale Gymnasium,1920,13536,individuals,630,24Roslindale Gymnasium,1921,24313,individuals,673,24Roslindale Gymnasium,1922,25055,individuals,683,24Roslindale Gymnasium,1923,24835,individuals,973,24Roslindale Gymnasium,1924,22364,individuals,488,24Roslindale Gymnasium,1925,12783,individuals,115,24Ward 6,1917,12576,individuals,1509,6Ward 6,1918,7222,individuals,768,6Ward 6,1919,3065,individuals,425,6Ward 6,1921,1134,individuals,83,6Ward 6,1922,5107,individuals,342,6Ward 12,1917,31817,individuals,4218,12Ward 12,1918,28404,individuals,4477,12Ward 12,1919,13718,individuals,2141,12Ward 12,1920,15388,individuals,7030,12Ward 12,1921,18318,individuals,690,12Ward 12,1922,22449,individuals,1775,12Ward 12,1923,22692,individuals,646,12Ward 12,1924,18122,individuals,0,12Ward 16,1914,50063,individuals,4778,16Ward 16,1915,49721,individuals,6510,16Ward 16,1916,48606,individuals,4223,16Ward 17,1916,14216,individuals,1546,17Ward 17,1917,56818,individuals,3225,17Ward 17,1918,48114,individuals,3086,17Ward 17,1919,19190,individuals,659,17Ward 17,1920,29861,individuals,1815,17Ward 17,1921,35771,individuals,2270,17Ward 17,1922,42634,individuals,2845,17Ward 17,1923,39102,individuals,5400,17Ward 17,1924,33717,individuals,3362,17Ward 3,1914,17712,individuals,3279,3Ward 3,1915,17712,individuals,3279,3Ward 3,1916,16976,individuals,2428,3Ward 4,1917,18643,individuals,1417,4Ward 4,1918,14879,individuals,1086,4Ward 4,1919,5593,individuals,177,4Ward 4,1920,9047,individuals,237,4Ward 4,1921,8036,individuals,162,4Ward 4,1922,12860,individuals,518,4Ward 4,1923,11687,individuals,227,4Ward 4,1924,11702,individuals,276,4Ward 5,1917,19026,individuals,2398,5Ward 5,1918,13257,individuals,1701,5Ward 5,1919,9865,individuals,1507,5Ward 5,1920,10413,individuals,1252,5Ward 5,1921,2247,individuals,288,5Ward 5,1922,14232,individuals,1850,5Ward 5,1923,13740,individuals,1977,5Ward 5,1924,14140,individuals,2254,5Ward 6,1923,8282,individuals,529,6Ward 6,1924,3167,individuals,329,6Ward 7,1914,15425,individuals,2091,7Ward 7,1915,13042,individuals,1423,7Ward 7,1916,4015,individuals,288,7Ward 9,1914,10812,individuals,1467,9Ward 9,1915,14725,individuals,1683,9Ward 9,1916,18992,individuals,3141,9Cabot Street Gymnasium,1914,38005,men,5571,18Cabot Street Gymnasium,1915,29567,men,5307,18Cabot Street Gymnasium,1916,24618,men,3916,18Cabot Street Gymnasium,1917,37082,men,4673,18Cabot Street Gymnasium,1918,33193,men,3089,18Cabot Street Gymnasium,1919,10500,men,1508,18Cabot Street Gymnasium,1920,12053,men,1665,18Cabot Street Gymnasium,1921,10615,men,1694,18Cabot Street Gymnasium,1922,25442,men,2872,18Cabot Street Gymnasium,1923,21073,men,2416,18Cabot Street Gymnasium,1924,22754,men,2834,18Cabot Street Gymnasium,1925,10465,men,1235,18Curtis Hall Gymnasium,1914,43240,men,6835,22Curtis Hall Gymnasium,1915,33415,men,4135,22Curtis Hall Gymnasium,1916,29265,men,3510,22Curtis Hall Gymnasium,1917,31240,men,3300,22Curtis Hall Gymnasium,1918,19833,men,1699,22Curtis Hall Gymnasium,1919,7228,men,314,22Curtis Hall Gymnasium,1920,9312,men,1005,22Curtis Hall Gymnasium,1921,17848,men,2595,22Curtis Hall Gymnasium,1922,7770,men,1185,22Curtis Hall Gymnasium,1923,15623,men,3027,22Curtis Hall Gymnasium,1924,16102,men,1904,22Curtis Hall Gymnasium,1925,16830,men,2420,22D Street Gymnasium,1914,18359,men,5393,13D Street Gymnasium,1915,21740,men,5834,13D Street Gymnasium,1916,24228,men,3723,13D Street Gymnasium,1917,25159,men,2430,13D Street Gymnasium,1918,22956,men,2021,13D Street Gymnasium,1919,5821,men,463,13D Street Gymnasium,1920,0,men,0,13D Street Gymnasium,1921,25818,men,3878,13D Street Gymnasium,1922,17697,men,3366,13East Boston Gymnasium,1914,33227,men,6157,2East Boston Gymnasium,1915,32184,men,6003,2East Boston Gymnasium,1916,27781,men,5124,2East Boston Gymnasium,1917,21709,men,3714,2East Boston Gymnasium,1918,19837,men,2830,2East Boston Gymnasium,1920,8348,men,1467,2East Boston Gymnasium,1921,20185,men,4512,2East Boston Gymnasium,1922,23296,men,5044,2East Boston Gymnasium,1923,24539,men,3308,2East Boston Gymnasium,1924,10361,men,1633,2North Bennet Street,1914,26513,men,5563,6North Bennet Street,1915,19566,men,3302,6North Bennet Street,1916,18888,men,2545,6North Bennet Street,1917,19855,men,2373,6North Bennet Street,1918,13337,men,1148,6North Bennet Street,1920,5410,men,910,6North Bennet Street,1921,23150,men,3345,6North Bennet Street,1922,31040,men,4900,6North Bennet Street,1923,29383,men,4155,6North Bennet Street,1924,25438,men,3165,6North Bennet Street,1925,5370,men,915,6Roslindale Gymnasium,1919,4340,men,431,24Roslindale Gymnasium,1920,13536,men,1669,24Roslindale Gymnasium,1921,24313,men,1957,24Roslindale Gymnasium,1922,25055,men,2665,24Roslindale Gymnasium,1923,24835,men,3159,24Roslindale Gymnasium,1924,22364,men,1998,24Roslindale Gymnasium,1925,12783,men,2059,24Ward 6,1917,12576,men,1891,6Ward 6,1918,7222,men,782,6Ward 6,1919,3065,men,270,6Ward 6,1921,1134,men,203,6Ward 6,1922,5107,men,1127,6Ward 12,1917,31817,men,3581,12Ward 12,1918,28404,men,3199,12Ward 12,1919,13718,men,1266,12Ward 12,1920,15388,men,1315,12Ward 12,1921,18318,men,1622,12Ward 12,1922,22449,men,2953,12Ward 12,1923,22692,men,3199,12Ward 12,1924,18122,men,2483,12Ward 16,1914,50063,men,9055,16Ward 16,1915,49721,men,10045,16Ward 16,1916,48606,men,7751,16Ward 17,1916,14216,men,1262,17Ward 17,1917,56818,men,7726,17Ward 17,1918,48114,men,7865,17Ward 17,1919,19190,men,2151,17Ward 17,1920,29861,men,5183,17Ward 17,1921,35771,men,5810,17Ward 17,1922,42634,men,6685,17Ward 17,1923,39102,men,6215,17Ward 17,1924,33717,men,5280,17Ward 3,1914,17712,men,2160,3Ward 3,1915,17712,men,2160,3Ward 3,1916,16976,men,1689,3Ward 4,1917,18643,men,2037,4Ward 4,1918,14879,men,1517,4Ward 4,1919,5593,men,441,4Ward 4,1920,9047,men,925,4Ward 4,1921,8036,men,654,4Ward 4,1922,12860,men,1016,4Ward 4,1923,11687,men,1339,4Ward 4,1924,11702,men,2463,4Ward 5,1917,19026,men,2395,5Ward 5,1918,13257,men,2213,5Ward 5,1919,9865,men,1086,5Ward 5,1920,10413,men,1101,5Ward 5,1921,2247,men,351,5Ward 5,1922,14232,men,2400,5Ward 5,1923,13740,men,2104,5Ward 5,1924,14140,men,2292,5Ward 6,1923,8282,men,1267,6Ward 6,1924,3167,men,426,6Ward 7,1914,15425,men,2758,7Ward 7,1915,13042,men,2175,7Ward 7,1916,4015,men,515,7Ward 9,1914,10812,men,2065,9Ward 9,1915,14725,men,2210,9Ward 9,1916,18992,men,2571,9Cabot Street Gymnasium,1914,38005,schoolboys,9562,18Cabot Street Gymnasium,1915,29567,schoolboys,7416,18Cabot Street Gymnasium,1916,24618,schoolboys,5965,18Cabot Street Gymnasium,1917,37082,schoolboys,9749,18Cabot Street Gymnasium,1918,33193,schoolboys,12646,18Cabot Street Gymnasium,1919,10500,schoolboys,3875,18Cabot Street Gymnasium,1920,12053,schoolboys,4040,18Cabot Street Gymnasium,1921,10615,schoolboys,2834,18Cabot Street Gymnasium,1922,25442,schoolboys,6972,18Cabot Street Gymnasium,1923,21073,schoolboys,4717,18Cabot Street Gymnasium,1924,22754,schoolboys,5345,18Cabot Street Gymnasium,1925,10465,schoolboys,2670,18Curtis Hall Gymnasium,1914,43240,schoolboys,8255,22Curtis Hall Gymnasium,1915,33415,schoolboys,7355,22Curtis Hall Gymnasium,1916,29265,schoolboys,5605,22Curtis Hall Gymnasium,1917,31240,schoolboys,7055,22Curtis Hall Gymnasium,1918,19833,schoolboys,4133,22Curtis Hall Gymnasium,1919,7228,schoolboys,1981,22Curtis Hall Gymnasium,1920,9312,schoolboys,2958,22Curtis Hall Gymnasium,1921,17848,schoolboys,3727,22Curtis Hall Gymnasium,1922,7770,schoolboys,3180,22Curtis Hall Gymnasium,1923,15623,schoolboys,4072,22Curtis Hall Gymnasium,1924,16102,schoolboys,4507,22Curtis Hall Gymnasium,1925,16830,schoolboys,3352,22D Street Gymnasium,1914,18359,schoolboys,5125,13D Street Gymnasium,1915,21740,schoolboys,4813,13D Street Gymnasium,1916,24228,schoolboys,8839,13D Street Gymnasium,1917,25159,schoolboys,9702,13D Street Gymnasium,1918,22956,schoolboys,6626,13D Street Gymnasium,1919,5821,schoolboys,975,13D Street Gymnasium,1920,0,schoolboys,0,13D Street Gymnasium,1921,25818,schoolboys,9836,13D Street Gymnasium,1922,17697,schoolboys,3588,13East Boston Gymnasium,1914,33227,schoolboys,7500,2East Boston Gymnasium,1915,32184,schoolboys,7077,2East Boston Gymnasium,1916,27781,schoolboys,7688,2East Boston Gymnasium,1917,21709,schoolboys,7027,2East Boston Gymnasium,1918,19837,schoolboys,7955,2East Boston Gymnasium,1920,8348,schoolboys,447,2East Boston Gymnasium,1921,20185,schoolboys,4867,2East Boston Gymnasium,1922,23296,schoolboys,4379,2East Boston Gymnasium,1923,24539,schoolboys,5848,2East Boston Gymnasium,1924,10361,schoolboys,2769,2North Bennet Street,1914,26513,schoolboys,9639,6North Bennet Street,1915,19566,schoolboys,7310,6North Bennet Street,1916,18888,schoolboys,7645,6North Bennet Street,1917,19855,schoolboys,7735,6North Bennet Street,1918,13337,schoolboys,6298,6North Bennet Street,1920,5410,schoolboys,265,6North Bennet Street,1921,23150,schoolboys,6995,6North Bennet Street,1922,31040,schoolboys,8890,6North Bennet Street,1923,29383,schoolboys,8135,6North Bennet Street,1924,25438,schoolboys,7350,6North Bennet Street,1925,5370,schoolboys,1515,6Roslindale Gymnasium,1919,4340,schoolboys,1443,24Roslindale Gymnasium,1920,13536,schoolboys,1667,24Roslindale Gymnasium,1921,24313,schoolboys,9494,24Roslindale Gymnasium,1922,25055,schoolboys,9886,24Roslindale Gymnasium,1923,24835,schoolboys,9219,24Roslindale Gymnasium,1924,22364,schoolboys,8172,24Roslindale Gymnasium,1925,12783,schoolboys,3408,24Ward 6,1917,12576,schoolboys,5844,6Ward 6,1918,7222,schoolboys,3188,6Ward 6,1919,3065,schoolboys,1105,6Ward 6,1921,1134,schoolboys,231,6Ward 6,1922,5107,schoolboys,1466,6Ward 12,1917,31817,schoolboys,8887,12Ward 12,1918,28404,schoolboys,8524,12Ward 12,1919,13718,schoolboys,4863,12Ward 12,1920,15388,schoolboys,560,12Ward 12,1921,18318,schoolboys,8728,12Ward 12,1922,22449,schoolboys,8631,12Ward 12,1923,22692,schoolboys,9001,12Ward 12,1924,18122,schoolboys,5937,12Ward 16,1914,50063,schoolboys,9534,16Ward 16,1915,49721,schoolboys,6435,16Ward 16,1916,48606,schoolboys,8203,16Ward 17,1916,14216,schoolboys,4647,17Ward 17,1917,56818,schoolboys,15082,17Ward 17,1918,48114,schoolboys,11927,17Ward 17,1919,19190,schoolboys,5797,17Ward 17,1920,29861,schoolboys,4600,17Ward 17,1921,35771,schoolboys,8045,17Ward 17,1922,42634,schoolboys,8920,17Ward 17,1923,39102,schoolboys,6680,17Ward 17,1924,33717,schoolboys,5404,17Ward 3,1914,17712,schoolboys,3450,3Ward 3,1915,17712,schoolboys,3450,3Ward 3,1916,16976,schoolboys,3219,3Ward 4,1917,18643,schoolboys,5085,4Ward 4,1918,14879,schoolboys,4128,4Ward 4,1919,5593,schoolboys,1512,4Ward 4,1920,9047,schoolboys,1054,4Ward 4,1921,8036,schoolboys,1860,4Ward 4,1922,12860,schoolboys,2200,4Ward 4,1923,11687,schoolboys,2140,4Ward 4,1924,11702,schoolboys,1689,4Ward 5,1917,19026,schoolboys,8349,5Ward 5,1918,13257,schoolboys,6174,5Ward 5,1919,9865,schoolboys,3323,5Ward 5,1920,10413,schoolboys,2374,5Ward 5,1921,2247,schoolboys,571,5Ward 5,1922,14232,schoolboys,4585,5Ward 5,1923,13740,schoolboys,4900,5Ward 5,1924,14140,schoolboys,4878,5Ward 6,1923,8282,schoolboys,2796,6Ward 6,1924,3167,schoolboys,907,6Ward 7,1914,15425,schoolboys,4173,7Ward 7,1915,13042,schoolboys,3852,7Ward 7,1916,4015,schoolboys,1709,7Ward 9,1914,10812,schoolboys,3718,9Ward 9,1915,14725,schoolboys,5036,9Ward 9,1916,18992,schoolboys,5877,9Cabot Street Gymnasium,1914,38005,workingboys,3175,18Cabot Street Gymnasium,1915,29567,workingboys,3636,18Cabot Street Gymnasium,1916,24618,workingboys,3897,18Cabot Street Gymnasium,1917,37082,workingboys,3804,18Cabot Street Gymnasium,1918,33193,workingboys,2755,18Cabot Street Gymnasium,1919,10500,workingboys,1487,18Cabot Street Gymnasium,1920,12053,workingboys,1847,18Cabot Street Gymnasium,1921,10615,workingboys,1185,18Cabot Street Gymnasium,1922,25442,workingboys,2176,18Cabot Street Gymnasium,1923,21073,workingboys,2445,18Cabot Street Gymnasium,1924,22754,workingboys,3047,18Cabot Street Gymnasium,1925,10465,workingboys,705,18Curtis Hall Gymnasium,1914,43240,workingboys,6185,22Curtis Hall Gymnasium,1915,33415,workingboys,5205,22Curtis Hall Gymnasium,1916,29265,workingboys,4180,22Curtis Hall Gymnasium,1917,31240,workingboys,4380,22Curtis Hall Gymnasium,1918,19833,workingboys,2328,22Curtis Hall Gymnasium,1919,7228,workingboys,916,22Curtis Hall Gymnasium,1920,9312,workingboys,1820,22Curtis Hall Gymnasium,1921,17848,workingboys,2017,22Curtis Hall Gymnasium,1922,7770,workingboys,1350,22Curtis Hall Gymnasium,1923,15623,workingboys,3009,22Curtis Hall Gymnasium,1924,16102,workingboys,1516,22Curtis Hall Gymnasium,1925,16830,workingboys,1926,22D Street Gymnasium,1914,18359,workingboys,2193,13D Street Gymnasium,1915,21740,workingboys,3578,13D Street Gymnasium,1916,24228,workingboys,2847,13D Street Gymnasium,1917,25159,workingboys,3652,13D Street Gymnasium,1918,22956,workingboys,3955,13D Street Gymnasium,1919,5821,workingboys,1660,13D Street Gymnasium,1920,0,workingboys,0,13D Street Gymnasium,1921,25818,workingboys,3031,13D Street Gymnasium,1922,17697,workingboys,3515,13East Boston Gymnasium,1914,33227,workingboys,3566,2East Boston Gymnasium,1915,32184,workingboys,5589,2East Boston Gymnasium,1916,27781,workingboys,3394,2East Boston Gymnasium,1917,21709,workingboys,2911,2East Boston Gymnasium,1918,19837,workingboys,1770,2East Boston Gymnasium,1920,8348,workingboys,447,2East Boston Gymnasium,1921,20185,workingboys,517,2East Boston Gymnasium,1922,23296,workingboys,1318,2East Boston Gymnasium,1923,24539,workingboys,1204,2East Boston Gymnasium,1924,10361,workingboys,731,2North Bennet Street,1914,26513,workingboys,1502,6North Bennet Street,1915,19566,workingboys,1019,6North Bennet Street,1916,18888,workingboys,1520,6North Bennet Street,1917,19855,workingboys,1863,6North Bennet Street,1918,13337,workingboys,789,6North Bennet Street,1920,5410,workingboys,265,6North Bennet Street,1921,23150,workingboys,1445,6North Bennet Street,1922,31040,workingboys,2600,6North Bennet Street,1923,29383,workingboys,1895,6North Bennet Street,1924,25438,workingboys,1533,6North Bennet Street,1925,5370,workingboys,415,6Roslindale Gymnasium,1919,4340,workingboys,291,24Roslindale Gymnasium,1920,13536,workingboys,1667,24Roslindale Gymnasium,1921,24313,workingboys,2679,24Roslindale Gymnasium,1922,25055,workingboys,3771,24Roslindale Gymnasium,1923,24835,workingboys,3363,24Roslindale Gymnasium,1924,22364,workingboys,3660,24Roslindale Gymnasium,1925,12783,workingboys,2585,24Ward 6,1917,12576,workingboys,1140,6Ward 6,1918,7222,workingboys,600,6Ward 6,1919,3065,workingboys,237,6Ward 6,1921,1134,workingboys,304,6Ward 6,1922,5107,workingboys,834,6Ward 12,1917,31817,workingboys,2149,12Ward 12,1918,28404,workingboys,1190,12Ward 12,1919,13718,workingboys,355,12Ward 12,1920,15388,workingboys,560,12Ward 12,1921,18318,workingboys,1260,12Ward 12,1922,22449,workingboys,1782,12Ward 12,1923,22692,workingboys,3136,12Ward 12,1924,18122,workingboys,3448,12Ward 16,1914,50063,workingboys,6661,16Ward 16,1915,49721,workingboys,9029,16Ward 16,1916,48606,workingboys,6509,16Ward 17,1916,14216,workingboys,609,17Ward 17,1917,56818,workingboys,6051,17Ward 17,1918,48114,workingboys,2724,17Ward 17,1919,19190,workingboys,1360,17Ward 17,1920,29861,workingboys,4600,17Ward 17,1921,35771,workingboys,5094,17Ward 17,1922,42634,workingboys,8330,17Ward 17,1923,39102,workingboys,6255,17Ward 17,1924,33717,workingboys,6555,17Ward 3,1914,17712,workingboys,1775,3Ward 3,1915,17712,workingboys,1775,3Ward 3,1916,16976,workingboys,2070,3Ward 4,1917,18643,workingboys,1552,4Ward 4,1918,14879,workingboys,1017,4Ward 4,1919,5593,workingboys,571,4Ward 4,1920,9047,workingboys,1054,4Ward 4,1921,8036,workingboys,900,4Ward 4,1922,12860,workingboys,1341,4Ward 4,1923,11687,workingboys,1356,4Ward 4,1924,11702,workingboys,1578,4Ward 5,1917,19026,workingboys,1285,5Ward 5,1918,13257,workingboys,297,5Ward 5,1919,9865,workingboys,470,5Ward 5,1920,10413,workingboys,2374,5Ward 5,1921,2247,workingboys,213,5Ward 5,1922,14232,workingboys,849,5Ward 5,1923,13740,workingboys,892,5Ward 5,1924,14140,workingboys,1139,5Ward 6,1923,8282,workingboys,858,6Ward 6,1924,3167,workingboys,392,6Ward 7,1914,15425,workingboys,1621,7Ward 7,1915,13042,workingboys,1413,7Ward 7,1916,4015,workingboys,309,7Ward 9,1914,10812,workingboys,326,9Ward 9,1915,14725,workingboys,973,9Ward 9,1916,18992,workingboys,719,9Cabot Street Gymnasium,1914,38005,women,4701,18Cabot Street Gymnasium,1915,29567,women,2631,18Cabot Street Gymnasium,1916,24618,women,1732,18Cabot Street Gymnasium,1917,37082,women,1828,18Cabot Street Gymnasium,1918,33193,women,395,18Cabot Street Gymnasium,1919,10500,women,145,18Cabot Street Gymnasium,1920,12053,women,883,18Cabot Street Gymnasium,1921,10615,women,25,18Cabot Street Gymnasium,1922,25442,women,2312,18Cabot Street Gymnasium,1923,21073,women,2789,18Cabot Street Gymnasium,1924,22754,women,1843,18Cabot Street Gymnasium,1925,10465,women,2400,18Curtis Hall Gymnasium,1914,43240,women,7890,22Curtis Hall Gymnasium,1915,33415,women,5475,22Curtis Hall Gymnasium,1916,29265,women,4870,22Curtis Hall Gymnasium,1917,31240,women,4750,22Curtis Hall Gymnasium,1918,19833,women,3037,22Curtis Hall Gymnasium,1919,7228,women,1554,22Curtis Hall Gymnasium,1920,9312,women,987,22Curtis Hall Gymnasium,1921,17848,women,1196,22Curtis Hall Gymnasium,1922,7770,women,0,22Curtis Hall Gymnasium,1923,15623,women,1618,22Curtis Hall Gymnasium,1924,16102,women,2562,22Curtis Hall Gymnasium,1925,16830,women,3407,22D Street Gymnasium,1914,18359,women,905,13D Street Gymnasium,1915,21740,women,293,13D Street Gymnasium,1916,24228,women,888,13D Street Gymnasium,1917,25159,women,861,13D Street Gymnasium,1918,22956,women,749,13D Street Gymnasium,1919,5821,women,85,13D Street Gymnasium,1920,0,women,0,13D Street Gymnasium,1921,25818,women,0,13D Street Gymnasium,1922,17697,women,2153,13East Boston Gymnasium,1914,33227,women,4266,2East Boston Gymnasium,1915,32184,women,2457,2East Boston Gymnasium,1916,27781,women,2165,2East Boston Gymnasium,1917,21709,women,1402,2East Boston Gymnasium,1918,19837,women,1161,2East Boston Gymnasium,1920,8348,women,802,2East Boston Gymnasium,1921,20185,women,1028,2East Boston Gymnasium,1922,23296,women,929,2East Boston Gymnasium,1923,24539,women,1924,2East Boston Gymnasium,1924,10361,women,638,2North Bennet Street,1914,26513,women,2240,6North Bennet Street,1915,19566,women,1298,6North Bennet Street,1916,18888,women,674,6North Bennet Street,1917,19855,women,1163,6North Bennet Street,1918,13337,women,502,6North Bennet Street,1920,5410,women,665,6North Bennet Street,1921,23150,women,1625,6North Bennet Street,1922,31040,women,2375,6North Bennet Street,1923,29383,women,1918,6North Bennet Street,1924,25438,women,635,6North Bennet Street,1925,5370,women,1135,6Roslindale Gymnasium,1919,4340,women,888,24Roslindale Gymnasium,1920,13536,women,3784,24Roslindale Gymnasium,1921,24313,women,4066,24Roslindale Gymnasium,1922,25055,women,2015,24Roslindale Gymnasium,1923,24835,women,1481,24Roslindale Gymnasium,1924,22364,women,938,24Roslindale Gymnasium,1925,12783,women,1651,24Ward 6,1917,12576,women,190,6Ward 6,1918,7222,women,186,6Ward 6,1919,3065,women,262,6Ward 6,1921,1134,women,118,6Ward 6,1922,5107,women,234,6Ward 12,1917,31817,women,3366,12Ward 12,1918,28404,women,3098,12Ward 12,1919,13718,women,1072,12Ward 12,1920,15388,women,853,12Ward 12,1921,18318,women,610,12Ward 12,1922,22449,women,660,12Ward 12,1923,22692,women,1195,12Ward 12,1924,18122,women,1729,12Ward 16,1914,50063,women,9383,16Ward 16,1915,49721,women,6618,16Ward 16,1916,48606,women,6288,16Ward 17,1916,14216,women,1765,17Ward 17,1917,56818,women,6625,17Ward 17,1918,48114,women,6714,17Ward 17,1919,19190,women,2089,17Ward 17,1920,29861,women,3560,17Ward 17,1921,35771,women,4262,17Ward 17,1922,42634,women,5127,17Ward 17,1923,39102,women,5407,17Ward 17,1924,33717,women,5225,17Ward 3,1914,17712,women,1846,3Ward 3,1915,17712,women,1846,3Ward 3,1916,16976,women,1797,3Ward 4,1917,18643,women,1581,4Ward 4,1918,14879,women,1080,4Ward 4,1919,5593,women,401,4Ward 4,1920,9047,women,798,4Ward 4,1921,8036,women,487,4Ward 4,1922,12860,women,988,4Ward 4,1923,11687,women,947,4Ward 4,1924,11702,women,619,4Ward 5,1917,19026,women,1229,5Ward 5,1918,13257,women,1176,5Ward 5,1919,9865,women,546,5Ward 5,1920,10413,women,654,5Ward 5,1921,2247,women,341,5Ward 5,1922,14232,women,989,5Ward 5,1923,13740,women,759,5Ward 5,1924,14140,women,813,5Ward 6,1923,8282,women,575,6Ward 6,1924,3167,women,248,6Ward 7,1914,15425,women,2065,7Ward 7,1915,13042,women,1870,7Ward 7,1916,4015,women,314,7Ward 9,1914,10812,women,673,9Ward 9,1915,14725,women,921,9Ward 9,1916,18992,women,1598,9Cabot Street Gymnasium,1914,38005,girls,4830,18Cabot Street Gymnasium,1915,29567,girls,4203,18Cabot Street Gymnasium,1916,24618,girls,3275,18Cabot Street Gymnasium,1917,37082,girls,5339,18Cabot Street Gymnasium,1918,33193,girls,6524,18Cabot Street Gymnasium,1919,10500,girls,2070,18Cabot Street Gymnasium,1920,12053,girls,2963,18Cabot Street Gymnasium,1921,10615,girls,2685,18Cabot Street Gymnasium,1922,25442,girls,5035,18Cabot Street Gymnasium,1923,21073,girls,3726,18Cabot Street Gymnasium,1924,22754,girls,3949,18Cabot Street Gymnasium,1925,10465,girls,1675,18Curtis Hall Gymnasium,1914,43240,girls,6035,22Curtis Hall Gymnasium,1915,33415,girls,5650,22Curtis Hall Gymnasium,1916,29265,girls,4880,22Curtis Hall Gymnasium,1917,31240,girls,4895,22Curtis Hall Gymnasium,1918,19833,girls,3164,22Curtis Hall Gymnasium,1919,7228,girls,1168,22Curtis Hall Gymnasium,1920,9312,girls,1145,22Curtis Hall Gymnasium,1921,17848,girls,4032,22Curtis Hall Gymnasium,1922,7770,girls,2055,22Curtis Hall Gymnasium,1923,15623,girls,2641,22Curtis Hall Gymnasium,1924,16102,girls,3377,22Curtis Hall Gymnasium,1925,16830,girls,2352,22D Street Gymnasium,1914,18359,girls,3337,13D Street Gymnasium,1915,21740,girls,3193,13D Street Gymnasium,1916,24228,girls,3286,13D Street Gymnasium,1917,25159,girls,4102,13D Street Gymnasium,1918,22956,girls,5140,13D Street Gymnasium,1919,5821,girls,1072,13D Street Gymnasium,1920,0,girls,0,13D Street Gymnasium,1921,25818,girls,8534,13D Street Gymnasium,1922,17697,girls,2256,13East Boston Gymnasium,1914,33227,girls,7642,2East Boston Gymnasium,1915,32184,girls,7431,2East Boston Gymnasium,1916,27781,girls,6636,2East Boston Gymnasium,1917,21709,girls,4726,2East Boston Gymnasium,1918,19837,girls,4099,2East Boston Gymnasium,1920,8348,girls,3171,2East Boston Gymnasium,1921,20185,girls,4838,2East Boston Gymnasium,1922,23296,girls,3473,2East Boston Gymnasium,1923,24539,girls,2523,2East Boston Gymnasium,1924,10361,girls,979,2North Bennet Street,1914,26513,girls,2785,6North Bennet Street,1915,19566,girls,2442,6North Bennet Street,1916,18888,girls,2465,6North Bennet Street,1917,19855,girls,2627,6North Bennet Street,1918,13337,girls,2638,6North Bennet Street,1920,5410,girls,1110,6North Bennet Street,1921,23150,girls,3625,6North Bennet Street,1922,31040,girls,4430,6North Bennet Street,1923,29383,girls,6360,6North Bennet Street,1924,25438,girls,3995,6North Bennet Street,1925,5370,girls,1390,6Roslindale Gymnasium,1919,4340,girls,1060,24Roslindale Gymnasium,1920,13536,girls,4085,24Roslindale Gymnasium,1921,24313,girls,5444,24Roslindale Gymnasium,1922,25055,girls,6035,24Roslindale Gymnasium,1923,24835,girls,6640,24Roslindale Gymnasium,1924,22364,girls,7108,24Roslindale Gymnasium,1925,12783,girls,2965,24Ward 6,1917,12576,girls,1973,6Ward 6,1918,7222,girls,1276,6Ward 6,1919,3065,girls,766,6Ward 6,1921,1134,girls,195,6Ward 6,1922,5107,girls,1030,6Ward 12,1917,31817,girls,8016,12Ward 12,1918,28404,girls,6314,12Ward 12,1919,13718,girls,3977,12Ward 12,1920,15388,girls,4385,12Ward 12,1921,18318,girls,5320,12Ward 12,1922,22449,girls,6134,12Ward 12,1923,22692,girls,5305,12Ward 12,1924,18122,girls,4525,12Ward 16,1914,50063,girls,9109,16Ward 16,1915,49721,girls,7138,16Ward 16,1916,48606,girls,9536,16Ward 17,1916,14216,girls,3666,17Ward 17,1917,56818,girls,11593,17Ward 17,1918,48114,girls,11351,17Ward 17,1919,19190,girls,6625,17Ward 17,1920,29861,girls,9400,17Ward 17,1921,35771,girls,9223,17Ward 17,1922,42634,girls,9070,17Ward 17,1923,39102,girls,7235,17Ward 17,1924,33717,girls,6614,17Ward 3,1914,17712,girls,4437,3Ward 3,1915,17712,girls,4437,3Ward 3,1916,16976,girls,3862,3Ward 4,1917,18643,girls,4852,4Ward 4,1918,14879,girls,3966,4Ward 4,1919,5593,girls,1487,4Ward 4,1920,9047,girls,3513,4Ward 4,1921,8036,girls,2399,4Ward 4,1922,12860,girls,5142,4Ward 4,1923,11687,girls,4505,4Ward 4,1924,11702,girls,4649,4Ward 5,1917,19026,girls,3370,5Ward 5,1918,13257,girls,1696,5Ward 5,1919,9865,girls,2933,5Ward 5,1920,10413,girls,2658,5Ward 5,1921,2247,girls,483,5Ward 5,1922,14232,girls,3213,5Ward 5,1923,13740,girls,2711,5Ward 5,1924,14140,girls,2645,5Ward 6,1923,8282,girls,2257,6Ward 6,1924,3167,girls,865,6Ward 7,1914,15425,girls,2717,7Ward 7,1915,13042,girls,2309,7Ward 7,1916,4015,girls,880,7Ward 9,1914,10812,girls,2043,9Ward 9,1915,14725,girls,3257,9Ward 9,1916,18992,girls,4319,9Cabot Street Gymnasium,1914,38005,mothers,993,18Cabot Street Gymnasium,1915,29567,mothers,659,18Cabot Street Gymnasium,1916,24618,mothers,409,18Cabot Street Gymnasium,1917,37082,mothers,0,18Cabot Street Gymnasium,1918,33193,mothers,0,18Cabot Street Gymnasium,1919,10500,mothers,0,18Cabot Street Gymnasium,1920,12053,mothers,0,18Cabot Street Gymnasium,1921,10615,mothers,0,18Cabot Street Gymnasium,1922,25442,mothers,0,18Cabot Street Gymnasium,1923,21073,mothers,0,18Cabot Street Gymnasium,1924,22754,mothers,0,18Cabot Street Gymnasium,1925,10465,mothers,0,18Curtis Hall Gymnasium,1914,43240,mothers,2705,22Curtis Hall Gymnasium,1915,33415,mothers,2565,22Curtis Hall Gymnasium,1916,29265,mothers,2685,22Curtis Hall Gymnasium,1917,31240,mothers,2615,22Curtis Hall Gymnasium,1918,19833,mothers,2110,22Curtis Hall Gymnasium,1919,7228,mothers,274,22Curtis Hall Gymnasium,1920,9312,mothers,66,22Curtis Hall Gymnasium,1921,17848,mothers,552,22Curtis Hall Gymnasium,1922,7770,mothers,0,22Curtis Hall Gymnasium,1923,15623,mothers,401,22Curtis Hall Gymnasium,1924,16102,mothers,2236,22Curtis Hall Gymnasium,1925,16830,mothers,3115,22D Street Gymnasium,1914,18359,mothers,0,13D Street Gymnasium,1915,21740,mothers,145,13D Street Gymnasium,1916,24228,mothers,377,13D Street Gymnasium,1917,25159,mothers,0,13D Street Gymnasium,1918,22956,mothers,0,13D Street Gymnasium,1919,5821,mothers,0,13D Street Gymnasium,1920,0,mothers,0,13D Street Gymnasium,1921,25818,mothers,0,13D Street Gymnasium,1922,17697,mothers,338,13East Boston Gymnasium,1914,33227,mothers,558,2East Boston Gymnasium,1915,32184,mothers,286,2East Boston Gymnasium,1916,27781,mothers,0,2East Boston Gymnasium,1917,21709,mothers,0,2East Boston Gymnasium,1918,19837,mothers,0,2East Boston Gymnasium,1920,8348,mothers,0,2East Boston Gymnasium,1921,20185,mothers,0,2East Boston Gymnasium,1922,23296,mothers,0,2East Boston Gymnasium,1923,24539,mothers,0,2East Boston Gymnasium,1924,10361,mothers,0,2North Bennet Street,1914,26513,mothers,1774,6North Bennet Street,1915,19566,mothers,954,6North Bennet Street,1916,18888,mothers,0,6North Bennet Street,1917,19855,mothers,0,6North Bennet Street,1918,13337,mothers,0,6North Bennet Street,1920,5410,mothers,0,6North Bennet Street,1921,23150,mothers,0,6North Bennet Street,1922,31040,mothers,0,6North Bennet Street,1923,29383,mothers,0,6North Bennet Street,1924,25438,mothers,0,6North Bennet Street,1925,5370,mothers,0,6Roslindale Gymnasium,1919,4340,mothers,34,24Roslindale Gymnasium,1920,13536,mothers,34,24Roslindale Gymnasium,1921,24313,mothers,0,24Roslindale Gymnasium,1922,25055,mothers,0,24Roslindale Gymnasium,1923,24835,mothers,0,24Roslindale Gymnasium,1924,22364,mothers,0,24Roslindale Gymnasium,1925,12783,mothers,0,24Ward 6,1917,12576,mothers,29,6Ward 6,1918,7222,mothers,422,6Ward 6,1919,3065,mothers,0,6Ward 6,1921,1134,mothers,0,6Ward 6,1922,5107,mothers,74,6Ward 12,1917,31817,mothers,1600,12Ward 12,1918,28404,mothers,1602,12Ward 12,1919,13718,mothers,44,12Ward 12,1920,15388,mothers,685,12Ward 12,1921,18318,mothers,88,12Ward 12,1922,22449,mothers,514,12Ward 12,1923,22692,mothers,210,12Ward 12,1924,18122,mothers,0,12Ward 16,1914,50063,mothers,1543,16Ward 16,1915,49721,mothers,3946,16Ward 16,1916,48606,mothers,6096,16Ward 17,1916,14216,mothers,721,17Ward 17,1917,56818,mothers,6516,17Ward 17,1918,48114,mothers,4447,17Ward 17,1919,19190,mothers,509,17Ward 17,1920,29861,mothers,703,17Ward 17,1921,35771,mothers,1067,17Ward 17,1922,42634,mothers,1657,17Ward 17,1923,39102,mothers,1910,17Ward 17,1924,33717,mothers,1277,17Ward 3,1914,17712,mothers,765,3Ward 3,1915,17712,mothers,765,3Ward 3,1916,16976,mothers,1911,3Ward 4,1917,18643,mothers,2119,4Ward 4,1918,14879,mothers,2085,4Ward 4,1919,5593,mothers,1004,4Ward 4,1920,9047,mothers,1466,4Ward 4,1921,8036,mothers,1574,4Ward 4,1922,12860,mothers,1655,4Ward 4,1923,11687,mothers,1173,4Ward 4,1924,11702,mothers,428,4Ward 5,1917,19026,mothers,0,5Ward 5,1918,13257,mothers,0,5Ward 5,1919,9865,mothers,0,5Ward 5,1920,10413,mothers,0,5Ward 5,1921,2247,mothers,0,5Ward 5,1922,14232,mothers,346,5Ward 5,1923,13740,mothers,397,5Ward 5,1924,14140,mothers,119,5Ward 6,1923,8282,mothers,0,6Ward 6,1924,3167,mothers,0,6Ward 7,1914,15425,mothers,0,7Ward 7,1915,13042,mothers,0,7Ward 7,1916,4015,mothers,0,7Ward 9,1914,10812,mothers,520,9Ward 9,1915,14725,mothers,645,9Ward 9,1916,18992,mothers,767,9
