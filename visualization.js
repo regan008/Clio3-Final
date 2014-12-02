@@ -57,7 +57,7 @@ d3.csv("gyms_long.csv", function(error, csvgyms) {
 
 ////***MAP***////
   var mapwidth  = 750;
-  var mapheight = 475;
+  var mapheight = 425;
   var gymdata;  //puts the gym location data in global scope. 
   var currentGym = "Cabot Street Gymnasium"
   //select the #mapvis div and append a svg object to it.  Get the width and heigh from variables.
@@ -116,7 +116,12 @@ function drawmap(){
         mapvis.selectAll(".ward").data(json.features)
             .enter().append("path")
                 .attr("class", function(d) { return "space" + d.properties.SpaceType; })
-                .attr("d", path);
+                .attr("d", path)
+                .on("click", function(d) {
+                  currentWard = d.properties.wid;
+                  drawAges();
+                  drawNativity(); 
+                });
 
         //add ward labels
         mapvis.selectAll(".ward-label")
@@ -172,8 +177,8 @@ var currentWard = 1;
 var color = d3.scale.ordinal()
     .range(["#ffffd9","#edf8b1","#c7e9b4","#7fcdbb","#41b6c4","#1d91c0","#225ea8","#253494","#081d58"]);
     
-var widthPie = 300,
-    heightPie = 400,
+var widthPie = 200,
+    heightPie = 200,
     radius = Math.min(widthPie, heightPie) / 2;
 
 var arc = d3.svg.arc()
