@@ -148,15 +148,7 @@ function drawmap(){
                 drawAges(); 
                 drawNativity(); 
                 drawGymClassatt();
-                console.log("the circle has been clicked");  });
-
-            // .on("click", function () {
-            //     d3.select(".selected").classed("selected", false)
-            //     d3.select(this).classed("selected", true);
-            //     updateWard()
-                // console.log(val);
-
-         // });      
+                console.log("the circle has been clicked");  });     
     }) //closes d3.json within drawmap()
 }; //closes drawmap
 
@@ -297,6 +289,8 @@ function drawAges() {
         .attr("data-legend", function(d){return d.data.agegrp})
         .on('mouseover', tip_age.show)
         .on('mouseout', tip_age.hide);
+
+    d3.select("#ageslabels").append("text")
 }; //end drawAges
 
 //drawNativity() draw the pie chart of nativity by ward/year. 
