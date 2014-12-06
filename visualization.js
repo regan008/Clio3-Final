@@ -54,6 +54,9 @@ d3.csv("gyms_long.csv", function(error, csvgyms) {
   drawGymClassatt();
 
 })
+d3.csv("pubgyms.csv", function(error, csvpubgyms) {
+  publicgyms = csvpubgyms;
+})
 
 ////***MAP***////
   var mapwidth  = 750;
@@ -88,7 +91,7 @@ function drawmap(){
         var circle = d3.geo.path().projection(projection);
         //calculate the radius for the circles 
         var radius = d3.scale.sqrt()
-                .domain([0, 1e3])
+                .domain([0, 2000])
                 .range([0, 15]);
         
         // using the path determine the bounds of the current map and use 
@@ -104,8 +107,7 @@ function drawmap(){
           .attr('class', 'd3-tip')
           .offset([-10, 0])
           .html(function(d) {
-            return "<strong>" + d.Gymname + "</strong></br><strong>Total attendence in " + sliderval + " was " + d[sliderval] + "</strong>"; })
-
+            return "<p class='tiptext'>" + d.Gymname + "</p><p class='tiptext'>Total attendence in " + sliderval + " was " + d[sliderval] + "</p>"; })
 
         // new projection
         projection = d3.geo.mercator().center(center)
@@ -153,7 +155,19 @@ function drawmap(){
                 drawAges(); 
                 drawNativity(); 
                 drawGymClassatt();
-                console.log("the circle has been clicked");  });     
+                console.log("the circle has been clicked");  });  
+        mapvis.selectAll("circles.points")
+          .data(publicgyms)
+          .enter()
+          .append("circle")
+          // .attr("class", function(d) {return d.WardNo; })
+          // .attr("r", function(d) {return 2 * Math.sqrt(d.converts)})
+          .attr("r", 3.5)
+          // .attr("r",  function(d) { return (+d["1914"])/scalefactor; })
+          .attr("class","publicgym")
+          .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";})
+          // .on('mouseover', tip_map.show)
+          // .on('mouseout', tip_map.hide)    
     }) //closes d3.json within drawmap()
 }; //closes drawmap
 
