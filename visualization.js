@@ -107,13 +107,13 @@ function drawmap(){
           .attr('class', 'd3-tip')
           .offset([-10, 0])
           .html(function(d) {
-            return "<p class='tiptext'>" + d.Gymname + "</p><p class='tiptext'>Total attendence in " + sliderval + " was " + d[sliderval] + "</p>"; })
+            return "<p class='tiptext'><strong>" + d.Gymname + "</strong><br>Total attendence in " + sliderval + " was " + d[sliderval] + "</p>"; })
 
         var tip_publicgyms = d3.tip()
           .attr('class', 'd3-tip')
           .offset([-10, 0])
           .html(function(d) {
-            return "<p class='tiptext'>" + d.Gym + "</p><p class='tiptext'>No attendence data.</p>"; })
+            return "<p class='tiptext'><strong>" + d.Gym + "</strong><br>No attendence data.</p>"; })
 
         // new projection
         projection = d3.geo.mercator().center(center)
@@ -174,7 +174,13 @@ function drawmap(){
           .attr("class","publicgym")
           .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";})
           .on('mouseover', tip_publicgyms.show)
-          .on('mouseout', tip_publicgyms.hide);    
+          .on('mouseout', tip_publicgyms.hide)  
+          .on("click", function(d) { 
+                // console.log(gymclass); 
+                // console.log(gymclass.ward); 
+                currentWard = d.WardNo; 
+                drawAges(); 
+                drawNativity(); });  
     }) //closes d3.json within drawmap()
 }; //closes drawmap
 
