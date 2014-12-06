@@ -109,6 +109,12 @@ function drawmap(){
           .html(function(d) {
             return "<p class='tiptext'>" + d.Gymname + "</p><p class='tiptext'>Total attendence in " + sliderval + " was " + d[sliderval] + "</p>"; })
 
+        var tip_publicgyms = d3.tip()
+          .attr('class', 'd3-tip')
+          .offset([-10, 0])
+          .html(function(d) {
+            return "<p class='tiptext'>" + d.Gym + "</p><p class='tiptext'>No attendence data.</p>"; })
+
         // new projection
         projection = d3.geo.mercator().center(center)
           .scale(scale).translate(offset);
@@ -156,6 +162,7 @@ function drawmap(){
                 drawNativity(); 
                 drawGymClassatt();
                 console.log("the circle has been clicked");  });  
+        mapvis.call(tip_publicgyms);
         mapvis.selectAll("circles.points")
           .data(publicgyms)
           .enter()
@@ -166,8 +173,8 @@ function drawmap(){
           // .attr("r",  function(d) { return (+d["1914"])/scalefactor; })
           .attr("class","publicgym")
           .attr("transform", function(d) {return "translate(" + projection([d.long,d.lat]) + ")";})
-          // .on('mouseover', tip_map.show)
-          // .on('mouseout', tip_map.hide)    
+          .on('mouseover', tip_publicgyms.show)
+          .on('mouseout', tip_publicgyms.hide);    
     }) //closes d3.json within drawmap()
 }; //closes drawmap
 
