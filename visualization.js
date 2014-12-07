@@ -1,21 +1,8 @@
-//TO DO: 
-    // *style dots
-    // *add pie chart of breakdown of classes
-    // *add labels to all pie charts
-    // *add pop-up with info
-    // *write an if statement to automatically draw the 1920s data if the slider is at or over 1920
-    // *add labels to slider
-    // *start slider at 1914 rather than in middle
-    // *fix font family
-    // *style background
-    // *add behavior where clicking on ward changes the ward in dropdown
-    // *comment code
-
 
 //When the slider changes log the slider val and call drawmap().
    $('#slider').on('change', function(){
    sliderval = $('#slider').attr('data-slider')
-   console.log(sliderval);
+   // console.log(sliderval);
    drawmap();
  });
   //set base value for slider
@@ -51,7 +38,7 @@ d3.csv("gyms_long.csv", function(error, csvgyms) {
   gymclass = csvgyms;
   gymclass.forEach(function(d) {
     d.count = +d.count;  });
-  drawGymClassatt();
+  // drawGymClassatt();
 
 })
 d3.csv("pubgyms.csv", function(error, csvpubgyms) {
@@ -180,10 +167,18 @@ function drawmap(){
                 // console.log(gymclass.ward); 
                 currentWard = d.WardNo; 
                 drawAges(); 
-                drawNativity(); });  
+                drawNativity();
+                drawNoData(); });  
     }) //closes d3.json within drawmap()
 }; //closes drawmap
+function drawNoData() {
+  svg_gymclassattendence.selectAll("g").remove();
+  svg_gymclassattendence.selectAll(".arc").remove();
+  var printnodata = "No data here."
+  var nodata = d3.selectAll("#gymclassestext").text(printnodata);
+  
 
+}
 //The functions filterYearAges and filterYear filter data based on the current year selected in each dropdown menu.
 //filterYearAges() returns data where the year and ward is equal to the current selections and has a count of greater than 11.  This is done to simplify the chart and only show the significant age groups. 
 function filterYearAges(d) {return +d.year === +currentYear && +d.ward === +currentWard && +d.count > 11}
@@ -256,6 +251,7 @@ function drawGymClassatt() {
 
     svg_gymclassattendence.selectAll("g").remove();
     svg_gymclassattendence.selectAll(".arc").remove();
+    d3.select("#gymclassestext").remove();
 
     //filter in order to calculate percentages for tooltips.
     var data_class_filt = gymclass.filter(filterDates);
