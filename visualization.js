@@ -4,6 +4,7 @@
    sliderval = $('#slider').attr('data-slider')
    // console.log(sliderval);
    drawmap();
+   outputdate();
  });
   //set base value for slider
   var sliderval = 1914;
@@ -53,7 +54,9 @@ d3.csv("pubgyms.csv", function(error, csvpubgyms) {
   //select the #mapvis div and append a svg object to it.  Get the width and heigh from variables.
   var mapvis = d3.select("#mapvis").append("svg")
       .attr("width", mapwidth).attr("height", mapheight)
-
+function outputdate(){
+   d3.select("#slideroutput").text("Year: " + sliderval);
+}
 //The function drawmap() takes a json object and creates the basemap.  It automatically calcualates the scope based on coordinates in the file. 
 //The function then appends ward labels to the map based on properties within the geojson file.
 //Lastly it appends circles on top of the map.  The radius of the circles is calculated based on the attendence figures in the BostonGyms.csv file. 
@@ -176,8 +179,6 @@ function drawNoData() {
   svg_gymclassattendence.selectAll(".arc").remove();
   var printnodata = "No data here."
   var nodata = d3.selectAll("#gymclassestext").text(printnodata);
-  
-
 }
 //The functions filterYearAges and filterYear filter data based on the current year selected in each dropdown menu.
 //filterYearAges() returns data where the year and ward is equal to the current selections and has a count of greater than 11.  This is done to simplify the chart and only show the significant age groups. 
@@ -282,11 +283,8 @@ function drawGymClassatt() {
          .on('mouseout', tip_gymclass.hide);
 }; //end drawAges
 
-
-
 //drawAges() draw a pie chart for each ward per year based on IPUMS data.
 function drawAges() {
-
     svg_age.selectAll("g").remove();
     svg_age.selectAll(".arc").remove()
 
@@ -354,3 +352,4 @@ function drawNativity() {
         .on('mouseout', tip_nat.hide);
   
 }; //end drawNativity()
+

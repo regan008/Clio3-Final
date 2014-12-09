@@ -7,10 +7,15 @@
 <link rel="stylesheet" href="foundation/css/foundation.css">
 </head>
 <style>
-body {
+@import url(http://fonts.googleapis.com/css?family=Open+Sans: 400, 600, 700);
+body, h1, h2, h3, h4, h5, p{
   background-color: #fff;
+  font-family: 'Open Sans';
 }
 
+h1, h4 {
+  font-weight: 600;
+}
 .spaceward {
   fill: #eee;
    stroke: black;
@@ -74,6 +79,12 @@ body {
   top: 100%;
   left: 0;
 }
+.range-slider {
+  margin-top: 0;
+}
+.slideroutput{
+  margin-bottom: 0;
+}
 h1 {
   font-size: 2.25rem;
 }
@@ -99,52 +110,12 @@ h4 {
 <div class="row">
 <div class="large-12 columns centered" id="mapvis"></div>
 </div>
-<!-- <div class="row"> -->
-<!-- <div class="large-3 columns" id="yearselector"> -->
-  <!-- <p id="year" class="menuchoice">Select -->
-  <!-- <select> -->
-    <!-- <option value="1910">1910</option> -->
-    <!-- <option value="1920">1920</option> -->
-  <!-- </select></p>
-</div> -->
-<!--<div class = "large-3 columns" id="wardselector">
-    <p id="ward" class="menuchoice">Select
-      <select>
-        <option value="1">Ward #1</option>
-        <option value="2">Ward #2</option>
-        <option value="3">Ward #3</option>
-        <option value="4">Ward #4</option>
-        <option value="5">Ward #5</option>
-        <option value="6">Ward #6</option>
-        <option value="7">Ward #7</option>
-        <option value="8">Ward #8</option>
-        <option value="9">Ward #9</option>
-        <option value="10">Ward #10</option>
-        <option value="11">Ward #11</option>
-        <option value="12">Ward #12</option>
-        <option value="13">Ward #13</option>
-        <option value="14">Ward #14</option>
-        <option value="15">Ward #15</option>
-        <option value="16">Ward #16</option>
-        <option value="17">Ward #17</option>
-        <option value="18">Ward #18</option>
-        <option value="19">Ward #19</option>
-        <option value="20">Ward #20</option>
-        <option value="21">Ward #21</option>
-        <option value="22">Ward #22</option>
-        <option value="23">Ward #23</option>
-        <option value="24">Ward #24</option>
-        <option value="25">Ward #25</option>
-        <option value="26">Ward #26</option>
-      </select></p>
-</div>-->
-<!-- </div> -->
-<!-- <div class="row">
-<div class="large-12 columns" id="vis"></div>
-</div> -->
+<div class="row">
+  <div class="large-12 columns"><h4 id="slideroutput"></h4></div>
+</div>
 <div class="row"> 
   <div class="large-12 columns">
-    <div class="range-slider" id="slider" data-slider data-options="start: 1914; end: 1924;">
+    <div class="range-slider" id="slider" data-slider data-options="start: 1914; end: 1924; initial: 1914;">
       <span class="range-slider-handle" role="slider" tabindex="1" aria-labelledby="sliderLabel"></span>
       <span class="range-slider-active-segment"></span>
       <input type="hidden">
@@ -154,7 +125,7 @@ h4 {
 <div class="row">
 <div class="large-4 columns" id="gymclasses">
 	<h4>Gymnasium Class Attendence</h4>
-  <h4 id="gymclassestext">Click a public gymnasium to populate attendance data.</h4>
+  <h5 id="gymclassestext">Click a public gymnasium to populate attendance data.</h5>
 </div>
 <div class="large-4 columns" id="ages">
 	<h4>Age of Residents</h4>
@@ -163,15 +134,11 @@ h4 {
 <h4>Nativity of Residents</h4>
 </div>
 </div>
-<div class="row">
-<div class="large-4 columns" id="gymclasslabels"></div>
-<div class="large-4 columns" id="ageslabels"></div>
-<div class="large-4 columns" id="nativitylabels"></div>
-</div>
+
 <div class="row">
 <div class="large-12 columns" id="text">
 <h1>About this visualization</h1>
-<p>This visualization shows the location of gymnasiums in Boston between 1909 and 1925.  The size of each circle on the map corresponds to the total attendance that year and the Age and Nativity pie charts show the demographics of the ward in 1910 and in 1920.  For more information about how this map was created or the history of gymansiums in Boston click here.</p>
+<p>This visualization was built for <a href="http://lincolnmullen.com/courses/clio3.2014/">History 698: Programming for Historians</a> with <a href="http://www.lincolnmullen.com">Lincoln Mullen</a> at George Mason University.  The map and corresponding charts above display information about the location of gymnasiums in Boston between 1914 and 1924.  Private gymnasiums are reprensted by the dark blue dots on the maps while public gymnasiums are displayed in teal. The size of the public gymnasium dates corresponds to the total attendence in a particular year and clicking on the dot will display inforamtion about the various classes offered at the gymnasium.  Clicking on a gymnasiums will also display information from the census about the ward where that gymnasium was located.  I have written a <a href="#">longer blog post</a> about how this visualization was constructed, the sources used to generate the data, and some general conclusions about Gymnasiums in Boston. </p>
 </div>
 </div>
 </div>
